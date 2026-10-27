@@ -1,0 +1,1295 @@
+<!doctype html>
+<html lang="sr-Latn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SEE UP Build Session #01 · STVARAJ · startap hakaton, Beograd, 28–29. novembar</title>
+<meta name="description" content="STVARAJ je dvodnevni startap hakaton u Beogradu za mlade do 30 godina. Od problema do MVP-ja i prvih kupaca, sam ili u timu do troje. Besplatno, prijave do 19. novembra.">
+<meta name="theme-color" content="#000000">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="sr_RS">
+<meta property="og:title" content="STVARAJ · AI je ubrzao sve. Sada je red na nas da stvaramo.">
+<meta property="og:description" content="SEE UP Build Session #01 · 28–29. novembar, Beograd. Do 30 godina, ne moraš da programiraš. Besplatno, prijave do 19. novembra.">
+<!-- [TBD domen]: og:url i apsolutna putanja do og-stvaraj.png (fajl je uz sajt) — popuniti pre objave -->
+<meta property="og:url" content="[TBD domen]">
+<meta property="og:image" content="https://[TBD domen]/og-stvaraj.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+<meta property="og:image:alt" content="STVARAJ, SEE UP Build Session #01. Beograd, 28–29. novembar 2026. Prijave do 19. novembra.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="STVARAJ · AI je ubrzao sve. Sada je red na nas da stvaramo.">
+<meta name="twitter:description" content="SEE UP Build Session #01 · 28–29. novembar, Beograd. Do 30 godina, ne moraš da programiraš. Besplatno, prijave do 19. novembra.">
+<!--
+SEE UP Build Session #01 · STVARAJ · v6 (plan v2 i tab „Sajt i dizajn“, 27. 10. 2026)
+Identitet prati SEE UP: crna/bela, plutajuća pill navigacija, pill dugmad verzalom, oblici krug / list / polukrug,
+originalan SEE UP logo. Varijacija: SEE UP sunrise kao oštar polukrug sunca na horizontu heroja (jedini pokret na strani).
+Naslovi: Archivo (wdth 125, wght 800; h3 700; sitni naslovi wdth 100). Tekst: Ubuntu 400/500/700.
+CTA: ravna pink #FE0081 sa crnim tekstom. Sunrise samo na suncu u heroju i stubu za 1. mesto. Tekst nikad preko gradijenta.
+-->
+<!-- ANALITIKA [TBD]: Umami Cloud. Ovde zalepiti: <script defer src="https://cloud.umami.is/script.js" data-website-id="[TBD ID sajta iz Umami-ja]"></script>
+     Klik na „Prijavi se“ beleži se kao događaj „prijava-klik“ (data-umami-event na dugmadi). -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,700..800&family=Ubuntu:wght@400;500;700&display=swap">
+<style>
+:root{
+  /* osnova */
+  --crna:#000000; --bela:#FFFFFF;
+  --tekst-2:#B8B8B8;     /* sekundarni na crnoj 10,59:1 */
+  --tekst-3:#8C8C8C;     /* napomene na crnoj 6,25:1 */
+  --tekst-2-sv:#4D4D4D;  /* sekundarni na beloj 8,45:1 */
+  --linija:#3A3A3A;      /* razdelnik na crnoj */
+  --linija-sv:#DADADA;   /* razdelnik na beloj */
+  --nav:#D9D9D9;         /* pill nav i mobilna traka */
+  --polje:#F2F2F2; --polje-ivica:#8A8A8A;
+  --greska:#B00020;      /* na beloj 6,9:1 */
+  /* SEE UP pločice */
+  --pink:#FE0081; --pink-hover:#FF4DA6;   /* tekst na pink je uvek #000 */
+  --violet:#62509F;                        /* tekst na violet je uvek #FFF */
+  /* sunrise (SEE UP stopovi, vertikalno) */
+  --narandza:#F68A3B; --crimson:#C50B2C; --purpura:#600080; --indigo:#1B1574;
+  --sunce:linear-gradient(180deg,#F68A3B 0%,#C50B2C 55%,#600080 100%);
+  --fokus:#F68A3B;
+  --f-naslov:"Archivo","Arial Black",sans-serif;
+  --f-tekst:"Ubuntu",system-ui,sans-serif;
+  --gutter:clamp(16px,4vw,32px);
+  --pad:clamp(56px,8vw,120px);
+  color-scheme:dark;
+}
+.svetlo-sek,.nav,.traka,.forma-list{--fokus:#000}
+.potvrda{--fokus:#F68A3B}
+
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent;scroll-padding-top:88px}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+@media (max-width:980px){html{scroll-padding-bottom:96px}}
+body{margin:0;background:var(--crna);color:var(--bela);font:400 17px/1.6 var(--f-tekst);-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4,p,ul,ol,dl,dd,figure{margin:0}
+ul,ol{padding:0;list-style:none}
+h1,h2,h3,h4{font-family:var(--f-naslov);font-stretch:125%;font-weight:800;text-wrap:balance}
+h3,h4{font-weight:700}
+p,li,dd{text-wrap:pretty}
+a{color:inherit}
+a,button,summary,label{touch-action:manipulation}
+:focus-visible{outline:3px solid var(--fokus);outline-offset:3px}
+main:focus{outline:none}
+.sr{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.wrap{max-width:calc(1240px + 2 * var(--gutter));margin:0 auto;padding-left:max(var(--gutter),env(safe-area-inset-left,0px));padding-right:max(var(--gutter),env(safe-area-inset-right,0px))}
+.tbd{font-family:var(--f-tekst);font-size:.88em;font-weight:500;font-style:normal;color:#FFC59A;background:#271609;border:1px dashed rgba(246,138,59,.75);padding:0 .35em;white-space:normal;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.svetlo-sek .tbd,.forma-list .tbd{color:#8A4A12;background:#FFF1E6;border-color:#F68A3B}
+.potvrda .tbd{color:#FFC59A;background:#271609;border-color:rgba(246,138,59,.75)}
+
+/* preskakanje */
+.preskoci{position:absolute;left:var(--gutter);top:-80px;z-index:70;background:#fff;color:#000;font:500 15px/1 var(--f-tekst);padding:15px 18px;border-radius:30px;text-decoration:none}
+.preskoci:focus{top:92px}
+
+/* dugmad */
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;background:var(--pink);color:#000;font:700 15px/1 var(--f-tekst);letter-spacing:.04em;text-transform:uppercase;text-decoration:none;padding:16px 28px;border-radius:30px;border:0;cursor:pointer;white-space:nowrap}
+.btn:hover{background:var(--pink-hover)}
+.btn.svetlo{background:transparent;color:#fff;box-shadow:inset 0 0 0 1.5px var(--tekst-3);text-transform:none;letter-spacing:0;font-weight:500;font-size:16px}
+.btn.svetlo:hover{box-shadow:inset 0 0 0 1.5px #fff}
+.btn:disabled{opacity:.6;cursor:default}
+@media (prefers-reduced-motion:no-preference){.btn{transition:background-color .15s,box-shadow .15s}}
+
+/* navigacija */
+.nav{position:fixed;top:max(14px,env(safe-area-inset-top,0px));left:0;right:0;z-index:50;pointer-events:none}
+.nav .wrap{pointer-events:auto}
+.nav-in{position:relative;display:flex;align-items:center;justify-content:space-between;gap:20px;background:var(--nav);color:#111;border-radius:30px;padding:10px 10px 10px 24px;min-height:64px}
+.lock{display:flex;align-items:center;gap:10px;min-height:44px;text-decoration:none;color:#111;min-width:0}
+.lock svg{height:22px;width:auto;flex:none}
+.lock span{font:700 15px/1 var(--f-naslov);font-stretch:125%;white-space:nowrap}
+.linkovi{display:flex;gap:26px;font:500 16px/1.3 var(--f-tekst)}
+.linkovi a{text-decoration:none;color:#111;display:flex;align-items:center;min-height:44px;padding:0}
+.linkovi a:hover{text-decoration:underline;text-underline-offset:4px}
+.nav .btn{min-height:44px;padding:14px 22px;font-size:14px}
+.meni-dugme{display:none;min-height:44px;padding:0 18px;border-radius:30px;border:0;background:transparent;box-shadow:inset 0 0 0 1.5px #111;color:#111;font:500 15px/1 var(--f-tekst);cursor:pointer}
+@media (max-width:1060px){.linkovi{gap:20px;font-size:15px}.lock span{font-size:14px}}
+@media (max-width:980px){
+  .nav .nav-cta{display:none}
+  .linkovi{display:none}
+  .js .meni-dugme{display:inline-flex;align-items:center}
+  .nav-in{padding-left:20px}
+  .js .nav.otvoren .linkovi{display:flex;flex-direction:column;gap:0;position:absolute;left:0;right:0;top:calc(100% + 8px);background:var(--nav);border-radius:24px;padding:8px 12px;font-size:17px}
+  .nav.otvoren .linkovi a{padding:13px 12px;border-bottom:1px solid #BDBDBD}
+  .nav.otvoren .linkovi li:last-child a{border-bottom:0}
+}
+@media (max-width:380px){.lock svg{height:19px}.lock span{font-size:13px}.lock{gap:8px}.nav-in{padding-left:16px}.meni-dugme{padding:0 14px}}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding-top:clamp(104px,12vw,144px)}
+.ime{font:700 clamp(18px,1.8vw,22px)/1.1 var(--f-naslov);font-stretch:125%;margin:0 0 20px}
+/* h1 u tri reda („Napravi nešto što / nekome treba. / Imaš vikend.“): najširi red je 10,66 em, pa veličina prati širinu kolone */
+.hero h1{font-size:clamp(30px,calc((100vw - 2 * var(--gutter)) / 10.9),78px);line-height:.98;letter-spacing:-.015em;font-weight:800}
+.hero h1 span{display:block}
+.hero .red{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:24px 56px;margin-top:clamp(28px,3.2vw,44px);align-items:start}
+.lead{font-size:clamp(18px,1.5vw,21px);line-height:1.5;color:var(--tekst-2);max-width:42ch}
+.lead b{color:#fff;font-weight:500}
+.druga{margin-top:14px;font-size:16px;color:#fff;max-width:56ch}
+.akcije{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.cinjenice{display:grid;grid-template-columns:repeat(3,auto);gap:16px 28px;justify-content:start;padding-top:6px}
+.cinjenice li{display:flex;flex-direction:column;gap:2px;min-width:0}
+.cinjenice b{font:500 17px/1.3 var(--f-tekst);color:#fff}
+.cinjenice span{font-size:15px;line-height:1.4;color:var(--tekst-2)}
+.sunce{position:relative;height:clamp(180px,30vw,400px);overflow:hidden;margin-top:clamp(40px,5vw,64px)}
+.sunce i{position:absolute;bottom:0;left:58%;width:clamp(360px,64vw,800px);aspect-ratio:2/1;border-radius:999px 999px 0 0;transform:translateX(-50%);background:var(--sunce)}
+@media (prefers-reduced-motion:no-preference){.sunce i{animation:izlazak 1.2s cubic-bezier(.2,.7,.2,1) .25s both}}
+@keyframes izlazak{from{transform:translate(-50%,45%)}to{transform:translate(-50%,0)}}
+@media (max-width:1100px){.cinjenice{grid-template-columns:repeat(2,minmax(0,auto))}}
+@media (max-width:820px){.hero .red{grid-template-columns:1fr;gap:28px}.cinjenice{grid-template-columns:repeat(3,minmax(0,auto))}.sunce i{left:50%}}
+@media (max-width:560px){
+  .ime{font-size:16px;margin-bottom:16px}
+  .hero .red{gap:24px;margin-top:24px}
+  .cinjenice{order:-1;grid-template-columns:1fr 1fr;gap:14px 16px}
+  .cinjenice li:last-child{grid-column:1/-1}
+  .cinjenice b{font-size:16px}
+  .cinjenice span{font-size:14px}
+  .lead{font-size:17px}
+  .akcije{margin-top:22px}
+  .akcije .btn{flex:1 1 auto}
+}
+
+/* odeljci */
+.sek{padding-block:var(--pad)}
+section[id]{scroll-margin-top:calc(16px - var(--pad))}
+.sek h2{font-size:clamp(27px,4.6vw,60px);line-height:1.04;letter-spacing:-.01em;max-width:22ch}
+.sek h2 span{display:block}
+.podnaslov{margin-top:20px;font-size:18px;line-height:1.55;color:var(--tekst-2);max-width:60ch}
+.svetlo-sek{background:#fff;color:#000}
+.svetlo-sek .podnaslov{color:var(--tekst-2-sv)}
+.nastavak{padding-top:0}
+.nastavak > .wrap > .prag{border-top:1px solid var(--linija);padding-top:var(--pad2)}
+.svetlo-sek.nastavak > .wrap > .prag{border-color:var(--linija-sv)}
+.nastavak{--pad2:clamp(48px,6vw,88px)}
+section.nastavak[id]{scroll-margin-top:calc(16px - var(--pad2))}
+.h-mali{font:700 clamp(20px,2vw,24px)/1.15 var(--f-naslov);font-stretch:125%}
+.natpis{font:500 15px/1.4 var(--f-tekst);color:var(--tekst-2)}
+.svetlo-sek .natpis{color:var(--tekst-2-sv)}
+.napomena{font-size:15px;line-height:1.5;color:var(--tekst-3)}
+.svetlo-sek .napomena{color:var(--tekst-2-sv)}
+
+/* zašto */
+.zasto-red{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:32px 64px;margin-top:40px;align-items:end}
+.tekst{display:flex;flex-direction:column;gap:18px;max-width:62ch;color:#1a1a1a}
+.citat{font:800 clamp(26px,3vw,40px)/1.1 var(--f-naslov);font-stretch:125%;letter-spacing:-.01em;border-top:2px solid #000;padding-top:20px;text-wrap:balance}
+@media (max-width:900px){.zasto-red{grid-template-columns:1fr}.citat{max-width:16ch}}
+
+/* za koga */
+.blok-n{margin-top:clamp(48px,5vw,72px)}
+.blok-n h3{font-size:clamp(22px,2.2vw,28px);line-height:1.15}
+.blok-n p{margin-top:8px;color:var(--tekst-2-sv)}
+.spoj{display:grid;grid-template-columns:minmax(0,2fr) 56px minmax(0,1fr);gap:32px;align-items:center;margin-top:32px;border-top:1px solid var(--linija-sv);padding-top:32px}
+.strana{align-self:start}
+.strana-n{font:700 clamp(20px,2vw,24px)/1.15 var(--f-naslov);font-stretch:125%;margin-bottom:20px}
+.uloge{display:grid;gap:24px 32px}
+.problem .uloge{grid-template-columns:repeat(2,minmax(0,1fr))}
+.uloge p{font-size:16px;line-height:1.55;color:var(--tekst-2-sv)}
+.uloge summary{font:700 18px/1.3 var(--f-naslov);font-stretch:100%;color:#000;margin-bottom:4px}
+/* sklopivi delovi: otvoreni na širem ekranu (JS), na telefonu se otvaraju dodirom */
+.sklop > summary{list-style:none;cursor:pointer}
+.sklop > summary::-webkit-details-marker{display:none}
+.sklop > summary::after{content:"";flex:none;width:26px;height:26px;border-radius:50%;box-shadow:inset 0 0 0 1.5px currentColor;background:linear-gradient(currentColor,currentColor) center/10px 2px no-repeat,linear-gradient(currentColor,currentColor) center/2px 10px no-repeat}
+.sklop[open] > summary::after{background:linear-gradient(currentColor,currentColor) center/10px 2px no-repeat}
+@media (min-width:641px){
+  .js .sklop > summary{pointer-events:none;cursor:default}
+  .js .sklop > summary::after{display:none}
+}
+@media (max-width:640px){
+  .uloge{gap:0!important}
+  .uloge li{border-top:1px solid var(--linija-sv)}
+  .uloge li:last-child{border-bottom:1px solid var(--linija-sv)}
+  .uloge summary{display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:52px;padding:10px 0;margin:0;font-size:17px}
+  .uloge p{padding:0 0 14px}
+  .strana-n{margin-bottom:12px}
+}
+.plus{width:56px;height:56px;border-radius:50%;background:var(--pink) linear-gradient(#000,#000) center/22px 4px no-repeat;position:relative}
+.plus::after{content:"";position:absolute;left:50%;top:50%;width:4px;height:22px;background:#000;transform:translate(-50%,-50%)}
+.problemi{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:24px 64px;margin-top:clamp(48px,5vw,72px);border-top:1px solid var(--linija-sv);padding-top:32px}
+.problemi h3{font-size:clamp(22px,2.2vw,28px);line-height:1.15}
+.problemi > div > p{margin-top:12px;color:#1a1a1a;max-width:52ch}
+.primeri{margin-top:12px}
+.primeri li{padding:12px 0;border-bottom:1px solid var(--linija-sv);font-size:17px;line-height:1.45}
+.primeri li:first-child{border-top:1px solid var(--linija-sv)}
+.tim-ai{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 64px;margin-top:clamp(40px,4vw,56px)}
+.tim-ai li{color:#1a1a1a;max-width:56ch}
+.tim-ai b{font-weight:700;color:#000}
+.uslovi{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;border-top:1px solid var(--linija-sv);margin-top:clamp(40px,4vw,56px);padding-top:28px}
+.uslovi li{display:flex;flex-direction:column;gap:6px;min-width:0}
+.uslovi b{font:800 clamp(26px,3vw,40px)/1 var(--f-naslov);font-stretch:125%;letter-spacing:-.01em;white-space:nowrap}
+.uslovi span{font:500 15px/1.4 var(--f-tekst);color:var(--tekst-2-sv)}
+.cta-red{margin-top:40px}
+@media (max-width:900px){
+  .spoj{grid-template-columns:1fr;gap:24px;align-items:start}
+  .plus{width:44px;height:44px;background-size:18px 3px}
+  .plus::after{width:3px;height:18px}
+  .proizvod .uloge{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .problemi{grid-template-columns:1fr}
+  .uslovi{grid-template-columns:1fr 1fr;gap:24px 16px}
+}
+@media (max-width:640px){
+  .problem .uloge,.proizvod .uloge{grid-template-columns:1fr;gap:20px}
+  .tim-ai{grid-template-columns:1fr}
+}
+
+/* vikend */
+.program{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:48px;align-items:start}
+.program .glava{position:sticky;top:112px}
+.koraci{counter-reset:k}
+.koraci li{counter-increment:k;display:grid;grid-template-columns:56px minmax(0,180px) minmax(0,1fr);gap:6px 24px;align-items:baseline;padding:26px 0;border-top:1px solid var(--linija)}
+.koraci li:last-child{border-bottom:1px solid var(--linija)}
+.koraci li::before{content:counter(k);grid-row:span 2;font:800 40px/1 var(--f-naslov);font-stretch:125%;color:#fff;font-variant-numeric:tabular-nums}
+.koraci h3{font-size:22px;line-height:1.2;grid-row:span 2}
+.koraci .sta{color:#fff;font-size:17px;line-height:1.5}
+.koraci .zasto{margin-top:10px}
+.koraci .zasto summary{display:flex;align-items:center;gap:10px;font:500 15px/1.4 var(--f-tekst);color:#fff}
+.koraci .zasto p{color:var(--tekst-2);font-size:16px;line-height:1.55;margin-top:2px}
+@media (max-width:640px){
+  .koraci .zasto{margin-top:4px}
+  .koraci .zasto summary{min-height:44px;color:var(--tekst-2)}
+  .koraci .zasto p{margin:0 0 4px}
+}
+@media (max-width:1100px){
+  .koraci li{grid-template-columns:56px minmax(0,1fr)}
+  .koraci li::before{grid-row:span 3}
+  .koraci h3{grid-row:auto}
+}
+@media (max-width:900px){.program{grid-template-columns:1fr;gap:32px}.program .glava{position:static}}
+@media (max-width:560px){
+  .koraci li{grid-template-columns:40px minmax(0,1fr);gap:4px 12px;padding:22px 0}
+  .koraci li::before{font-size:32px}
+  .koraci h3{font-size:20px}
+  .koraci .sta{font-size:16px}
+  .koraci .zasto p{font-size:15px}
+}
+.satnica{margin-top:clamp(56px,6vw,88px);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 48px}
+.satnica-glava{grid-column:1/-1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 48px;align-items:start}
+.satnica-glava h3{font-size:clamp(24px,2.6vw,34px);line-height:1.1}
+.checkpoint h4{display:flex;align-items:center;gap:10px;font:700 18px/1.3 var(--f-naslov);font-stretch:100%}
+.tacka{flex:none;width:10px;height:10px;border-radius:50%;background:var(--pink)}
+.checkpoint p{margin-top:6px;color:var(--tekst-2);font-size:16px;line-height:1.55;max-width:56ch}
+.dan h4{display:flex;justify-content:space-between;align-items:baseline;gap:12px;font-size:clamp(22px,2.2vw,28px);line-height:1.1;padding-bottom:12px;border-bottom:2px solid #fff}
+.dan h4 span{font:400 16px/1 var(--f-tekst);color:var(--tekst-2)}
+.dan dl div{display:grid;grid-template-columns:120px minmax(0,1fr);gap:16px;padding:14px 0;border-bottom:1px solid var(--linija)}
+.dan dt{font:500 15px/1.5 var(--f-tekst);color:#fff;display:flex;align-items:center;gap:8px;align-self:start;padding-top:1px}
+.dan dd{color:var(--tekst-2);font-size:16px;line-height:1.5}
+.dan dd b{color:#fff;font-weight:500}
+.satnica .napomena{grid-column:1/-1}
+@media (max-width:820px){.satnica,.satnica-glava{grid-template-columns:1fr}}
+@media (max-width:560px){.dan dl div{grid-template-columns:92px minmax(0,1fr);gap:10px;padding:12px 0}.dan dt{font-size:14px}.dan dd{font-size:15px}}
+
+/* ljudi */
+.vrste{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 48px;margin-top:40px}
+.vrste p{color:#1a1a1a;max-width:52ch}
+.vrste b{font-weight:700;color:#000}
+.grupa-n{font-size:clamp(22px,2.2vw,28px);line-height:1.15;margin-top:clamp(48px,5vw,72px)}
+.mozaik-ljudi{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:28px 16px;margin-top:24px}
+.mozaik-ljudi .gost{grid-column:span 2;grid-row:span 2}
+.oblik{aspect-ratio:1;display:grid;place-items:center;overflow:hidden;font:800 clamp(22px,2.4vw,34px)/1 var(--f-naslov);font-stretch:125%;letter-spacing:-.01em}
+.oblik img{width:100%;height:100%;object-fit:cover}
+.mozaik-ljudi li:nth-child(4n+1) .oblik{border-radius:50%}
+.mozaik-ljudi li:nth-child(4n+2) .oblik{border-radius:50% 0 50% 50%}
+.mozaik-ljudi li:nth-child(4n+3) .oblik{border-radius:999px 999px 0 0}
+.mozaik-ljudi li:nth-child(4n) .oblik{border-radius:0}
+.mozaik-ljudi li.gost .oblik{border-radius:50% 0 50% 50%}
+.mozaik-ljudi.ziri-lista li .oblik{border-radius:50%}
+.o-pink{background:var(--pink);color:#000}
+.o-violet{background:var(--violet);color:#fff}
+.o-crna{background:#000;color:#fff}
+.o-siva{background:var(--nav);color:#000}
+.osoba b{display:block;margin-top:12px;font:700 17px/1.25 var(--f-naslov);font-stretch:100%}
+.osoba span{display:block;margin-top:2px;font-size:15px;line-height:1.35;color:var(--tekst-2-sv)}
+.gost .oblik{width:72%;font-size:clamp(40px,4.6vw,64px)}
+.gost .natpis{margin-top:16px}
+.gost h3{font-size:clamp(20px,2vw,24px);line-height:1.15;margin-top:4px}
+.gost p:last-child{margin-top:8px;font-size:16px;line-height:1.55;color:#1a1a1a}
+.lista-napomena{margin-top:28px}
+.ziri{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px 48px;margin-top:clamp(48px,5vw,72px);border-top:1px solid var(--linija-sv);padding-top:32px;align-items:start}
+.ziri h3{font-size:clamp(22px,2.2vw,28px);line-height:1.15}
+.ziri-tekst p{margin-top:10px;color:#1a1a1a;max-width:46ch}
+.mozaik-ljudi.ziri-lista{grid-template-columns:repeat(3,minmax(0,1fr));margin-top:0}
+.foto-napomena{margin-top:32px}
+@media (max-width:900px){
+  .mozaik-ljudi{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .mozaik-ljudi .gost{grid-column:1/-1;grid-row:auto;display:grid;grid-template-columns:160px minmax(0,1fr);gap:0 24px;align-items:center}
+  .gost .oblik{width:100%;grid-row:span 3}
+  .gost .natpis{margin-top:0}
+  .gost p:last-child{grid-column:1/-1;margin-top:16px}
+  .ziri{grid-template-columns:1fr}
+  .mozaik-ljudi.ziri-lista{max-width:560px}
+}
+@media (max-width:640px){.vrste{grid-template-columns:1fr}}
+@media (max-width:560px){
+  .mozaik-ljudi,.mozaik-ljudi.ziri-lista{grid-template-columns:repeat(3,minmax(0,1fr));gap:20px 12px}
+  .mozaik-ljudi .gost{grid-template-columns:104px minmax(0,1fr);gap:0 16px}
+  .gost .oblik{font-size:36px}
+  .osoba b{font-size:15px;margin-top:10px}
+  .osoba span{font-size:14px}
+}
+
+/* ishod */
+.ishod{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 40px;margin-top:40px}
+.ishod li{border-top:1px solid var(--linija);padding:22px 0 30px}
+.ishod h3{font:700 20px/1.25 var(--f-naslov);font-stretch:100%}
+.ishod p{margin-top:8px;color:var(--tekst-2);font-size:16px;line-height:1.55}
+@media (max-width:900px){.ishod{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.ishod{grid-template-columns:1fr}.ishod li{padding:18px 0 20px}}
+
+/* nagrade */
+.stubovi{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;align-items:end;margin-top:48px}
+.stub{display:flex;flex-direction:column;gap:16px;min-width:0}
+.stub .iznos{font:800 clamp(40px,5.6vw,80px)/.95 var(--f-naslov);font-stretch:125%;letter-spacing:-.015em;font-variant-numeric:tabular-nums;white-space:nowrap}
+.stub i{display:block;height:calc(var(--v) * clamp(240px,28vw,380px));width:min(100%,320px);border-radius:999px 999px 0 0;margin-bottom:-16px}
+.stub:nth-child(1) i{background:var(--sunce)}
+.stub:nth-child(2) i{background:var(--pink)}
+.stub:nth-child(3) i{background:var(--violet)}
+.stub .mesto{border-top:2px solid #fff;padding-top:12px;font:500 16px/1.3 var(--f-tekst);color:var(--tekst-2)}
+.dodatno{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px 40px;margin-top:56px}
+.dodatno div{border-top:1px solid var(--linija);padding-top:20px}
+.dodatno h3{font:700 20px/1.25 var(--f-naslov);font-stretch:100%}
+.dodatno p{margin-top:8px;color:var(--tekst-2);font-size:16px;line-height:1.55}
+@media (max-width:900px){.dodatno{grid-template-columns:1fr;gap:20px}}
+@media (max-width:640px){
+  .stubovi{grid-template-columns:1fr;gap:22px;margin-top:36px}
+  .stub{gap:8px}
+  .stub i{height:28px;width:calc(var(--v) * 100%);min-width:56px;border-radius:0 999px 999px 0;margin:0}
+  .stub .mesto{border:0;padding:0}
+  .stub .iznos{font-size:40px}
+  .dodatno{margin-top:40px}
+}
+
+/* partneri i organizatori: uska traka */
+.traka-sek{padding-block:clamp(48px,6vw,80px);border-top:1px solid var(--linija)}
+.traka-sek + .traka-sek{border-top:1px solid var(--linija)}
+.traka-sek:last-of-type{border-bottom:1px solid var(--linija)}
+.par-red{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:24px 48px;align-items:start}
+.par-red > div > p{margin-top:10px;color:var(--tekst-2);max-width:44ch}
+.partner{display:grid;grid-template-columns:minmax(0,220px) minmax(0,1fr);gap:8px 32px;align-items:baseline;padding-bottom:20px;border-bottom:1px solid var(--linija)}
+.partner-ime{font:800 32px/1 var(--f-naslov);font-stretch:125%;letter-spacing:-.01em}
+.partner p:last-child{color:var(--tekst-2);font-size:16px}
+.partner-ostalo{margin-top:16px;color:var(--tekst-2);font-size:16px;display:flex;flex-direction:column;gap:8px}
+.org{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 48px}
+.org-kol{border-top:1px solid var(--linija);padding-top:20px}
+.org-znak{display:flex;align-items:center;min-height:32px}
+.org-znak svg{height:26px;width:auto;color:#fff}
+.org-znak span{font:700 24px/1 var(--f-naslov);font-stretch:125%}
+.org-kol p{margin-top:12px;color:var(--tekst-2);font-size:16px;max-width:48ch}
+.org-kol a{display:inline-flex;align-items:center;min-height:44px;margin-top:8px;color:#fff;text-underline-offset:4px;padding:0}
+.org-ispod{margin-top:28px;color:#fff;max-width:62ch}
+@media (max-width:820px){.par-red,.org{grid-template-columns:1fr}.partner{grid-template-columns:1fr}}
+
+/* pitanja */
+.pitanja{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:32px 48px;align-items:start}
+.pitanja .glava{position:sticky;top:112px}
+.faq details{border-bottom:1px solid var(--linija-sv)}
+.faq details:first-child{border-top:1px solid var(--linija-sv)}
+.faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:18px 0;min-height:44px;font:700 20px/1.3 var(--f-naslov);font-stretch:100%}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";flex:none;width:30px;height:30px;border-radius:50%;box-shadow:inset 0 0 0 1.5px #000;background:linear-gradient(#000,#000) center/12px 2px no-repeat,linear-gradient(#000,#000) center/2px 12px no-repeat}
+.faq summary:hover::after,.sklop > summary:hover::after{box-shadow:inset 0 0 0 2.5px currentColor}
+.faq details[open] summary::after{background:linear-gradient(#000,#000) center/12px 2px no-repeat}
+.faq details p{padding:0 0 22px;color:#1a1a1a;max-width:64ch}
+@media (max-width:900px){.pitanja{grid-template-columns:1fr}.pitanja .glava{position:static}}
+@media (max-width:560px){.faq summary{font-size:18px;padding:16px 0}}
+
+/* prijava */
+.prijava{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:40px 56px;align-items:start}
+.prijava .uvod-p{margin-top:20px;color:var(--tekst-2);max-width:44ch}
+.prijava .napomena{margin-top:14px}
+.odbrojavanje{margin-top:40px;border-top:1px solid var(--linija);padding-top:22px}
+.odbroj{display:flex;gap:28px;margin-top:12px;flex-wrap:wrap}
+.odbroj div{display:flex;flex-direction:column;gap:6px}
+.odbroj b{font:800 clamp(40px,4.4vw,56px)/1 var(--f-naslov);font-stretch:125%;font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.odbroj span{font-size:15px;color:var(--tekst-2)}
+.odbroj-ispod{margin-top:16px;font-size:15px;color:#fff}
+.forma-list{background:#fff;color:#000;color-scheme:light;border-radius:40px 0 40px 40px;padding:clamp(24px,3.4vw,44px)}
+.zbirna{margin:0 0 20px;padding:12px 16px;border-left:4px solid var(--greska);background:#FDECEE;color:#6E0014;font-weight:500;font-size:15px}
+.polja{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 20px}
+.polje{display:flex;flex-direction:column;gap:6px;min-width:0;border:0;margin:0;padding:0}
+.polje.puno{grid-column:1/-1}
+.polje label,.polje legend{font:500 16px/1.35 var(--f-tekst);color:#000;padding:0}
+.polje legend{margin-bottom:8px}
+.opc{font-weight:400;color:var(--tekst-2-sv);font-size:15px}
+.pomoc{font-size:14px;line-height:1.45;color:var(--tekst-2-sv)}
+.greska{font-size:14px;line-height:1.45;color:var(--greska);font-weight:500}
+.greska[hidden],.pomoc[hidden]{display:none}
+.polje input[type=text],.polje input[type=email],.polje input[type=tel],.polje textarea{font:400 16px/1.3 var(--f-tekst);color:#000;background:var(--polje);border:1.5px solid var(--polje-ivica);border-radius:30px;padding:13px 18px;width:100%;min-width:0;min-height:50px;margin:0}
+.polje textarea{border-radius:24px;min-height:150px;resize:vertical;line-height:1.5;padding:14px 18px}
+.polje ::placeholder{color:#6B6B6B;opacity:1}
+.polje input:focus,.polje textarea:focus{outline:3px solid #000;outline-offset:2px;border-color:#000;background:#fff}
+.polje [aria-invalid="true"]{border-color:var(--greska);box-shadow:inset 0 0 0 1px var(--greska)}
+.izbor{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 20px}
+.opcija label{display:block;cursor:pointer}
+.opcija input{position:absolute;opacity:0;width:1px;height:1px;margin:0}
+.opcija label span{display:flex;align-items:center;min-height:48px;border:1.5px solid #000;border-radius:30px;padding:10px 18px;font:500 16px/1.3 var(--f-tekst)}
+.opcija input:checked + span{background:#000;color:#fff}
+.opcija input:focus-visible + span{outline:3px solid #000;outline-offset:3px}
+.opcija input[aria-invalid="true"] + span{border-color:var(--greska)}
+.opcija .pomoc{margin-top:8px;padding-left:4px}
+.saglasnost{display:flex;gap:12px;align-items:flex-start;cursor:pointer}
+.saglasnost input{width:22px;height:22px;margin:1px 0 0;accent-color:#000;flex:none;cursor:pointer}
+.saglasnost input:focus-visible{outline:3px solid #000;outline-offset:2px}
+.polje .saglasnost > span{font:400 15px/1.5 var(--f-tekst);color:#1a1a1a}
+.posalji{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:14px 20px;align-items:center;padding-top:6px}
+.posalji .pomoc{max-width:36ch}
+.potvrda{background:#000;color:#fff;border-radius:24px;padding:clamp(24px,3vw,36px)}
+.potvrda::before{content:"";display:block;width:48px;height:24px;border-radius:999px 999px 0 0;background:var(--sunce);margin-bottom:18px}
+.potvrda h3{font-size:clamp(24px,2.6vw,32px);line-height:1.1}
+.potvrda p{margin-top:12px;color:var(--tekst-2)}
+.potvrda p:first-of-type{color:#fff}
+.potvrda:focus{outline:none}
+.zatvoreno h3{font-size:clamp(24px,2.6vw,32px);line-height:1.1}
+.zatvoreno p{margin-top:12px;color:#1a1a1a}
+.zatvoreno h3[hidden] + p{margin-top:0}
+@media (max-width:900px){.prijava{grid-template-columns:1fr}}
+@media (max-width:560px){
+  .polja{grid-template-columns:1fr;gap:20px}
+  .izbor{grid-template-columns:1fr}
+  .forma-list{border-radius:32px 0 32px 32px;padding:24px 18px}
+  .odbroj{gap:22px}
+  .odbroj b{font-size:40px}
+}
+
+/* podnožje */
+.podnozje{border-top:1px solid var(--linija);padding-block:56px}
+.pod-red{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:28px}
+.lockup{display:flex;flex-direction:column;align-items:flex-start;gap:14px}
+.lock-red{display:flex;align-items:center;gap:10px;color:#fff}
+.lock-red svg{height:26px;width:auto}
+.lock-red span{font:700 17px/1 var(--f-naslov);font-stretch:125%;white-space:nowrap}
+.lockup p{font-size:15px;color:var(--tekst-2)}
+.lockup p b{font-weight:500;color:#fff}
+.naslov{font:500 15px/1.3 var(--f-tekst);color:#fff;margin-bottom:6px}
+.pod-red > div > p:not(.naslov){font-size:15px;color:var(--tekst-2)}
+.donja{margin-top:40px;padding-top:20px;border-top:1px solid var(--linija);font-size:14px;line-height:1.5;color:var(--tekst-3)}
+@media (max-width:820px){.pod-red{grid-template-columns:1fr 1fr}.lockup{grid-column:1/-1}}
+@media (max-width:980px){.podnozje{padding-bottom:104px}}
+
+/* telefon: zbijeniji ritam */
+@media (max-width:560px){
+  :root{--pad:48px}
+  body{font-size:16px;line-height:1.55}
+  .podnaslov{font-size:17px;margin-top:14px}
+  .zasto-red{margin-top:28px;gap:28px}
+  .tekst{gap:14px}
+  .blok-n{margin-top:40px}
+  .spoj{margin-top:20px;padding-top:24px;gap:20px}
+  .problemi{margin-top:40px;padding-top:24px;gap:16px}
+  .primeri li{padding:9px 0;font-size:16px}
+  .tim-ai{margin-top:32px;gap:14px}
+  .uslovi{margin-top:32px;padding-top:22px}
+  .cta-red{margin-top:28px}
+  .satnica{margin-top:48px;gap:28px}
+  .vrste{margin-top:24px;gap:14px}
+  .grupa-n{margin-top:36px}
+  .lista-napomena{margin-top:20px}
+  .ziri{margin-top:36px;padding-top:24px;gap:20px}
+  .foto-napomena{margin-top:24px}
+  .ishod{margin-top:20px}
+  .ishod li{padding:16px 0 18px}
+  .dodatno{gap:16px}
+  .traka-sek{padding-block:40px}
+  .partner-ime{font-size:26px}
+  .partner{padding-bottom:16px}
+  .org{gap:20px}
+  .org-ispod{margin-top:20px}
+  .odbrojavanje{margin-top:28px}
+  .podnozje{padding-top:40px}
+  .pod-red{gap:20px}
+  .donja{margin-top:28px}
+}
+
+/* mobilna traka */
+.traka{position:fixed;left:max(12px,env(safe-area-inset-left,0px));right:max(12px,env(safe-area-inset-right,0px));bottom:max(12px,env(safe-area-inset-bottom,0px));z-index:45;display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--nav);color:#111;border-radius:30px;padding:8px 8px 8px 20px}
+.traka p{font-size:14px;line-height:1.3}
+.traka p b{font-weight:700}
+.traka .btn{min-height:44px;padding:14px 20px;font-size:14px}
+.js .traka.skriveno{visibility:hidden;opacity:0;transform:translateY(16px)}
+@media (prefers-reduced-motion:no-preference){.traka{transition:opacity .2s,transform .2s,visibility .2s}}
+@media (min-width:981px){.traka{display:none}}
+
+/* ===== v4: vraćene SEE UP komponente iz v2 (blokovi u heroju, obojene kartice) ===== */
+:root{--sunce-t:linear-gradient(65deg,#000 6%,#1B1574 28%,#600080 46%,#C50B2C 68%,#F68A3B 96%);--sunce-b:linear-gradient(245.41deg,#000 9.37%,#1B1574 30.33%,#600080 45.42%,#C50B2C 63.02%,#F68A3B 93.21%);--ploca:#0F0F12;--ploca-ivica:#2A2A2E}
+.hero{isolation:isolate;padding-bottom:clamp(56px,7vw,96px)}
+.hero::before{content:"";position:absolute;z-index:-1;right:-18%;top:-34%;width:min(1100px,120vw);aspect-ratio:1;border-radius:50%;background:var(--sunce-b);filter:blur(60px);opacity:.85;pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);gap:clamp(32px,4vw,64px);align-items:center}
+.hero-tekst{min-width:0}
+.hero h1{font-size:clamp(30px,4.5vw,66px)}
+.hero .red{grid-template-columns:1fr;gap:28px}
+.hero .cinjenice{grid-template-columns:repeat(3,auto)}
+.blokovi{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;width:100%;max-width:440px;justify-self:end}
+.b{display:flex;align-items:flex-end;aspect-ratio:1;padding:14%;font-style:normal;overflow:hidden}
+.b span{font:800 clamp(24px,2.6vw,38px)/1 var(--f-naslov);font-stretch:125%}
+.b.krug{border-radius:50%}.b.list{border-radius:50% 0 50% 50%}.b.list2{border-radius:0 50% 50% 50%}.b.pol{border-radius:50% 50% 0 0}.b.pol2{border-radius:0 0 50% 50%}
+.b.pink{background:var(--pink)}.b.violet{background:var(--violet);color:#fff}.b.sunce-b{background:var(--sunce-b)}.b.crimson{background:var(--crimson)}.b.narandza{background:var(--narandza)}.b.bela{background:#fff;color:#000}
+.b.oko{display:grid;place-items:center;padding:0;color:var(--narandza);box-shadow:inset 0 0 0 2px var(--narandza)}.b.oko svg{width:62%;height:62%}
+@media (prefers-reduced-motion:no-preference){
+  .blokovi .b{animation:slozi .7s cubic-bezier(.2,.9,.25,1.1) both}
+  .blokovi .b:nth-child(2){animation-delay:.07s}.blokovi .b:nth-child(3){animation-delay:.14s}.blokovi .b:nth-child(4){animation-delay:.21s}.blokovi .b:nth-child(5){animation-delay:.28s}.blokovi .b:nth-child(6){animation-delay:.35s}.blokovi .b:nth-child(7){animation-delay:.42s}.blokovi .b:nth-child(8){animation-delay:.49s}.blokovi .b:nth-child(9){animation-delay:.56s}
+}
+@keyframes slozi{from{transform:translateY(-48px) rotate(-90deg) scale(.6);opacity:0}to{transform:none;opacity:1}}
+@media (max-width:900px){
+  .hero-grid{grid-template-columns:1fr}
+  .blokovi{justify-self:start;max-width:340px}
+  .hero h1{font-size:clamp(30px,calc((100vw - 2 * var(--gutter)) / 10.9),66px)}
+}
+@media (max-width:560px){.hero .cinjenice{grid-template-columns:1fr 1fr}}
+
+/* koraci kao kartice, prva u sunrise */
+.koraci{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.koraci li,.koraci li:last-child{display:flex;flex-direction:column;gap:10px;background:var(--ploca);border:1px solid var(--ploca-ivica);border-radius:24px;padding:28px;min-height:250px}
+.koraci li::before{font-size:34px;color:var(--narandza);grid-row:auto}
+.koraci h3{margin-top:auto;grid-row:auto}
+.koraci li:first-child{background:var(--sunce-t);border-color:transparent}
+.koraci li:first-child::before{color:#fff}
+.koraci li:first-child .zasto p,.koraci li:first-child .zasto summary{color:#fff}
+@media (max-width:900px){.koraci{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:600px){.koraci{grid-template-columns:1fr}.koraci li,.koraci li:last-child{min-height:0;padding:22px}.koraci h3{margin-top:4px}}
+
+/* uslovi kao obojene pločice */
+.uslovi{border-top:0;padding-top:0;gap:16px}
+.uslovi li{background:#F2F2F2;border-radius:24px;padding:24px;min-height:150px;justify-content:flex-end}
+.uslovi li.u-pink{background:var(--pink)}.uslovi li.u-pink span{color:#000}
+.uslovi li.u-violet{background:var(--violet);color:#fff}
+.uslovi li{min-width:0}
+@media (max-width:560px){.uslovi b{white-space:normal;font-size:clamp(24px,7vw,30px)}.uslovi li{padding:20px;min-height:120px}}.uslovi li.u-violet span{color:#fff}
+
+/* šta ti ostaje: SEE UP mozaik */
+.ishod.mozaik{grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;grid-auto-flow:dense}
+.ishod.mozaik li{border-top:0;padding:32px;min-height:220px;display:flex;flex-direction:column;justify-content:flex-end;gap:8px;border-radius:24px}
+.ishod.mozaik li.siroko{grid-column:span 2;border-radius:200px;padding-inline:clamp(32px,4vw,56px)}
+.ishod.mozaik h3{font-size:clamp(20px,1.8vw,26px)}
+.ishod.mozaik p{margin-top:0}
+.ishod .t-pink{background:var(--pink);color:#000;border-radius:120px 0 120px 120px!important}.ishod .t-pink p{color:#000}
+.ishod .t-violet{background:var(--violet);color:#fff;border-radius:0 120px 120px 120px!important}.ishod .t-violet p{color:#fff}
+.ishod .t-sunce{background:var(--sunce-t);color:#fff}.ishod .t-sunce p{color:#fff}
+.ishod .t-bela{background:#fff;color:#000;box-shadow:inset 0 0 0 2px var(--narandza)}.ishod .t-bela p{color:#333}
+.ishod .t-tamna{background:var(--ploca);border:1px solid var(--ploca-ivica)}
+.ishod .t-crimson{background:var(--crimson);color:#fff}.ishod .t-crimson p{color:#fff}
+.ishod .t-crimson .tbd{color:#fff;background:rgba(0,0,0,.35);border-color:rgba(255,255,255,.6)}
+@media (max-width:900px){.ishod.mozaik{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.ishod.mozaik{grid-template-columns:1fr}.ishod.mozaik li,.ishod.mozaik li.siroko{grid-column:auto;min-height:0;border-radius:24px!important;padding:24px}}
+
+/* nagrade kao kartice, prvo mesto u sunrise */
+.stubovi{grid-template-columns:1.3fr 1fr 1fr;align-items:stretch}
+.stub{background:var(--ploca);border:1px solid var(--ploca-ivica);border-radius:24px;padding:30px;min-height:240px;justify-content:space-between}
+.stub i{display:none}
+.stub .mesto{order:-1;border-top:0;padding-top:0;color:#fff;font-weight:500}
+.stub:first-child{background:var(--sunce-t);border-color:transparent}
+@media (max-width:760px){.stubovi{grid-template-columns:1fr}.stub{min-height:0;gap:28px}}
+
+.program{display:block}
+.program .glava{position:static;margin-bottom:40px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px 48px;align-items:end}
+@media (max-width:900px){.program .glava{grid-template-columns:1fr;margin-bottom:28px}}
+.ishod .t-pink{border-radius:120px 120px 120px 0!important}
+.ishod .t-violet{border-radius:120px 0 120px 0!important}
+
+/* ===== v5: copy deck v5 — novi blokovi (pitch deck, satnica sa naslovima, žiri pita, FAQ grupe) ===== */
+.hero-rok{margin-top:14px;font-size:15px;line-height:1.45;color:var(--tekst-2)}
+.deck{margin-top:clamp(56px,6vw,88px);display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:28px 48px;align-items:start}
+.deck-glava h3{font-size:clamp(24px,2.6vw,34px);line-height:1.1}
+.deck-glava p{margin-top:12px;color:var(--tekst-2);font-size:17px;line-height:1.55;max-width:46ch}
+.deck-glava .napomena{margin-top:16px;font-size:15px;color:var(--tekst-3)}
+.slajdovi{counter-reset:s;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 32px}
+.slajdovi li{counter-increment:s;display:grid;grid-template-columns:48px minmax(0,1fr);gap:14px;align-items:start;padding:14px 0;border-top:1px solid var(--linija);color:var(--tekst-2);font-size:16px;line-height:1.5}
+.slajdovi li::before{content:counter(s);display:grid;place-items:center;aspect-ratio:16/10;border:1.5px solid var(--narandza);border-radius:6px;font:800 15px/1 var(--f-naslov);font-stretch:125%;color:var(--narandza);margin-top:1px}
+.slajdovi b{color:#fff;font-weight:500}
+.dan h4{border-bottom:0;padding-bottom:6px}
+.dan-fokus{font:700 17px/1.3 var(--f-naslov);font-stretch:100%;color:var(--narandza);padding-bottom:12px;border-bottom:2px solid #fff}
+.dan dl div{grid-template-columns:150px minmax(0,1fr)}
+.dan dt{flex-wrap:wrap;row-gap:4px}
+.dan dt .tbd{font-size:12px;line-height:1.5}
+.dan dd b{display:block;margin-bottom:2px}
+.osoba .fokus{margin-top:6px;font-size:14px;line-height:1.4;color:var(--tekst-2-sv)}
+.osoba .tbd{display:inline;margin-top:0}
+.gost-tbd{margin-top:12px}
+.ziri-pita{margin-top:clamp(48px,5vw,72px);border-top:1px solid var(--linija-sv);padding-top:32px}
+.ziri-pita-glava{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px 48px;align-items:end}
+.ziri-pita-glava h3{font-size:clamp(22px,2.2vw,28px);line-height:1.15}
+.ziri-pita-glava p{color:#1a1a1a;max-width:52ch}
+.zp-lista{counter-reset:z;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:28px}
+.zp-lista li{display:flex;flex-direction:column;gap:6px;background:#F2F2F2;border-radius:24px;padding:24px;min-height:180px;font-size:16px;line-height:1.5;color:#1a1a1a}
+.zp-lista li:not(.zp-uslov){counter-increment:z}
+.zp-lista li:not(.zp-uslov)::before{content:counter(z);font:800 30px/1 var(--f-naslov);font-stretch:125%;color:#000;margin-bottom:auto;padding-bottom:20px}
+.zp-lista b{font:700 18px/1.3 var(--f-naslov);font-stretch:100%;color:#000}
+.zp-lista .zp-uslov{background:var(--pink);color:#000;justify-content:flex-end;font-weight:500;border-radius:120px 120px 120px 0}
+.ziri-pita > .napomena{margin-top:16px}
+.faq-g + .faq-g{margin-top:36px}
+.faq .faq-n{margin:0 0 8px}
+.faq .faq-n + details{border-top:1px solid var(--linija-sv)}
+@media (max-width:1060px){.zp-lista{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:900px){.deck,.ziri-pita-glava{grid-template-columns:1fr}}
+@media (max-width:640px){.slajdovi{grid-template-columns:1fr}}
+@media (max-width:560px){
+  .deck{margin-top:48px}
+  .dan dl div{grid-template-columns:104px minmax(0,1fr)}
+  .slajdovi li{grid-template-columns:40px minmax(0,1fr);gap:12px;font-size:15px}
+  .zp-lista{grid-template-columns:1fr;gap:12px}
+  .zp-lista li{min-height:0;padding:20px}
+  .zp-lista li:not(.zp-uslov)::before{font-size:24px;padding-bottom:12px}
+  .zp-lista .zp-uslov{border-radius:24px}
+  .ziri-pita{margin-top:36px;padding-top:24px}
+}
+
+/* ===== v6: plan v2 — STVARAJ kao naziv izdanja, pet koraka, program sa satima, predavač ===== */
+.hero h1.izdanje{font-size:clamp(56px,8.4vw,124px);line-height:.88;letter-spacing:-.02em}
+.glavna{margin-top:clamp(14px,1.6vw,22px);font:800 clamp(24px,2.7vw,40px)/1.06 var(--f-naslov);font-stretch:125%;letter-spacing:-.01em}
+.glavna span{display:block}
+@media (max-width:900px){.hero h1.izdanje{font-size:clamp(50px,calc((100vw - 2 * var(--gutter)) / 6.1),124px)}}
+.koraci li:last-child{grid-column:span 2}
+@media (max-width:600px){.koraci li:last-child{grid-column:auto}}
+.dan dl div{grid-template-columns:120px minmax(0,1fr)}
+@media (max-width:560px){.dan dl div{grid-template-columns:112px minmax(0,1fr)}}
+.predavac{display:grid;grid-template-columns:minmax(0,.62fr) minmax(0,1.38fr);gap:32px clamp(32px,5vw,80px);align-items:start}
+.pred-oblik{border-radius:50% 0 50% 50%;font-size:clamp(56px,7vw,112px);width:100%;max-width:400px}
+.predavac .natpis{margin-bottom:12px}
+.pred-kad{margin-top:28px;font:700 18px/1.3 var(--f-naslov);font-stretch:100%}
+.pred-teme{counter-reset:t;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 32px;margin-top:12px}
+.pred-teme li{counter-increment:t;display:grid;grid-template-columns:28px minmax(0,1fr);gap:8px;padding:14px 0;border-top:1px solid var(--linija-sv);font-size:16px;line-height:1.5;color:#1a1a1a}
+.pred-teme li::before{content:counter(t);font:800 18px/1.4 var(--f-naslov);font-stretch:125%;color:#000}
+.pred-teme b{color:#000}
+@media (max-width:900px){.predavac{grid-template-columns:1fr}.pred-oblik{max-width:200px}}
+@media (max-width:640px){.pred-teme{grid-template-columns:1fr}}
+@media (max-width:560px){.pred-oblik{max-width:140px}.pred-kad{margin-top:20px}}
+.mozaik-ljudi:not(.ziri-lista){grid-template-columns:repeat(8,minmax(0,1fr))}
+@media (max-width:1100px){.mozaik-ljudi:not(.ziri-lista){grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media (max-width:560px){.mozaik-ljudi:not(.ziri-lista){grid-template-columns:repeat(3,minmax(0,1fr))}}
+.mozaik-ljudi.ziri-lista{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media (max-width:560px){.mozaik-ljudi.ziri-lista{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 16px}.ziri-lista .oblik{max-width:128px}}
+.zp-lista .zp-uslov{grid-column:span 2}
+@media (max-width:560px){.zp-lista .zp-uslov{grid-column:auto}}
+.lock-red span{order:0}
+@media (max-width:560px){.lock span{font-size:13px}.lock svg{height:19px}.lock{gap:8px}}
+
+/* ===== v7: koraci i kriterijumi skraćeni ===== */
+.koraci{grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+.koraci li,.koraci li:last-child{grid-column:auto;min-height:232px;padding:24px;gap:8px}
+.koraci li::before{font-size:40px}
+.koraci h3{font-size:clamp(19px,1.5vw,21px);line-height:1.15}
+.koraci .sta{font-size:16px;line-height:1.45;color:var(--tekst-2)}
+.koraci li:first-child .sta{color:#fff}
+@media (max-width:1100px){.koraci{grid-template-columns:repeat(2,minmax(0,1fr))}.koraci li,.koraci li:last-child{min-height:176px}.koraci li:last-child{grid-column:span 2}}
+@media (max-width:600px){.koraci{grid-template-columns:1fr;gap:10px}.koraci li,.koraci li:last-child{display:grid;grid-template-columns:34px minmax(0,1fr);column-gap:12px;row-gap:4px;align-items:baseline;min-height:0;grid-column:auto;padding:18px 20px}.koraci li::before{font-size:28px;grid-row:span 2}.koraci h3{margin:0;font-size:19px}.koraci .sta{grid-column:2;font-size:15px}}
+.zp-lista{grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.zp-lista li{min-height:0;padding:22px 24px;gap:4px}
+.zp-lista li:not(.zp-uslov)::before{font-size:22px;padding-bottom:14px;margin-bottom:0}
+.zp-lista b{font-size:19px}
+.zp-lista .zp-uslov{grid-column:1/-1;border-radius:200px;padding:22px 32px;font:700 clamp(18px,1.6vw,22px)/1.3 var(--f-naslov);font-stretch:100%}
+@media (max-width:640px){.zp-lista{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.zp-lista li{padding:18px}.zp-lista b{font-size:17px}.zp-lista li{font-size:15px}.zp-lista .zp-uslov{grid-column:1/-1;border-radius:24px;padding:18px 20px;font-size:17px}}
+
+/* ===== v8: hero činjenice kao jedna kartica sa tri polja ===== */
+.hero .cinjenice{grid-template-columns:repeat(3,auto);gap:0;justify-content:start;width:max-content;max-width:100%;padding:0;background:rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.16);border-radius:24px}
+.hero .cinjenice li{position:relative;display:flex;flex-direction:column;gap:3px;padding:16px 26px 17px 48px;min-width:0}
+.hero .cinjenice li + li{border-left:1px solid rgba(255,255,255,.16)}
+.hero .cinjenice li::before{content:"";position:absolute;left:24px;top:22px;width:12px;height:12px;border-radius:50%;background:var(--narandza)}
+.hero .cinjenice li:nth-child(2)::before{border-radius:50% 50% 0 0;background:var(--violet)}
+.hero .cinjenice li:nth-child(3)::before{border-radius:50% 0 50% 50%;background:var(--pink)}
+.hero .cinjenice b{font:700 18px/1.25 var(--f-naslov);font-stretch:100%;color:#fff;white-space:nowrap}
+.hero .cinjenice span{font-size:14px;line-height:1.35;color:var(--tekst-2);white-space:nowrap}
+@media (min-width:901px) and (max-width:1100px),(max-width:760px){.hero .cinjenice{grid-template-columns:repeat(2,auto)}.hero .cinjenice li:nth-child(3){grid-column:1/-1;border-left:0;border-top:1px solid rgba(255,255,255,.16)}}
+@media (max-width:560px){
+  .hero .cinjenice{grid-template-columns:1fr;width:100%;border-radius:20px}
+  .hero .cinjenice li{flex-direction:row;flex-wrap:wrap;align-items:baseline;column-gap:8px;padding:12px 16px 12px 38px}
+  .hero .cinjenice li + li{border-left:0;border-top:1px solid rgba(255,255,255,.16)}
+  .hero .cinjenice li::before{left:17px;top:18px;width:11px;height:11px}
+  .hero .cinjenice b{font-size:16px}
+}
+
+/* ===== v9: drugi ekran (zašto + za koga), Milovan kao treći, u SEE UP violet ===== */
+.uvod2{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:20px 64px;align-items:end}
+.sek .uvod2 h2{max-width:none;font-size:clamp(32px,5.2vw,74px);line-height:1}
+.uvod2-tekst{color:#1a1a1a;font-size:18px;line-height:1.55;max-width:46ch}
+.kome{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:24px 64px;margin-top:clamp(40px,5vw,64px);padding-top:32px;border-top:1px solid var(--linija-sv);align-items:start}
+.kome h3{font-size:clamp(22px,2.2vw,28px);line-height:1.15}
+.kome > div > p{margin-top:10px;color:#1a1a1a;max-width:44ch}
+.grupe{display:flex;flex-direction:column;gap:18px}
+.grupa > p{font:700 16px/1.3 var(--f-naslov);font-stretch:100%;margin-bottom:10px}
+.pilule{display:flex;flex-wrap:wrap;gap:8px}
+.pilule li{border:1.5px solid #000;border-radius:30px;padding:7px 16px;font:500 15px/1.3 var(--f-tekst)}
+.pilule.pune li{background:#000;color:#fff}
+.grupe .plus{width:40px;height:40px;background-size:16px 3px;margin-top:26px}
+.grupe .plus::after{width:3px;height:16px}
+#za-koga .uslovi{margin-top:clamp(32px,4vw,48px)}
+.violet-sek{background:var(--violet);color:#fff;--fokus:#fff}
+.violet-sek .natpis,.violet-sek .podnaslov{color:rgba(255,255,255,.88)}
+.violet-sek .pred-teme li{border-top-color:rgba(255,255,255,.35);color:rgba(255,255,255,.92)}
+.violet-sek .pred-teme li::before,.violet-sek .pred-teme b{color:#fff}
+@media (max-width:900px){.uvod2,.kome{grid-template-columns:1fr}}
+@media (max-width:560px){
+  .uvod2-tekst{font-size:16px}
+  .kome{margin-top:32px;padding-top:24px;gap:18px}
+  .pilule li{padding:6px 13px;font-size:14px}
+  .grupe{gap:12px 14px}
+  .grupe .plus{width:32px;height:32px;background-size:13px 3px;margin-top:0}
+  .grupe .plus::after{height:13px}
+}
+
+.uslovi.uslovi3{grid-template-columns:repeat(3,minmax(0,1fr));margin-top:0;gap:12px;align-self:center}
+.uslovi3 li{min-height:136px}
+@media (max-width:560px){.uslovi.uslovi3{gap:8px}.uslovi3 li{min-height:100px;padding:16px 14px}.uslovi3 b{white-space:nowrap;font-size:clamp(20px,5.8vw,24px)}.uslovi3 span{font-size:14px}}
+
+.pred-oblik{overflow:hidden}
+.pred-oblik img{display:block;width:100%;height:100%;object-fit:cover}
+.pred-tekst .podnaslov + .podnaslov{margin-top:14px}
+.pred-tekst .pred-ispod{margin-top:6px}
+.predavac{align-items:center}
+@media (max-width:900px){.predavac{align-items:start}.pred-oblik{max-width:240px}}
+@media (max-width:560px){.pred-oblik{max-width:180px}}
+
+.pred-tekst .podnaslov b{color:#fff;font-weight:700}
+.pred-blok{margin-top:26px;background:var(--pink);color:#000;border-radius:24px 24px 24px 0;padding:22px 26px;max-width:60ch}
+.pred-blok .pred-kad{margin:0;font:800 clamp(19px,1.8vw,24px)/1.2 var(--f-naslov);font-stretch:125%;color:#000}
+.pred-blok p + p{margin-top:8px;font-size:17px;line-height:1.5;color:#000}
+@media (max-width:560px){.pred-blok{padding:18px 20px;margin-top:20px}.pred-blok p + p{font-size:16px}}
+
+.satnica-kratko .dan dl div{grid-template-columns:72px minmax(0,1fr);padding:12px 0}
+.satnica-kratko .dan dt{font-variant-numeric:tabular-nums;color:var(--tekst-2)}
+.satnica-kratko .dan dd b{margin:0}
+@media (max-width:560px){.satnica-kratko .dan dl div{grid-template-columns:60px minmax(0,1fr);padding:11px 0}}
+.h2-pod{font-size:.56em;line-height:1.15;margin-top:.25em}
+.ishod.mozaik li{min-height:180px}
+.ishod.mozaik h3{font-size:clamp(21px,1.9vw,27px)}
+@media (max-width:560px){.ishod.mozaik{grid-template-columns:1fr 1fr;gap:10px}.ishod.mozaik li,.ishod.mozaik li.siroko{min-height:150px;padding:18px 16px}.ishod.mozaik h3{font-size:18px;line-height:1.2}.ishod.mozaik p{font-size:14px;line-height:1.45}}
+
+.ziri-pita h3{font-size:clamp(22px,2.2vw,28px);line-height:1.15}
+.kriterijumi{counter-reset:kr;display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.kriterijumi li{counter-increment:kr;display:flex;align-items:center;gap:10px;border:1.5px solid #000;border-radius:30px;padding:7px 18px 7px 7px;font:700 17px/1.2 var(--f-naslov);font-stretch:100%}
+.kriterijumi li::before{content:counter(kr);display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:#000;color:#fff;font:800 14px/1 var(--f-naslov);font-stretch:125%}
+.zp-traka{margin-top:16px;background:var(--pink);color:#000;border-radius:200px;padding:20px 30px;font:700 clamp(17px,1.6vw,22px)/1.3 var(--f-naslov);font-stretch:100%}
+@media (max-width:560px){.kriterijumi{gap:8px}.kriterijumi li{font-size:15px;padding:5px 14px 5px 5px;gap:8px}.kriterijumi li::before{width:24px;height:24px;font-size:12px}.zp-traka{border-radius:24px;padding:16px 20px;font-size:17px}}
+@media (max-width:560px){.mozaik-ljudi:not(.ziri-lista),.mozaik-ljudi.ziri-lista{grid-template-columns:repeat(4,minmax(0,1fr));gap:18px 8px}.ziri-lista .oblik{max-width:none}.mozaik-ljudi .oblik{font-size:20px}.osoba b{font-size:13px;line-height:1.2;margin-top:8px;overflow-wrap:anywhere}.osoba span{font-size:12px}}
+.partner{align-items:center}
+.partner-ime img{display:block;height:36px;width:auto}
+@media (max-width:560px){.partner-ime img{height:30px}}
+#vikend .program .glava{grid-template-columns:1fr}
+.prijava-karta h3{font-size:clamp(22px,2.4vw,30px);line-height:1.15}
+.prijava-karta p{margin-top:10px;color:#1a1a1a;max-width:44ch}
+.prijava-karta .btn{margin-top:24px}
+.lock-red span{font:700 17px/1 var(--f-naslov);font-stretch:125%}
+.podnozje .mreze{margin-top:6px}
+.podnozje a{text-underline-offset:3px}
+.lock svg{height:24px}
+.lock svg.p011{height:31px}
+@media (max-width:980px){.lock svg{height:22px}.lock svg.p011{height:28px}}
+@media (max-width:380px){.lock svg{height:19px}.lock svg.p011{height:24px}.lock{gap:7px}}
+@media (max-width:340px){.lock svg{height:17px}.lock svg.p011{height:21px}.lock{gap:6px}}
+.pravila-sek{padding-block:clamp(40px,5vw,64px);border-top:1px solid var(--linija)}
+section.pravila-sek[id]{scroll-margin-top:96px}
+.pravila details{border-bottom:1px solid var(--linija);scroll-margin-top:96px}
+.pravila details:first-child{border-top:1px solid var(--linija)}
+.pravila summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:18px 0;min-height:44px;font:700 20px/1.3 var(--f-naslov);font-stretch:100%;color:#fff}
+.pravila summary::-webkit-details-marker{display:none}
+.pravila summary::after{content:"";flex:none;width:30px;height:30px;border-radius:50%;box-shadow:inset 0 0 0 1.5px #fff;background:linear-gradient(#fff,#fff) center/12px 2px no-repeat,linear-gradient(#fff,#fff) center/2px 12px no-repeat}
+.pravila details[open] summary::after{background:linear-gradient(#fff,#fff) center/12px 2px no-repeat}
+.pravila-tekst{padding:0 0 28px;max-width:72ch;color:var(--tekst-2);font-size:16px;line-height:1.6}
+.pravila-tekst h3{font:700 17px/1.3 var(--f-naslov);font-stretch:100%;color:#fff;margin-top:22px}
+.pravila-tekst p{margin-top:6px}
+.pravila-tekst ol{list-style:decimal;padding-left:22px;margin-top:12px;display:grid;gap:8px}
+.pravila-tekst b{color:#fff;font-weight:500}
+.pravila-tekst a,.donja a{color:inherit;text-underline-offset:3px}
+@media (max-width:560px){.pravila summary{font-size:18px}}
+.modal{display:none;position:fixed;inset:0;z-index:90;background:rgba(0,0,0,.72);overflow-y:auto;padding:clamp(16px,5vh,64px) var(--gutter)}
+.modal:target{display:block}
+.modal-in{position:relative;max-width:760px;margin:0 auto;background:#fff;color:#000;border-radius:28px;padding:clamp(24px,4vw,48px);--fokus:#000}
+.modal-in h2{font-size:clamp(24px,3vw,34px);line-height:1.1;padding-right:96px}
+.modal-x{position:absolute;top:clamp(18px,3vw,36px);right:clamp(18px,3vw,36px);display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border-radius:30px;box-shadow:inset 0 0 0 1.5px #000;color:#000;text-decoration:none;font:500 15px/1 var(--f-tekst)}
+.modal-x:hover{background:#000;color:#fff}
+.modal .pravila-tekst{padding:8px 0 0;max-width:none;color:#1a1a1a}
+.modal .pravila-tekst h3,.modal .pravila-tekst b{color:#000}
+.modal .pravila-tekst a{color:#000}
+</style>
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<a class="preskoci" href="#sadrzaj">Preskoči na sadržaj</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="seeup" viewBox="0 0 200 43"><g fill="currentColor"><path d="M0 29.9766L2.79132 24.8828C5.49402 27.0465 10.4564 28.6242 14.887 28.6242C19.3177 28.6242 20.2038 27.8579 20.2038 26.6408C20.2038 25.4237 18.7417 25.018 15.2858 24.6574L11.0767 24.1616C3.81037 23.3952 0.664599 21.3217 0.664599 17.1745C0.664599 12.1709 6.24723 9.33105 14.5326 9.33105C22.8179 9.33105 23.837 10.458 26.7169 12.3062L24.4129 17.2196C21.8875 15.5518 18.0771 14.4699 14.5769 14.515C11.2982 14.515 8.90563 15.3264 8.90563 16.5885C8.90563 17.445 10.1462 17.9859 13.1148 18.2564L17.3682 18.7523C25.1218 19.5186 28.4448 21.6823 28.4448 25.9196C28.4448 30.788 22.9951 34.0786 14.4883 34.0786C9.03855 34.0786 3.10146 32.4558 0.0443068 30.0667L0 29.9766Z"/><path d="M30.6152 33.2668V10.0068H54.851V15.2809H38.812V19.1576H53.5661V23.7104H38.812V28.0378H55.1611V33.3119H30.6152V33.2668Z"/><path d="M57.377 33.2668V10.0068H81.6127V15.2809H65.5737V19.1576H80.3278V23.7104H65.5737V28.0378H81.9228V33.3119H57.377V33.2668Z"/><path d="M138.945 22.6285V10.0068H147.408V22.1327C147.408 25.8741 149.801 27.6772 153.744 27.6772C157.687 27.6772 160.08 25.829 160.08 22.1327V10.0068H168.542V22.6285C168.542 29.886 163.137 33.8528 153.788 33.8528C144.351 33.8528 138.945 29.886 138.945 22.6285Z"/><path d="M171.334 33.2668V10.0068H189.943C196.412 10.0068 200 12.9369 200 18.1659C200 23.3949 196.367 26.0995 189.899 26.0995H179.797V33.2668H171.334ZM179.797 21.2762H187.107C189.943 21.2762 191.538 20.1042 191.538 17.9856C191.538 15.8669 189.987 14.74 187.107 14.74H179.797V21.2762Z"/><use href="#seeup-oko-putanje"/></g></symbol>
+    <g id="seeup-oko-putanje"><path d="M131.325 21.2766C131.325 33.0418 121.977 42.5532 110.413 42.5532C98.8487 42.5532 89.5 33.0418 89.5 21.2766C89.5 9.51136 98.8487 0 110.413 0C121.977 0 111.387 2.75064e-06 111.831 0.0450803C102.393 0.721243 94.994 8.74504 94.994 18.4818C94.994 28.2185 103.146 37.0086 113.204 37.0086C123.262 37.0086 130.661 29.4356 131.325 19.8792V21.2766Z"/><path d="M129.863 15.1911C129.641 14.2445 129.331 13.3429 128.932 12.4865C126.894 8.02378 123.305 4.3725 118.919 2.29894C117.856 1.75801 116.792 1.44246 115.596 1.172C114.267 0.901534 112.893 1.08185 111.653 1.53262C106.38 3.60619 102.747 8.65487 102.924 14.8305C103.101 22.2232 108.906 28.3087 116.172 28.7144C122.331 29.075 127.381 25.3335 129.464 19.9242C130.084 18.3916 130.217 16.7688 129.863 15.146V15.1911ZM125.166 16.6336C123.305 18.5268 119.406 17.5802 116.438 14.56C113.425 11.4948 112.539 7.52793 114.4 5.67975C116.261 3.7865 120.16 4.73312 123.128 7.75331C126.097 10.7735 127.027 14.7403 125.166 16.6336Z"/></g>
+    <symbol id="oko" viewBox="89 0 43 43"><g fill="currentColor"><use href="#seeup-oko-putanje"/></g></symbol>
+    <!-- Project 011 · mali, znak bez proreza (ispod 40 px visine); izvor: claude/project011-logo-svg.md -->
+    <symbol id="p011-mali" viewBox="0 0 149.47 43"><path fill="currentColor" d="M-0 33.31V10H5.31Q8.38 10 9.75 11.26Q11.11 12.51 11.21 15.4Q11.26 16.73 11.26 17.85Q11.26 18.98 11.21 20.26Q11.11 23.14 9.75 24.4Q8.38 25.65 5.31 25.65H4V33.31H-0ZM4 22.12H5.31Q6.24 22.12 6.7 21.69Q7.16 21.27 7.21 20.47Q7.25 19.69 7.27 18.76Q7.28 17.83 7.27 16.9Q7.25 15.97 7.21 15.19Q7.16 14.38 6.7 13.96Q6.24 13.53 5.31 13.53H4V22.12ZM13.71 33.31V10H19.02Q22.09 10 23.46 11.26Q24.82 12.51 24.92 15.4Q24.95 16.29 24.96 16.98Q24.97 17.67 24.96 18.36Q24.95 19.04 24.92 19.9Q24.86 21.72 24.31 22.87Q23.75 24.02 22.58 24.62L25.26 33.31H21.01L18.81 25.29H17.71V33.31H13.71ZM17.71 21.76H19.02Q19.95 21.76 20.41 21.33Q20.87 20.9 20.92 20.11Q20.96 19.33 20.97 18.49Q20.99 17.65 20.97 16.81Q20.96 15.97 20.92 15.19Q20.87 14.38 20.41 13.96Q19.95 13.53 19.02 13.53H17.71V21.76ZM33.34 33.59Q30.32 33.59 28.96 32.31Q27.61 31.02 27.55 28.05Q27.51 26.52 27.5 24.91Q27.48 23.29 27.48 21.65Q27.48 20 27.5 18.39Q27.51 16.77 27.55 15.25Q27.61 12.28 28.96 11Q30.32 9.73 33.34 9.73Q36.38 9.73 37.71 11Q39.03 12.28 39.12 15.25Q39.17 16.8 39.2 18.41Q39.23 20.03 39.23 21.67Q39.23 23.31 39.2 24.91Q39.17 26.52 39.12 28.05Q39.03 31.02 37.71 32.31Q36.38 33.59 33.34 33.59ZM33.34 30.32Q34.23 30.32 34.66 29.93Q35.1 29.54 35.11 28.78Q35.19 27.2 35.21 25.37Q35.24 23.54 35.24 21.64Q35.24 19.73 35.21 17.91Q35.18 16.08 35.11 14.51Q35.1 13.76 34.65 13.38Q34.2 12.99 33.34 12.99Q32.49 12.99 32.03 13.38Q31.58 13.76 31.55 14.51Q31.49 16.08 31.45 17.91Q31.42 19.73 31.42 21.64Q31.42 23.54 31.46 25.37Q31.49 27.2 31.55 28.78Q31.58 29.54 32.03 29.93Q32.49 30.32 33.34 30.32ZM46.93 33.59Q44.91 33.59 43.73 33.03Q42.55 32.47 42.02 31.25Q41.5 30.02 41.44 28.04Q41.43 27.26 41.43 26.33Q41.43 25.4 41.44 24.62H45.21Q45.19 25.18 45.19 25.94Q45.18 26.7 45.19 27.45Q45.19 28.21 45.21 28.77Q45.24 29.53 45.65 29.92Q46.06 30.32 46.93 30.32Q47.81 30.32 48.18 29.92Q48.56 29.53 48.56 28.77V10H52.56V28.04Q52.56 31.02 51.3 32.3Q50.04 33.59 46.93 33.59ZM55.35 33.31V10H64.9V13.53H59.35V19.71H64.61V23.24H59.35V29.78H64.9V33.31H55.35ZM73.05 33.59Q69.95 33.59 68.64 32.31Q67.33 31.02 67.26 28.04Q67.24 26.7 67.23 25.05Q67.21 23.4 67.21 21.65Q67.21 19.9 67.23 18.24Q67.24 16.59 67.26 15.23Q67.3 12.68 68.67 11.2Q70.03 9.73 73.05 9.73Q76.02 9.73 77.35 11.01Q78.69 12.29 78.77 15.25Q78.78 15.75 78.78 16.35Q78.78 16.95 78.77 17.55Q78.76 18.16 78.74 18.65H74.74Q74.75 18.08 74.77 17.33Q74.78 16.58 74.78 15.84Q74.78 15.09 74.77 14.52Q74.75 13.77 74.31 13.38Q73.86 13 73.05 13Q72.2 13 71.75 13.38Q71.29 13.77 71.26 14.52Q71.21 16.14 71.18 17.96Q71.16 19.78 71.16 21.66Q71.16 23.54 71.18 25.35Q71.21 27.16 71.26 28.78Q71.29 29.53 71.75 29.93Q72.2 30.32 73.05 30.32Q73.94 30.32 74.4 29.93Q74.87 29.53 74.88 28.78Q74.9 28.21 74.9 27.45Q74.91 26.7 74.9 25.94Q74.89 25.19 74.88 24.62H78.88Q78.91 25.4 78.91 26.33Q78.92 27.26 78.89 28.04Q78.8 31.02 77.45 32.31Q76.09 33.59 73.05 33.59ZM83.99 33.31V13.53H80.36V10H91.62V13.53H87.99V33.31H83.99ZM109.17 0H113.85V42.55H109.17V14.04H103.64V42.55H98.96V11.06H104.88C103.64 10.49 102.79 9.24 102.79 7.79C102.79 5.79 104.41 4.17 106.41 4.17C107.52 4.17 108.51 4.67 109.17 5.46ZM106.41 6.3C105.59 6.3 104.92 6.97 104.92 7.79C104.92 8.61 105.59 9.28 106.41 9.28C107.23 9.28 107.9 8.61 107.9 7.79C107.9 6.97 107.23 6.3 106.41 6.3ZM107.94 11.06H109.17V10.12C108.84 10.51 108.42 10.84 107.94 11.06ZM127.06 33.59Q124.32 33.59 122.82 32.15Q121.32 30.71 121.26 28.05Q121.22 25.98 121.2 23.81Q121.19 21.64 121.2 19.48Q121.22 17.31 121.26 15.25Q121.32 12.57 122.82 11.15Q124.32 9.73 127.06 9.73Q129.77 9.73 131.26 11.15Q132.75 12.57 132.83 15.25Q132.88 16.8 132.91 18.42Q132.94 20.04 132.94 21.67Q132.94 23.29 132.91 24.9Q132.88 26.5 132.83 28.05Q132.75 30.71 131.26 32.15Q129.77 33.59 127.06 33.59ZM127.06 30.32Q128.75 30.32 128.83 28.78Q128.92 26.43 128.96 23.99Q128.99 21.56 128.96 19.15Q128.92 16.75 128.83 14.51Q128.78 12.99 127.06 12.99Q125.3 12.99 125.26 14.51Q125.21 16.27 125.17 18.08Q125.14 19.89 125.14 21.71Q125.14 23.53 125.17 25.31Q125.21 27.09 125.26 28.78Q125.3 30.32 127.06 30.32ZM137.2 33.31V13.59H135.78L135.7 12.16L138.04 10H141.2V33.31H137.2ZM145.46 33.31V13.59H144.05L143.96 12.16L146.31 10H149.46V33.31H145.46Z"/></symbol>
+  </defs>
+</svg>
+
+<nav class="nav" id="nav" aria-label="Glavna navigacija"><div class="wrap"><div class="nav-in">
+  <a class="lock" href="#vrh" aria-label="SEE UP × Project 011, na vrh strane"><svg viewBox="0 0 200 43" aria-hidden="true"><use href="#seeup"/></svg><span aria-hidden="true">×</span><svg class="p011" viewBox="0 0 149.47 43" aria-hidden="true"><use href="#p011-mali"/></svg></a>
+  <button class="meni-dugme" id="meni-dugme" type="button" aria-expanded="false" aria-controls="meni" aria-label="Otvori meni">Meni</button>
+  <ul class="linkovi" id="meni">
+    <li><a href="#za-koga">Za koga</a></li>
+    <li><a href="#vikend">Vikend</a></li>
+    <li><a href="#ljudi">Mentori i žiri</a></li>
+    <li><a href="#nagrade">Nagrade</a></li>
+    <li><a href="#pitanja">Pitanja</a></li>
+  </ul>
+  <a class="btn nav-cta" href="#prijava" data-prijava data-umami-event="prijava-klik">Prijavi se</a>
+</div></div></nav>
+
+<main id="sadrzaj" tabindex="-1">
+
+<!-- 1. HERO -->
+<header class="hero" id="vrh">
+  <div class="wrap hero-grid">
+  <div class="hero-tekst">
+    <p class="ime"><span translate="no">SEE UP Build Session&nbsp;#01</span> · startap hakaton</p>
+    <h1 class="izdanje" translate="no">STVARAJ</h1>
+    <p class="glavna"><span>AI je ubrzao sve.</span> <span>Sada je red na nas da stvaramo.</span></p>
+    <div class="red">
+      <div>
+        <p class="lead"><b>Subota: od problema do prve verzije.<br>Nedelja: od prve verzije do prvih kupaca.</b><br> Nađi problem koji poznaješ iz prve ruke. Mentori i AI alati su tu oba dana.</p>
+        <div class="akcije" id="hero-akcije">
+          <a class="btn" href="#prijava" data-prijava data-umami-event="prijava-klik">Prijavi se</a>
+          <a class="btn svetlo" href="#vikend">Kako izgleda vikend</a>
+        </div>
+      </div>
+      <ul class="cinjenice">
+        <li><b>28–29.&nbsp;novembar</b><span>subota i nedelja</span></li>
+        <li><b>CDT Hub, 6.&nbsp;sprat</b><span>Kneza Miloša 12, Beograd</span></li>
+        <li><b>Prijave do 19.&nbsp;novembra</b></li>
+      </ul>
+    </div>
+  </div>
+  <div class="blokovi" aria-hidden="true">
+    <i class="b list pink"></i>
+    <i class="b krug sunce-b"></i>
+    <i class="b pol violet"></i>
+    <i class="b krug bela"><span>45</span></i>
+    <i class="b krug oko"><svg viewBox="89 0 43 43"><use href="#seeup-oko-putanje" fill="currentColor"/></svg></i>
+    <i class="b list2 narandza"></i>
+    <i class="b pol2 crimson"></i>
+    <i class="b kv sunce-b"></i>
+    <i class="b list violet"><span>#01</span></i>
+  </div>
+  </div>
+</header>
+
+<!-- 2. PREDAVAČ (violet) -->
+<section class="sek violet-sek" id="predavac" aria-labelledby="predavac-n">
+  <div class="wrap predavac">
+    <!-- Biografija: CGA Belgrade (govornici), Finesa (Design Thinking, 10. izdanje). Nordeus: plan kaže ex-Nordeus, javni izvori ga i dalje vode u Nordeusu [TBD Milovan potvrdi]. -->
+    <div class="oblik o-pink pred-oblik"><img src="milovan-dekic.jpg" alt="Milovan Dekić drži predavanje" width="400" height="400" loading="lazy" decoding="async"></div>
+    <div class="pred-tekst">
+      <p class="natpis">Gostujući predavač</p>
+      <h2 id="predavac-n"><span>Milovan Dekić,</span> <span class="h2-pod">autor knjige „Stvaraj“</span></h2>
+      <p class="podnaslov">Milovan se bavi istraživanjem korisnika: kako ljudi stvarno koriste proizvode i zašto. Bio je User Research Lead u Nordeusu, gde je timovima koji prave igre pomagao da odluke o proizvodu donose na osnovu istraživanja. Pre toga je predavao sociologiju na Univerzitetu u Beogradu.</p>
+      <p class="podnaslov">Sa Markom Jevtićem napisao je <b>„Design Thinking“</b>, knjigu koja je izašla u deset izdanja. Njegova nova knjiga, <b>„Stvaraj“</b>, metod je po kome radimo ceo vikend, a primerak dobija svaki tim.</p>
+      <div class="pred-blok">
+        <p class="pred-kad">Subota, 09:45–10:45</p>
+        <p><b>Uvodno predavanje:</b> kako se od ideje dođe do pravog problema, kako se proveravaju pretpostavke i kako se slaže pitch deck.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. ZAŠTO I ZA KOGA (bela, jedan ekran) -->
+<!-- Duža verzija ključne poruke iz taba Marketing [TBD Emilija]: tab još nema ključnu poruku. -->
+<section class="sek svetlo-sek" id="za-koga" aria-labelledby="za-koga-n">
+  <div class="wrap">
+    <div class="uvod2">
+      <h2 id="za-koga-n"><span>Kod više nije usko grlo.</span> <span>Problem jeste.</span></h2>
+      <p class="uvod2-tekst">AI je ubrzao i pojeftinio pravljenje softvera, pa radna verzija danas nastaje za vikend. Najteže je ostalo isto: naći problem koji ljudi stvarno imaju, napraviti ono što im treba i doći do prvih kupaca.</p>
+    </div>
+
+    <div class="kome">
+      <div>
+        <h3>Ne moraš da budeš programer.</h3>
+        <p>Dovoljno je da znaš problem. Prvu verziju praviš uz AI alate kao što je <span translate="no">Lovable</span>, a mentori su tu oba dana da ti pomognu da ih koristiš i da dođeš do rešenja.</p>
+      </div>
+      <!-- Tačna starosna granica po godini rođenja [TBD]: vidljivo u FAQ-u -->
+      <ul class="uslovi uslovi3">
+        <li class="u-pink"><b>do 30</b><span>godina</span></li>
+        <li><b>do 3</b><span>u timu, ili sam</span></li>
+        <li class="u-violet"><b>45</b><span>mesta</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 4. KAKO IZGLEDA VIKEND + PROGRAM (crna) -->
+<section class="sek" id="vikend" aria-labelledby="vikend-n">
+  <div class="wrap">
+    <div class="program">
+      <div class="glava">
+        <h2 id="vikend-n">Pet koraka, od problema do prvih kupaca.</h2>
+      </div>
+      <ol class="koraci">
+        <li><h3>Pronađi problem</h3><p class="sta">Ko ga ima, koliko je važan i kako se danas rešava.</p></li>
+        <li><h3>Istraži tržište</h3><p class="sta">Ko već rešava isti problem i po čemu ste drugačiji.</p></li>
+        <li><h3>Napravi MVP</h3><p class="sta">Najmanja verzija koja radi i koju žiri može sam da proba.</p></li>
+        <li><h3>Pronađi prve kupce</h3><p class="sta">Kako dolazite do prvih deset kupaca za 30&nbsp;dana.</p></li>
+        <li><h3>Pitch</h3><p class="sta">Tri minuta prezentacije sa demom, tri minuta pitanja.</p></li>
+      </ol>
+    </div>
+
+    <!-- Program (okvirno, plan v2 2.2; kraći prikaz, samo početna vremena) -->
+    <div class="satnica satnica-kratko" id="program">
+      <div class="satnica-glava">
+        <h3>Program</h3>
+      </div>
+      <div class="dan">
+        <h4>Subota <span>28.&nbsp;novembar</span></h4>
+        <p class="dan-fokus">Od problema do prvog MVP-ja</p>
+        <dl>
+          <div><dt>09:00</dt><dd><b>Registracija i otvaranje</b></dd></div>
+          <div><dt>09:45</dt><dd><b>Milovan Dekić, uvodno predavanje</b></dd></div>
+          <div><dt>11:00</dt><dd><b>Istraživanje problema i tržišta</b></dd></div>
+          <div><dt>13:00</dt><dd><b>Ručak</b></dd></div>
+          <div><dt>13:45</dt><dd><b>Rešenje i razvoj MVP-ja</b></dd></div>
+          <div><dt>17:30</dt><dd><b>Provera napretka sa mentorima</b></dd></div>
+          <div><dt>18:00</dt><dd><b>Rad na projektima, do 23:00</b></dd></div>
+        </dl>
+      </div>
+      <div class="dan">
+        <h4>Nedelja <span>29.&nbsp;novembar</span></h4>
+        <p class="dan-fokus">Od MVP-ja do prvih kupaca</p>
+        <dl>
+          <div><dt>09:00</dt><dd><b>Završavanje MVP-ja</b></dd></div>
+          <div><dt>11:30</dt><dd><b>Testiranje i poslovni model</b></dd></div>
+          <div><dt>13:15</dt><dd><b>Ručak</b></dd></div>
+          <div><dt>14:00</dt><dd><b>Finalizacija i pitch deck</b></dd></div>
+          <div><dt>16:00</dt><dd><b>Rok za predaju projekata</b></dd></div>
+          <div><dt>17:00</dt><dd><b>Finalni pitch pred žirijem</b></dd></div>
+          <div><dt>19:00</dt><dd><b>Proglašenje pobednika</b></dd></div>
+        </dl>
+      </div>
+      <p class="napomena">Satnica je okvirna.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 5. MENTORI I ŽIRI (bela) -->
+<section class="sek svetlo-sek" id="ljudi" aria-labelledby="ljudi-n">
+  <div class="wrap"><div class="prag">
+    <h2 id="ljudi-n">Ljudi koji će vam reći šta ne valja.</h2>
+    <p class="podnaslov">Mentori su uz timove oba dana i ne ocenjuju one sa kojima su radili. Startap mentori pomažu oko problema, tržišta i prvih kupaca, a tehnički oko AI alata i MVP-ja.</p>
+
+    <h3 class="grupa-n">Mentori</h3>
+    <!-- Fotografije [TBD]: <img src="…" alt=""> ide unutar .oblik, inicijali se brišu. Oznaka startap / tehnički [TBD].
+         Fokus (interni plan): Ilić proizvod/MVP · Gajić proizvod, poslovni model · Popović tehnika/MVP · Lekić AI agenti, B2B prodaja · Grujović marketing · Pavlović preduzetništvo, agritech · Jovanović [TBD] · Verović proizvod/MVP -->
+    <ul class="mozaik-ljudi" aria-label="Mentori">
+      <li class="osoba"><div class="oblik o-pink" aria-hidden="true">AI</div><b>Aleksandar Ilić</b><span>Goodnotes</span></li>
+      <li class="osoba"><div class="oblik o-violet" aria-hidden="true">SG</div><b>Svetislav Gajić</b><span>Valyrion</span></li>
+      <li class="osoba"><div class="oblik o-crna" aria-hidden="true">BP</div><b>Balša Popović</b><span>Valyrion</span></li>
+      <li class="osoba"><div class="oblik o-siva" aria-hidden="true">LL</div><b>Lazar Lekić</b><span>Casper Agents</span></li>
+      <li class="osoba"><div class="oblik o-pink" aria-hidden="true">AG</div><b>Aleksa Grujović</b><span>Casper Agents</span></li>
+      <li class="osoba"><div class="oblik o-violet" aria-hidden="true">SP</div><b>Sava Pavlović</b><span>Farmit</span></li>
+      <li class="osoba"><div class="oblik o-crna" aria-hidden="true">LJ</div><b>Lazar Jovanović</b><span><span translate="no">Lovable</span></span></li>
+      <li class="osoba"><div class="oblik o-siva" aria-hidden="true">VV</div><b>Vuk Verović</b><span>Valyrion</span></li>
+    </ul>
+    <p class="napomena lista-napomena">Lista se dopunjuje.</p>
+
+    <div class="ziri">
+      <div class="ziri-tekst">
+        <h3>Žiri</h3>
+        <p>Ocenjuje finalni pitch u nedelju.</p>
+      </div>
+      <ul class="mozaik-ljudi ziri-lista" aria-label="Žiri">
+        <li class="osoba"><div class="oblik o-crna" aria-hidden="true">ZB</div><b>Zorana Branković</b><span>Banca Intesa</span></li>
+        <li class="osoba"><div class="oblik o-crna" aria-hidden="true">NĐ</div><b>Nemanja Đorđević</b><span>Palata nauke</span></li>
+        <li class="osoba"><div class="oblik o-crna" aria-hidden="true">PN</div><b>Predrag Nikolić</b><span>CDT / PKS</span></li>
+        <li class="osoba"><div class="oblik o-crna" aria-hidden="true">MC</div><b>Marko Carević</b><span>Ananas</span></li>
+      </ul>
+    </div>
+  </div></div>
+</section>
+
+<!-- 6. ŠTA ŽIRI GLEDA (crna, SEE UP mozaik). Kriterijumi po planu v2 (2.6), poređani po težini; težine se ne objavljuju [TBD Balša/Milovan]. -->
+<section class="sek" id="kriterijumi" aria-labelledby="ishod-n">
+  <div class="wrap">
+    <h2 id="ishod-n">Šta žiri gleda.</h2>
+    <p class="podnaslov">Najviše se boduje razumevanje problema, a ne tehnička složenost.</p>
+    <ul class="ishod mozaik">
+      <li class="t-pink"><h3>Problem</h3><p>Da li je stvaran i ko ga ima?</p></li>
+      <li class="t-sunce siroko"><h3>MVP</h3><p>Da li radi i rešava taj problem?</p></li>
+      <li class="t-violet"><h3>Konkurencija</h3><p>Po čemu ste drugačiji od onoga što ljudi već koriste?</p></li>
+      <li class="t-bela siroko"><h3>Prvi kupci</h3><p>Kako dolazite do njih u narednih 30&nbsp;dana?</p></li>
+      <li class="t-tamna"><h3>Poslovni model</h3><p>Ko plaća i koliko?</p></li>
+      <li class="t-crimson"><h3>Prezentacija</h3><p>Da li je jasno i u roku?</p></li>
+    </ul>
+  </div>
+</section>
+
+<!-- 7. NAGRADE (crna, nastavak) -->
+<section class="sek nastavak" id="nagrade" aria-labelledby="nagrade-n">
+  <div class="wrap"><div class="prag">
+    <h2 id="nagrade-n">Za prva tri mesta: novac i nastavak.</h2>
+    <p class="podnaslov">Vikend se ne završava proglašenjem.</p>
+    <ol class="stubovi">
+      <li class="stub" style="--v:1"><span class="iznos">1.000&nbsp;€</span><i aria-hidden="true"></i><span class="mesto">1.&nbsp;mesto</span></li>
+      <li class="stub" style="--v:.4"><span class="iznos">400&nbsp;€</span><i aria-hidden="true"></i><span class="mesto">2.&nbsp;mesto</span></li>
+      <li class="stub" style="--v:.2"><span class="iznos">200&nbsp;€</span><i aria-hidden="true"></i><span class="mesto">3.&nbsp;mesto</span></li>
+    </ol>
+    <div class="dodatno">
+      <div><h3>Podrška SEE UP-a</h3><p>Prva tri tima nastavljaju uz SEE UP: mentorstvo, pomoć u osnivanju startapa, validacija, razvoj proizvoda i prvi kupci, uz veze sa osnivačima i partnerima. Otvara se i mogućnost ulaska u SEE UP kohortu. Posle 30&nbsp;dana se ponovo vidimo da proverimo dokle ste stigli.</p></div>
+      <div><h3><span translate="no">Microsoft Azure</span> krediti</h3><p>Mogućnost kredita do 150.000&nbsp;$ kroz <span translate="no">Microsoft Azure Sponsorship</span>, za cloud i AI servise na <span translate="no">Azure</span>-u u daljem razvoju proizvoda.</p></div>
+      <div><h3>Knjiga za svaki tim</h3><p>Svaki tim dobija primerak nove knjige „Stvaraj“ Milovana Dekića, bez obzira na plasman. Po njenom metodu radite ceo vikend.</p></div>
+    </div>
+  </div></div>
+</section>
+
+<!-- 8. PARTNERI (uska traka) -->
+<section class="traka-sek" id="partneri" aria-labelledby="partneri-n">
+  <div class="wrap par-red">
+    <div>
+      <h2 class="h-mali" id="partneri-n">Partneri</h2>
+      <p>Alati koje timovi koriste uživo tokom vikenda.</p>
+    </div>
+    <div>
+      <!-- Logo: wordmark za tamnu pozadinu (homarr-labs/dashboard-icons). Pre objave zameniti zvaničnim fajlom od Lovable-a [TBD Ilija/Lazar]. -->
+      <div class="partner">
+        <p class="partner-ime"><img src="lovable-logo.svg" alt="Lovable" width="911" height="155"></p>
+        <p>Timovi grade MVP uz <span translate="no">Lovable</span>.</p>
+      </div>
+      <div class="partner-ostalo">
+        <!-- Ostali partneri: kad se potvrde, svaki dobija isti red kao Lovable (ime + jedna rečenica kako ga timovi koriste). -->
+        <p>Imate alat koji pomaže u nekom od pet koraka? Pišite na <a href="mailto:emilija@seeup.net">emilija@seeup.net</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 9. KO ORGANIZUJE (uska traka) -->
+<section class="traka-sek" id="organizatori" aria-labelledby="org-n">
+  <div class="wrap par-red">
+    <div><h2 class="h-mali" id="org-n">Ko organizuje.</h2></div>
+    <div>
+      <div class="org">
+        <div class="org-kol">
+          <div class="org-znak"><svg viewBox="0 0 200 43" role="img" aria-label="SEE UP"><use href="#seeup"/></svg></div>
+          <!-- Brojke (4 mil. € u 16 startapa, 80+ partnera) tek kad Dušan potvrdi [TBD] -->
+          <p>Privatni akcelerator iz Beograda, fokusiran na prodaju.</p>
+          <a href="https://seeup.net" target="_blank" rel="noopener" aria-label="seeup.net, otvara se u novom prozoru">seeup.net</a>
+        </div>
+        <div class="org-kol">
+          <div class="org-znak"><svg viewBox="0 0 149.47 43" role="img" aria-label="Project 011"><use href="#p011-mali"/></svg></div>
+          <p>Ljudi koji svaki dan prave proizvode, a ovaj vikend pomažu drugima da naprave svoj. Ime nosimo po pozivnom broju Beograda, a čita se i kao put od 0 do 1.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 10. PITANJA (bela) -->
+<section class="sek svetlo-sek" id="pitanja" aria-labelledby="pitanja-n">
+  <div class="wrap pitanja">
+    <div class="glava">
+      <h2 id="pitanja-n">Pitanja pre prijave.</h2>
+      <p class="podnaslov">Ako tvoje nije ovde, piši na <a href="mailto:emilija@seeup.net">emilija@seeup.net</a>.</p>
+    </div>
+    <!-- FAQ po istraživanju (17 stranih i 38 domaćih stranica hakatona, 27. 10.). Još bez odgovora: smeštaj i prevoz za ljude iz drugih gradova, hrana, jezik pitcha, vlasništvo nad projektom, potvrda o učešću, tačna granica godina [TBD]. -->
+    <div class="faq">
+      <details><summary>Ne programiram. Ima li smisla da se prijavim?</summary><p>Ima. Žiri najviše boduje razumevanje problema, ne kod. Prvu verziju praviš uz AI alate kao što je <span translate="no">Lovable</span>, a mentori pomažu kad zapne.</p></details>
+      <details><summary>Nemam tim. Mogu li da dođem sam?</summary><p>Možeš. Radiš sam ili u timu od dva do tri člana, a pojedinci se ocenjuju isto kao timovi i imaju isto pravo na pitch.</p></details>
+      <details><summary>Nemam ideju. Šta onda?</summary><p>Ne treba ti ideja, treba ti problem. Kreni od nečega što znaš sa posla, fakulteta ili iz nečije firme. Ako ga nemaš, posle uvodnog predavanja Milovana Dekića znaćeš gde da ga tražiš.</p></details>
+      <details><summary>Ko može da se prijavi?</summary><p>Svi do 30 godina iz cele Srbije: studenti, zaposleni, frilenseri i oni koji tek hoće svoj posao.</p></details>
+      <details><summary>Koliko ima mesta?</summary><p>Do 45 učesnika, u najviše 15 timova. Prijave gledamo kako stižu, pa ne čekaj poslednji dan. Odgovor stiže najkasnije do 23.&nbsp;novembra.</p></details>
+      <details><summary>Moram li da budem tu ceo vikend? Radi li se preko noći?</summary><p>Oba dana, jer su pitch i proglašenje u nedelju. Subota traje od 09:00 do 23:00, nedelja od 09:00 do 19:30. Preko noći se ne radi.</p></details>
+      <details><summary>Mogu li da dođem sa projektom koji već radim?</summary><p>Problem i ideju slobodno ponesi. Postojeće biblioteke, AI alati i servisi su dozvoljeni, ali MVP koji se takmiči pravi se tokom vikenda.</p></details>
+      <details><summary>Šta ako ne pobedimo?</summary><p>Novac dobijaju tri tima, ali svaki tim odlazi sa prvom verzijom proizvoda, pitch deckom i knjigom „Stvaraj“.</p></details>
+      <details><summary>Šta da ponesem?</summary><p>Laptop i punjač. Ako već znaš problem, ponesi i kontakte ljudi koji ga imaju.</p></details>
+      <details><summary>Šta ako se prijavim, a ne mogu da dođem?</summary><p>Javi što pre na <a href="mailto:emilija@seeup.net">emilija@seeup.net</a>. Tvoje mesto ide sledećem sa liste čekanja.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- 11. PRIJAVA (crna) -->
+<section class="sek" id="prijava" aria-labelledby="prijava-n">
+  <div class="wrap prijava">
+    <div>
+      <h2 id="prijava-n">Prijava je otvorena do 19.&nbsp;novembra.</h2>
+      <!-- Posle roka JS menja h2 u „Prijave su zatvorene.“ i sklanja uvod, napomenu i odbrojavanje. -->
+      <p class="uvod-p" id="prijava-uvod">Prijavljuješ se preko Google forme. Najviše vremena vredi potrošiti na opis problema koji poznaješ. Prijave gledamo kako stižu, a odgovor stiže najkasnije do 23.&nbsp;novembra.</p>
+      <div class="odbrojavanje" id="odbrojavanje">
+        <p class="natpis" id="odbroj-natpis">Do zatvaranja prijava</p>
+        <div class="odbroj" id="odbroj" role="timer" aria-label="Vreme do zatvaranja prijava" aria-live="off">
+          <div><b data-d>—</b><span data-dj>dana</span></div>
+          <div><b data-h>—</b><span data-hj>sati</span></div>
+          <div><b data-m>—</b><span data-mj>minuta</span></div>
+        </div>
+        <p class="sr">Prijave se zatvaraju u četvrtak, 19. novembra 2026, u 23:59.</p>
+        <p class="odbroj-ispod" aria-hidden="true">Četvrtak, 19.&nbsp;novembar 2026, u 23:59.</p>
+      </div>
+    </div>
+
+    <div>
+      <!-- Prijava ide preko Google forme (odluka organizatora). Link se upisuje u PRIJAVA_URL u skripti na dnu. -->
+      <div class="forma-list prijava-karta" id="prijava-karta">
+        <h3>Prijava je na Google formi.</h3>
+        <p>Otvara se u novom prozoru. Ako nešto ne radi, piši na <a href="mailto:emilija@seeup.net">emilija@seeup.net</a>.</p>
+        <a class="btn" href="#prijava" data-prijava data-umami-event="prijava-klik">Otvori prijavu</a>
+      </div>
+      <div class="forma-list zatvoreno" id="zatvoreno" hidden>
+        <h3 id="zatvoreno-n">Prijave su zatvorene.</h3>
+        <p>Rok je bio 19.&nbsp;novembar u 23:59. Odgovor stiže najkasnije do 23.&nbsp;novembra. Pitanja: <a href="mailto:emilija@seeup.net">emilija@seeup.net</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="podnozje" id="podnozje">
+  <div class="wrap">
+    <div class="pod-red">
+      <div class="lockup">
+        <div class="lock-red" role="img" aria-label="SEE UP × Project 011"><svg viewBox="0 0 200 43" aria-hidden="true"><use href="#seeup"/></svg><span aria-hidden="true">×</span><svg class="p011" viewBox="0 0 149.47 43" aria-hidden="true"><use href="#p011-mali"/></svg></div>
+        <p><b translate="no">SEE UP Build Session&nbsp;#01 · STVARAJ</b> · Prvo izdanje.</p>
+      </div>
+      <div><p class="naslov">Kada</p><p>Subota 28. i nedelja 29.&nbsp;novembar 2026.</p></div>
+      <div><p class="naslov">Gde</p><p>CDT Hub, Kneza Miloša 12, Beograd, 6.&nbsp;sprat.</p></div>
+      <div><p class="naslov">Kontakt</p><p><a href="mailto:emilija@seeup.net">emilija@seeup.net</a></p>
+        <p class="mreze"><a href="https://www.instagram.com/seeup_accelerator/" target="_blank" rel="noopener" aria-label="Instagram SEE UP-a, otvara se u novom prozoru">Instagram</a> · <a href="https://seeup.net" target="_blank" rel="noopener" aria-label="seeup.net, otvara se u novom prozoru">seeup.net</a> · <a href="https://www.linkedin.com/company/see-up/" target="_blank" rel="noopener" aria-label="LinkedIn SEE UP-a, otvara se u novom prozoru">LinkedIn</a></p></div>
+    </div>
+    <p class="donja">Organizuju SEE UP i <span translate="no">Project 011</span>. Program po metodologiji iz knjige „Stvaraj“ Milovana Dekića. <a href="#privatnost">Obaveštenje o privatnosti</a> · <a href="#kodeks">Kodeks ponašanja</a></p>
+  </div>
+</footer>
+
+<!-- Privatnost i kodeks: otvaraju se preko linkova u podnožju (CSS :target, radi i bez JS-a). Nacrt; pre objave da pogleda SEE UP. -->
+<div class="modal" id="privatnost" role="dialog" aria-modal="true" aria-labelledby="privatnost-n">
+  <div class="modal-in">
+    <a class="modal-x" href="#podnozje">Zatvori</a>
+    <h2 id="privatnost-n">Obaveštenje o privatnosti</h2>
+    <div class="pravila-tekst">
+        <p>Ovde piše šta radimo sa podacima iz prijave za STVARAJ (SEE UP Build Session&nbsp;#01) i kako možeš da ih tražiš nazad.</p>
+        <h3>Ko obrađuje podatke</h3>
+        <!-- Pravni naziv rukovaoca dodati kad Dušan potvrdi (u registru: SEE UP DOO Beograd, See Up Prime d.o.o., SEE UP TRIO) [TBD] -->
+        <p>Podatke iz prijave obrađuje SEE UP, Mokranjčeva 13, Beograd, zajedno sa ekipom <span translate="no">Project 011</span>. Za sva pitanja o podacima piši na <a href="mailto:emilija@seeup.net">emilija@seeup.net</a>.</p>
+        <h3>Šta prikupljamo</h3>
+        <p>Samo ono što upišeš u prijavu.</p>
+        <h3>Zašto</h3>
+        <p>Da izaberemo učesnike, da te obaveštavamo pre i posle vikenda i da organizujemo sam događaj. Ništa drugo.</p>
+        <h3>Na osnovu čega</h3>
+        <p>Na osnovu tvog pristanka, koji daješ kad pošalješ prijavu. Možeš da ga povučeš kad god hoćeš.</p>
+        <h3>Ko ih vidi</h3>
+        <p>Organizatori iz SEE UP-a i <span translate="no">Project 011</span> koji rade selekciju i komunikaciju. Mentori i žiri pre događaja vide samo imena timova i opis problema. Prijava ide preko <span translate="no">Google Forms</span>, pa podatke tehnički čuva Google. Podatke ne prodajemo, a partneri ih ne dobijaju bez tvoje dozvole.</p>
+        <h3>Koliko dugo</h3>
+        <p>Dok traje selekcija i komunikacija oko vikenda, a posle toga ih brišemo.</p>
+        <h3>Fotografije i snimci</h3>
+        <p>Tokom vikenda se fotografiše i snima za objave organizatora. Ako ne želiš da budeš na fotografijama, reci organizatorima kad stigneš.</p>
+        <h3>Tvoja prava</h3>
+        <p>Možeš da tražiš uvid u svoje podatke, ispravku ili brisanje i da povučeš pristanak. Piši na <a href="mailto:emilija@seeup.net">emilija@seeup.net</a>. Ako misliš da podatke ne obrađujemo kako treba, možeš da podneseš pritužbu Povereniku za informacije od javnog značaja i zaštitu podataka o ličnosti.</p>
+    </div>
+  </div>
+</div>
+<div class="modal" id="kodeks" role="dialog" aria-modal="true" aria-labelledby="kodeks-n">
+  <div class="modal-in">
+    <a class="modal-x" href="#podnozje">Zatvori</a>
+    <h2 id="kodeks-n">Kodeks ponašanja</h2>
+    <div class="pravila-tekst">
+        <p>STVARAJ treba da bude mesto gde svako može da radi i da pita bez straha da će ispasti glup. Pravila važe za sve: učesnike, mentore, žiri, organizatore i partnere.</p>
+        <ol>
+          <li><b>Poštuj ljude oko sebe,</b> bez obzira na pol, poreklo, veru, godine, invaliditet, izgled ili iskustvo.</li>
+          <li><b>Bez uznemiravanja.</b> To znači bez uvreda, pretnji, neželjenog dodira, seksualnih komentara i snimanja nekoga ko to ne želi.</li>
+          <li><b>Kritikuj ideju, ne čoveka.</b> Mentori i žiri kažu šta ne valja, ali bez ponižavanja.</li>
+          <li><b>Ne prisvajaj tuđe ideje i rad.</b> Ako koristiš gotov kod, alat ili tuđi materijal, reci to.</li>
+          <li><b>Čuvaj prostor i opremu</b> kao da su tvoji.</li>
+        </ol>
+        <h3>Ako nešto nije u redu</h3>
+        <p>Javi se bilo kome iz organizacije na licu mesta ili piši na <a href="mailto:emilija@seeup.net">emilija@seeup.net</a>. Prijave tretiramo poverljivo. Organizatori mogu da opomenu, da isključe tim iz takmičenja ili da udalje osobu sa događaja.</p>
+    </div>
+  </div>
+</div>
+
+<div class="traka skriveno" id="traka">
+  <p id="traka-tekst">Prijave do <b>19.&nbsp;novembra</b></p>
+  <a class="btn" href="#prijava" data-prijava data-umami-event="prijava-klik">Prijavi se</a>
+</div>
+
+<script>
+(function(){
+  var KRAJ=new Date('2026-11-19T23:59:59+01:00').getTime();
+  var $=function(id){return document.getElementById(id)};
+  function zatvoreno(){return Date.now()>=KRAJ}
+
+  /* ---------- mobilni meni ---------- */
+  var nav=$('nav'), dugme=$('meni-dugme'), meni=$('meni');
+  function meniStanje(otvori){
+    nav.classList.toggle('otvoren',otvori);
+    dugme.setAttribute('aria-expanded',otvori?'true':'false');
+    dugme.setAttribute('aria-label',otvori?'Zatvori meni':'Otvori meni');
+  }
+  dugme.addEventListener('click',function(){meniStanje(dugme.getAttribute('aria-expanded')!=='true')});
+  meni.addEventListener('click',function(e){if(e.target.closest('a'))meniStanje(false)});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&nav.classList.contains('otvoren')){meniStanje(false);dugme.focus()}});
+  document.addEventListener('click',function(e){if(nav.classList.contains('otvoren')&&!nav.contains(e.target))meniStanje(false)});
+
+  /* ---------- sklopivi delovi (uloge, „Zašto“ u koracima): otvoreni od 641 px, na telefonu zatvoreni ---------- */
+  var mqSir=window.matchMedia('(min-width:641px)');
+  function sklop(){
+    var sir=mqSir.matches;
+    Array.prototype.forEach.call(document.querySelectorAll('details.sklop'),function(d){d.open=sir;d.querySelector('summary').tabIndex=sir?-1:0});
+  }
+  sklop();
+  if(mqSir.addEventListener)mqSir.addEventListener('change',sklop);else mqSir.addListener(sklop);
+
+  /* ---------- odbrojavanje ---------- */
+  function jDan(n){return (n%10===1&&n%100!==11)?'dan':'dana'}
+  function jSat(n){var d=n%10,s=n%100;if(d===1&&s!==11)return 'sat';if(d>=2&&d<=4&&(s<12||s>14))return 'sata';return 'sati'}
+  function jMin(n){return (n%10===1&&n%100!==11)?'minut':'minuta'}
+  var box=$('odbroj'), trakaTekst=$('traka-tekst');
+  var q=function(s){return box.querySelector(s)};
+  function tik(){
+    var ms=KRAJ-Date.now();
+    if(ms<=0){zatvori();return false}
+    var d=Math.floor(ms/864e5), h=Math.floor(ms%864e5/36e5), m=Math.floor(ms%36e5/6e4);
+    q('[data-d]').textContent=d; q('[data-dj]').textContent=jDan(d);
+    q('[data-h]').textContent=h; q('[data-hj]').textContent=jSat(h);
+    q('[data-m]').textContent=m; q('[data-mj]').textContent=jMin(m);
+    if(ms<864e5) trakaTekst.innerHTML='Prijave se zatvaraju <b>večeras u 23:59</b>';
+    return true;
+  }
+  function zatvori(){
+    // h2 bi posle roka bio netačan: postaje „Prijave su zatvorene.“, pa se ista rečenica ne ponavlja u odbrojavanju i kartici
+    $('prijava-n').textContent='Prijave su zatvorene.';
+    $('prijava-uvod').hidden=true; $('odbrojavanje').hidden=true;
+    $('prijava-karta').hidden=true; $('zatvoreno').hidden=false; $('zatvoreno-n').hidden=true;
+    gotovo=true; osvezi();
+  }
+
+  /* ---------- mobilna traka: skrivena u heroju (dok se ne prođe CTA), u prijavi i posle roka ---------- */
+  var traka=$('traka'), akcije=$('hero-akcije'), prijava=$('prijava');
+  var prosaoCta=false, uPrijavi=false, gotovo=false;
+  function osvezi(){traka.classList.toggle('skriveno',!(prosaoCta&&!uPrijavi&&!gotovo))}
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        if(e.target===akcije) prosaoCta=!e.isIntersecting&&e.boundingClientRect.top<0;
+        else uPrijavi=e.isIntersecting;
+      });
+      osvezi();
+    });
+    io.observe(akcije); io.observe(prijava);
+  } else { prosaoCta=true; osvezi(); }
+
+  if(tik()){var tikId=setInterval(function(){if(!tik())clearInterval(tikId)},3e4)}
+
+  /* ---------- privatnost i kodeks: Escape zatvara prozor ---------- */
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&(location.hash==='#privatnost'||location.hash==='#kodeks'))location.hash='podnozje'});
+
+  /* ---------- izvor posete: UTM iz linka (pamti se za sesiju), ide u Google formu ---------- */
+  // [TBD] ID polja „Izvor“ iz Google forme, npr. 'entry.123456789' (forma → ⋮ → Get pre-filled link)
+  var IZVOR_POLJE='';
+  function izvor(){
+    var s='';
+    try{
+      var p=new URLSearchParams(location.search), v=[];
+      ['utm_source','utm_medium','utm_campaign','utm_content'].forEach(function(k){var x=p.get(k);if(x)v.push(x.slice(0,60))});
+      if(v.length){s=v.join(' / ');sessionStorage.setItem('izvor',s)}
+      else s=sessionStorage.getItem('izvor')||'';
+      if(!s&&document.referrer&&document.referrer.indexOf(location.host)<0){s='ref: '+new URL(document.referrer).hostname;sessionStorage.setItem('izvor',s)}
+    }catch(e){}
+    return s||'direktno';
+  }
+  var IZVOR=izvor();
+
+  /* ---------- link ka prijavi: Google forma ---------- */
+  // [TBD] upisati link Google forme. Dok je prazan, dugmad vode na sekciju #prijava.
+  var PRIJAVA_URL='';
+  if(PRIJAVA_URL&&!zatvoreno()){
+    var url=PRIJAVA_URL+(IZVOR_POLJE?(PRIJAVA_URL.indexOf('?')<0?'?':'&')+'usp=pp_url&'+IZVOR_POLJE+'='+encodeURIComponent(IZVOR):'');
+    Array.prototype.forEach.call(document.querySelectorAll('a[data-prijava]'),function(a){a.href=url;a.target='_blank';a.rel='noopener'});
+  }
+})();
+</script>
+</body>
+</html>
