@@ -345,6 +345,10 @@ section.nastavak[id]{scroll-margin-top:calc(16px - var(--pad2))}
 .stub .mesto{border-top:2px solid #fff;padding-top:12px;font:500 16px/1.3 var(--f-tekst);color:var(--tekst-2)}
 .dodatno{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px 40px;margin-top:56px}
 .dodatno div{border-top:1px solid var(--linija);padding-top:20px}
+.dod-vizual{margin:12px 0 4px;display:flex;align-items:flex-end}
+.dod-broj{font:800 clamp(34px,3.2vw,44px)/1 var(--f-naslov);font-stretch:125%;letter-spacing:-.02em;white-space:nowrap}
+.dod-broj small{font-size:.45em;font-weight:700;letter-spacing:0;margin-right:.15em}
+.partner p:last-child{line-height:1.55;max-width:58ch}
 .dodatno h3{font:700 20px/1.25 var(--f-naslov);font-stretch:100%}
 .dodatno p{margin-top:8px;color:var(--tekst-2);font-size:16px;line-height:1.55}
 @media (max-width:900px){.dodatno{grid-template-columns:1fr;gap:20px}}
@@ -366,6 +370,8 @@ section.nastavak[id]{scroll-margin-top:calc(16px - var(--pad2))}
 .partner{display:grid;grid-template-columns:minmax(0,220px) minmax(0,1fr);gap:8px 32px;align-items:baseline;padding-bottom:20px;border-bottom:1px solid var(--linija)}
 .partner-ime{font:800 32px/1 var(--f-naslov);font-stretch:125%;letter-spacing:-.01em}
 .partner p:last-child{color:var(--tekst-2);font-size:16px}
+.partneri-blok{margin-top:clamp(56px,7vw,96px);padding-top:clamp(32px,4vw,48px);border-top:1px solid var(--linija);scroll-margin-top:96px}
+.partner + .partner{padding-top:20px}
 .partner-ostalo{margin-top:16px;color:var(--tekst-2);font-size:16px;display:flex;flex-direction:column;gap:8px}
 .org{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 48px}
 .org-kol{border-top:1px solid var(--linija);padding-top:20px}
@@ -760,6 +766,10 @@ section.nastavak[id]{scroll-margin-top:calc(16px - var(--pad2))}
 .partner{align-items:center}
 .partner-ime img{display:block;height:36px;width:auto}
 @media (max-width:560px){.partner-ime img{height:30px}}
+.partner-ime.partner-cdt{display:flex;align-items:center;gap:14px}
+.partner-ime.partner-cdt img{height:44px;width:44px;border-radius:6px;flex:none}
+.partner-cdt span{white-space:nowrap;font-size:28px}
+@media (max-width:560px){.partner-ime.partner-cdt img{height:38px;width:38px}}
 #vikend .program .glava{grid-template-columns:1fr}
 .prijava-karta h3{font-size:clamp(22px,2.4vw,30px);line-height:1.15}
 .prijava-karta p{margin-top:10px;color:#1a1a1a;max-width:44ch}
@@ -862,6 +872,48 @@ section.pravila-sek[id]{scroll-margin-top:96px}
   </div>
   </div>
 </header>
+
+<!-- 2. NAGRADE I PARTNERI (crna) -->
+<section class="sek" id="nagrade" aria-labelledby="nagrade-n">
+  <div class="wrap">
+    <h2 id="nagrade-n">Za prva tri mesta: novac i nastavak.</h2>
+    <p class="podnaslov">Vikend se ne završava proglašenjem.</p>
+    <ol class="stubovi">
+      <li class="stub" style="--v:1"><span class="iznos">1.000&nbsp;€</span><i aria-hidden="true"></i><span class="mesto">1.&nbsp;mesto</span></li>
+      <li class="stub" style="--v:.4"><span class="iznos">400&nbsp;€</span><i aria-hidden="true"></i><span class="mesto">2.&nbsp;mesto</span></li>
+      <li class="stub" style="--v:.2"><span class="iznos">200&nbsp;€</span><i aria-hidden="true"></i><span class="mesto">3.&nbsp;mesto</span></li>
+    </ol>
+    <div class="dodatno">
+      <div><h3>Podrška SEE UP-a</h3><p>Prva tri tima nastavljaju uz SEE UP: mentorstvo, pomoć u osnivanju startapa, razvoju proizvoda i dolasku do prvih kupaca, uz veze sa osnivačima i partnerima. Otvara se i mogućnost ulaska u SEE UP kohortu. Posle 30&nbsp;dana proveravamo dokle ste stigli.</p></div>
+      <div><!-- Bez Microsoft/Azure logoa: traži licencu ili odobrenje Microsofta. --><h3><span translate="no">Microsoft Azure</span> krediti</h3><figure class="dod-vizual"><span class="dod-broj"><small>do</small> 150.000&nbsp;$</span></figure><p>Mogućnost za pobednike kroz <span translate="no">Microsoft Azure Sponsorship</span>. Krediti se koriste za cloud i AI servise na <span translate="no">Azure</span>-u, od servera i baza podataka do AI modela.</p></div>
+      <div><h3>Knjiga za svaki tim</h3><p>Svaki tim dobija primerak nove knjige „Stvaraj“ Milovana Dekića, bez obzira na plasman. Po njenom metodu radite ceo vikend, od problema i hipoteza do prvih kupaca, a knjiga ostaje kao vodič i kad se vikend završi.</p></div>
+    </div>
+
+    <!-- Partneri. Microsoft/Azure logo ne stavljati bez licence ili odobrenja Microsofta (microsoft.com/trademarks); Azure ostaje samo tekstom u nagradama. -->
+    <div class="par-red partneri-blok" id="partneri">
+      <div>
+        <h3 class="h-mali" id="partneri-n">Partneri</h3>
+        <p>Alat sa kojim timovi grade i prostor u kom radimo ceo vikend.</p>
+      </div>
+      <div>
+        <!-- Logo: wordmark za tamnu pozadinu (homarr-labs/dashboard-icons). Pre objave zameniti zvaničnim fajlom od Lovable-a [TBD Ilija/Lazar]. -->
+        <div class="partner">
+          <p class="partner-ime"><img src="lovable-logo.svg" alt="Lovable" width="911" height="155"></p>
+          <p><span translate="no">Lovable</span> pravi web aplikacije iz opisa na običnom jeziku. Opišeš šta aplikacija treba da radi, a <span translate="no">Lovable</span> napiše kod, poveže bazu i objavi je. Timovi ga na vikendu koriste da za nekoliko sati dođu do prve verzije koju mogu da pokažu korisnicima i žiriju.</p>
+        </div>
+        <!-- CDT Hub: znak dobijen od Vuka 28. 10. (200×200 PNG). -->
+        <div class="partner">
+          <p class="partner-ime partner-cdt"><img src="cdt-hub-logo.png" alt="" width="200" height="200"><span translate="no">CDT Hub</span></p>
+          <p><span translate="no">CDT Hub</span> je prostor Centra za digitalnu transformaciju Privredne komore Srbije, mesto gde se sreću IT kompanije, startapi, investitori i tradicionalna privreda. Kod njih radimo oba dana: Kneza Miloša 12, Beograd, 6.&nbsp;sprat.</p>
+        </div>
+        <div class="partner-ostalo">
+          <!-- Ostali partneri: kad se potvrde, svaki dobija isti red kao Lovable (ime + jedna rečenica kako ga timovi koriste). -->
+          <p>Imate alat koji pomaže u nekom od pet koraka? Pišite na <a href="mailto:emilija@seeup.net">emilija@seeup.net</a>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- 2. PREDAVAČ (violet) -->
 <section class="sek violet-sek" id="predavac" aria-labelledby="predavac-n">
@@ -1009,44 +1061,6 @@ section.pravila-sek[id]{scroll-margin-top:96px}
   </div>
 </section>
 
-<!-- 7. NAGRADE (crna, nastavak) -->
-<section class="sek nastavak" id="nagrade" aria-labelledby="nagrade-n">
-  <div class="wrap"><div class="prag">
-    <h2 id="nagrade-n">Za prva tri mesta: novac i nastavak.</h2>
-    <p class="podnaslov">Vikend se ne završava proglašenjem.</p>
-    <ol class="stubovi">
-      <li class="stub" style="--v:1"><span class="iznos">1.000&nbsp;€</span><i aria-hidden="true"></i><span class="mesto">1.&nbsp;mesto</span></li>
-      <li class="stub" style="--v:.4"><span class="iznos">400&nbsp;€</span><i aria-hidden="true"></i><span class="mesto">2.&nbsp;mesto</span></li>
-      <li class="stub" style="--v:.2"><span class="iznos">200&nbsp;€</span><i aria-hidden="true"></i><span class="mesto">3.&nbsp;mesto</span></li>
-    </ol>
-    <div class="dodatno">
-      <div><h3>Podrška SEE UP-a</h3><p>Prva tri tima nastavljaju uz SEE UP: mentorstvo, pomoć u osnivanju startapa, validacija, razvoj proizvoda i prvi kupci, uz veze sa osnivačima i partnerima. Otvara se i mogućnost ulaska u SEE UP kohortu. Posle 30&nbsp;dana se ponovo vidimo da proverimo dokle ste stigli.</p></div>
-      <div><h3><span translate="no">Microsoft Azure</span> krediti</h3><p>Mogućnost kredita do 150.000&nbsp;$ kroz <span translate="no">Microsoft Azure Sponsorship</span>, za cloud i AI servise na <span translate="no">Azure</span>-u u daljem razvoju proizvoda.</p></div>
-      <div><h3>Knjiga za svaki tim</h3><p>Svaki tim dobija primerak nove knjige „Stvaraj“ Milovana Dekića, bez obzira na plasman. Po njenom metodu radite ceo vikend.</p></div>
-    </div>
-  </div></div>
-</section>
-
-<!-- 8. PARTNERI (uska traka) -->
-<section class="traka-sek" id="partneri" aria-labelledby="partneri-n">
-  <div class="wrap par-red">
-    <div>
-      <h2 class="h-mali" id="partneri-n">Partneri</h2>
-      <p>Alati koje timovi koriste uživo tokom vikenda.</p>
-    </div>
-    <div>
-      <!-- Logo: wordmark za tamnu pozadinu (homarr-labs/dashboard-icons). Pre objave zameniti zvaničnim fajlom od Lovable-a [TBD Ilija/Lazar]. -->
-      <div class="partner">
-        <p class="partner-ime"><img src="lovable-logo.svg" alt="Lovable" width="911" height="155"></p>
-        <p>Timovi grade MVP uz <span translate="no">Lovable</span>.</p>
-      </div>
-      <div class="partner-ostalo">
-        <!-- Ostali partneri: kad se potvrde, svaki dobija isti red kao Lovable (ime + jedna rečenica kako ga timovi koriste). -->
-        <p>Imate alat koji pomaže u nekom od pet koraka? Pišite na <a href="mailto:emilija@seeup.net">emilija@seeup.net</a>.</p>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- 9. KO ORGANIZUJE (uska traka) -->
 <section class="traka-sek" id="organizatori" aria-labelledby="org-n">
@@ -1086,7 +1100,7 @@ section.pravila-sek[id]{scroll-margin-top:96px}
       <details><summary>Moram li da budem tu ceo vikend? Radi li se preko noći?</summary><p>Oba dana, jer su pitch i proglašenje u nedelju. Subota traje od 09:00 do 23:00, nedelja od 09:00 do 19:30. Preko noći se ne radi.</p></details>
       <details><summary>Da li je obezbeđen smeštaj?</summary><p>Nije. Ako dolaziš iz drugog grada, smeštaj za noć između subote i nedelje organizuješ sam.</p></details>
       <details><summary>Mogu li da dođem sa projektom koji već radim?</summary><p>Problem i ideju slobodno ponesi. Postojeće biblioteke, AI alati i servisi su dozvoljeni, ali MVP koji se takmiči pravi se tokom vikenda.</p></details>
-      <details><summary>Šta ako ne pobedimo?</summary><p>Novac dobijaju tri tima, ali svaki tim odlazi sa prvom verzijom proizvoda, pitch deckom i knjigom „Stvaraj“.</p></details>
+      <details><summary>Šta ako ne pobedimo?</summary><p>Novac dobijaju tri tima, ali svaki tim odlazi sa prvom verzijom proizvoda, pitch deckom i knjigom „Stvaraj“. Pored toga, dva dana radiš sa mentorima koji su gradili proizvode i vode firme, i ti kontakti ostaju i posle vikenda.</p></details>
       <details><summary>Šta da ponesem?</summary><p>Laptop i punjač. Ako već znaš problem, ponesi i kontakte ljudi koji ga imaju.</p></details>
       <details><summary>Šta ako se prijavim, a ne mogu da dođem?</summary><p>Javi što pre na <a href="mailto:emilija@seeup.net">emilija@seeup.net</a>. Tvoje mesto ide sledećem sa liste čekanja.</p></details>
     </div>
