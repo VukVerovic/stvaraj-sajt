@@ -546,7 +546,7 @@ section.nastavak[id]{scroll-margin-top:calc(16px - var(--pad2))}
 .koraci li,.koraci li:last-child{display:flex;flex-direction:column;gap:10px;background:var(--ploca);border:1px solid var(--ploca-ivica);border-radius:24px;padding:28px;min-height:250px}
 .koraci li::before{font-size:34px;color:var(--narandza);grid-row:auto}
 .koraci h3{margin-top:auto;grid-row:auto}
-.koraci li:first-child{background:var(--sunce-t);border-color:transparent}
+.koraci li:first-child{background:var(--sunce-t) border-box;border-color:transparent}
 .koraci li:first-child::before{color:#fff}
 .koraci li:first-child .zasto p,.koraci li:first-child .zasto summary{color:#fff}
 @media (max-width:900px){.koraci{grid-template-columns:repeat(2,minmax(0,1fr))}}
@@ -581,7 +581,7 @@ section.nastavak[id]{scroll-margin-top:calc(16px - var(--pad2))}
 .stub{background:var(--ploca);border:1px solid var(--ploca-ivica);border-radius:24px;padding:30px;min-height:240px;justify-content:space-between}
 .stub i{display:none}
 .stub .mesto{order:-1;border-top:0;padding-top:0;color:#fff;font-weight:500}
-.stub:first-child{background:var(--sunce-t);border-color:transparent}
+.stub:first-child{background:var(--sunce-t) border-box;border-color:transparent}
 @media (max-width:760px){.stubovi{grid-template-columns:1fr}.stub{min-height:0;gap:28px}}
 
 .program{display:block}
@@ -807,6 +807,68 @@ section.pravila-sek[id]{scroll-margin-top:96px}
 .modal .pravila-tekst{padding:8px 0 0;max-width:none;color:#1a1a1a}
 .modal .pravila-tekst h3,.modal .pravila-tekst b{color:#000}
 .modal .pravila-tekst a{color:#000}
+
+/* 29. 10.: prijava, odbrojavanje u kartici */
+.prijava{align-items:center}
+.prijava-karta .odbrojavanje{margin-top:0;border-top:0;padding-top:0}
+.prijava-karta .natpis{margin-top:0;color:#4a4a4a}
+.prijava-karta .odbroj{gap:clamp(18px,2.8vw,44px);margin-top:14px}
+.prijava-karta .odbroj b{font-size:clamp(56px,6vw,100px);color:#000;letter-spacing:-.02em}
+.prijava-karta .odbroj span{color:#4a4a4a;font-size:16px}
+.prijava-karta .odbroj-ispod{margin-top:18px;color:#000;font-weight:500}
+.prijava-karta .btn{margin-top:30px}
+.prijava-karta .karta-napomena{margin-top:14px;font-size:15px;color:#333;max-width:48ch}
+/* 29. 10.: knjiga uz Dekića */
+.pred-vizual{display:grid;width:100%;max-width:400px}
+.pred-knjiga{margin:-32px 0 0;width:62%;justify-self:end;border-radius:0 28px 28px 28px;overflow:hidden;position:relative}
+.pred-knjiga img{display:block;width:100%;height:auto}
+@media (max-width:900px){.pred-vizual{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;max-width:440px;align-items:end}.pred-vizual .pred-oblik{max-width:none}.pred-knjiga{width:100%;margin:0;justify-self:stretch}}
+/* 29. 10.: mobilni, sitnije (Emilija) */
+@media (max-width:560px){
+  .hero h1.izdanje{font-size:clamp(40px,calc((100vw - 2 * var(--gutter)) / 7.4),56px)}
+  .glavna{font-size:20px}
+  .lead{font-size:16px}
+  .sek h2{font-size:24px}
+  .sek .uvod2 h2{font-size:27px}
+  .podnaslov{font-size:16px}
+  .blokovi{max-width:260px}
+  .stub{padding:22px;gap:16px}
+  .stub .iznos{font-size:32px}
+  .dod-broj{font-size:30px}
+  .koraci h3{font-size:17px}
+  .faq summary{font-size:16px}
+  .kome h3{font-size:20px}
+  .uslovi b{font-size:24px}
+  .ishod.mozaik h3{font-size:17px}
+  .h-mali{font-size:19px}
+  .partner-ime{font-size:22px}
+  .partner-ime img{height:26px}
+  .partner-cdt span{font-size:22px}
+  .partner-ime.partner-cdt img{height:34px;width:34px}
+  .prijava-karta .odbroj b{font-size:46px}
+  .prijava-karta .odbroj{gap:18px}
+}
+
+/* 29. 10.: nagrade u dinarima, 3. mesto podrška */
+.stub{justify-content:flex-start}
+.stub .iznos{margin-top:auto}
+.stub .iznos{font-size:clamp(36px,4.2vw,64px)}
+.stub .iznos small{display:block;margin-top:.3em;font-size:max(15px,.28em);font-weight:700;letter-spacing:0}
+.stub-plus{font-size:15px;line-height:1.4;color:var(--tekst-2);max-width:30ch}
+.stub:first-child .stub-plus{color:rgba(255,255,255,.9)}
+.stub-podrska .iznos{white-space:normal;font-size:clamp(30px,3.2vw,46px);line-height:1}
+/* 29. 10.: mentori sa fotografijama, 14 osoba u dva reda */
+.mozaik-ljudi.mentori-lista{grid-template-columns:repeat(7,minmax(0,1fr))}
+@media (max-width:900px){.mozaik-ljudi.mentori-lista{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.ziri{grid-template-columns:minmax(0,.55fr) minmax(0,1.45fr)}
+.mozaik-ljudi.ziri-lista{grid-template-columns:repeat(5,minmax(0,1fr))}
+@media (max-width:900px){.ziri{grid-template-columns:1fr}.mozaik-ljudi.ziri-lista{max-width:none}}
+@media (max-width:560px){
+  .mozaik-ljudi.mentori-lista{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .mozaik-ljudi.ziri-lista{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .stub-plus{font-size:14px}
+  .stub-podrska .iznos{font-size:26px}
+}
 </style>
 <script>document.documentElement.classList.add('js')</script>
 </head>
@@ -848,7 +910,7 @@ section.pravila-sek[id]{scroll-margin-top:96px}
     <p class="glavna"><span>AI je ubrzao sve.</span> <span>Sada je red na nas da stvaramo.</span></p>
     <div class="red">
       <div>
-        <p class="lead"><b>Subota: od problema do prve verzije.<br>Nedelja: od prve verzije do prvih kupaca.</b><br> Nađi problem koji poznaješ iz prve ruke. Mentori i AI alati su tu oba dana.</p>
+        <p class="lead"><b>Subota: od problema do prve verzije.<br>Nedelja: od prve verzije do prvih kupaca.</b><br> Tema je slobodna: kreni od problema koji ti je blizak. Mentori i AI alati su tu oba dana.</p>
         <div class="akcije" id="hero-akcije">
           <a class="btn" href="#prijava" data-prijava data-umami-event="prijava-klik">Prijavi se</a>
           <a class="btn svetlo" href="#vikend">Kako izgleda vikend</a>
@@ -878,16 +940,17 @@ section.pravila-sek[id]{scroll-margin-top:96px}
 <!-- 2. NAGRADE I PARTNERI (crna) -->
 <section class="sek" id="nagrade" aria-labelledby="nagrade-n">
   <div class="wrap">
-    <h2 id="nagrade-n">Za prva tri mesta: novac i nastavak.</h2>
-    <p class="podnaslov">Vikend se ne završava proglašenjem.</p>
+    <h2 id="nagrade-n">Nagrade za prva tri tima.</h2>
+    <p class="podnaslov">Novac za prva dva mesta, a sva tri tima nastavljaju uz SEE&nbsp;UP.</p>
+    <!-- 29. 10.: nagrade u dinarima (Vuk); 3. mesto bez novca, sa podrškom SEE UP-a. Interni plan i dalje kaže 1.000/400/200 €. -->
     <ol class="stubovi">
-      <li class="stub" style="--v:1"><span class="iznos">1.000&nbsp;€</span><i aria-hidden="true"></i><span class="mesto">1.&nbsp;mesto</span></li>
-      <li class="stub" style="--v:.4"><span class="iznos">400&nbsp;€</span><i aria-hidden="true"></i><span class="mesto">2.&nbsp;mesto</span></li>
-      <li class="stub" style="--v:.2"><span class="iznos">200&nbsp;€</span><i aria-hidden="true"></i><span class="mesto">3.&nbsp;mesto</span></li>
+      <li class="stub"><span class="mesto">1.&nbsp;mesto</span><span class="iznos">100.000<small>dinara</small></span><span class="stub-plus">+ podrška SEE UP-a i mogućnost Azure kredita</span></li>
+      <li class="stub"><span class="mesto">2.&nbsp;mesto</span><span class="iznos">40.000<small>dinara</small></span><span class="stub-plus">+ podrška SEE UP-a i mogućnost Azure kredita</span></li>
+      <li class="stub stub-podrska"><span class="mesto">3.&nbsp;mesto</span><span class="iznos">Podrška SEE&nbsp;UP-a</span><span class="stub-plus">mentorstvo, pomoć u osnivanju startapa i mogućnost Azure kredita</span></li>
     </ol>
     <div class="dodatno">
       <div><h3>Podrška SEE UP-a</h3><p>Prva tri tima nastavljaju uz SEE UP: mentorstvo, pomoć u osnivanju startapa, razvoju proizvoda i dolasku do prvih kupaca, uz veze sa osnivačima i partnerima. Otvara se i mogućnost ulaska u SEE UP kohortu. Posle 30&nbsp;dana proveravamo dokle ste stigli.</p></div>
-      <div><!-- Bez Microsoft/Azure logoa: traži licencu ili odobrenje Microsofta. --><h3><span translate="no">Microsoft Azure</span> krediti</h3><figure class="dod-vizual"><span class="dod-broj"><small>do</small> 150.000&nbsp;$</span></figure><p>Mogućnost za pobednike kroz <span translate="no">Microsoft Azure Sponsorship</span>. Krediti se koriste za cloud i AI servise na <span translate="no">Azure</span>-u, od servera i baza podataka do AI modela.</p></div>
+      <div><!-- Bez Microsoft/Azure logoa: traži licencu ili odobrenje Microsofta. --><h3><span translate="no">Microsoft Azure</span> krediti</h3><figure class="dod-vizual"><span class="dod-broj"><small>do</small> 150.000&nbsp;$</span></figure><p>Mogućnost za prva tri tima kroz <span translate="no">Microsoft Azure Sponsorship</span>. Krediti se koriste za cloud i AI servise na <span translate="no">Azure</span>-u, od servera i baza podataka do AI modela.</p></div>
       <div><h3>Knjiga za svaki tim</h3><p>Svaki tim dobija primerak nove knjige „Stvaraj“ Milovana Dekića, bez obzira na plasman. Po njenom metodu radite ceo vikend, od problema i hipoteza do prvih kupaca, a knjiga ostaje kao vodič i kad se vikend završi.</p></div>
     </div>
 
@@ -921,12 +984,16 @@ section.pravila-sek[id]{scroll-margin-top:96px}
 <section class="sek violet-sek" id="predavac" aria-labelledby="predavac-n">
   <div class="wrap predavac">
     <!-- Biografija: CGA Belgrade (govornici), Finesa (Design Thinking, 10. izdanje). Nordeus: plan kaže ex-Nordeus, javni izvori ga i dalje vode u Nordeusu [TBD Milovan potvrdi]. -->
-    <div class="oblik o-pink pred-oblik"><img src="milovan-dekic.jpg" alt="Milovan Dekić drži predavanje" width="400" height="400" loading="lazy" decoding="async"></div>
+    <div class="pred-vizual">
+      <div class="oblik o-pink pred-oblik"><img src="milovan-dekic.jpg" alt="Milovan Dekić drži predavanje" width="400" height="400" loading="lazy" decoding="async"></div>
+      <!-- Mockup knjige: Svetislav, 29. 10. -->
+      <figure class="pred-knjiga"><img src="stvaraj-knjiga.jpg" alt="Knjiga „Stvaraj“ Milovana Dekića" width="800" height="800" loading="lazy" decoding="async"></figure>
+    </div>
     <div class="pred-tekst">
       <p class="natpis">Gostujući predavač</p>
       <h2 id="predavac-n"><span>Milovan Dekić,</span> <span class="h2-pod">autor knjige „Stvaraj“</span></h2>
       <p class="podnaslov">Milovan se bavi istraživanjem korisnika: kako ljudi stvarno koriste proizvode i zašto. Bio je User Research Lead u Nordeusu, gde je timovima koji prave igre pomagao da odluke o proizvodu donose na osnovu istraživanja. Pre toga je predavao sociologiju na Univerzitetu u Beogradu.</p>
-      <p class="podnaslov">Sa Markom Jevtićem napisao je <b>„Design Thinking“</b>, knjigu koja je izašla u deset izdanja. Njegova nova knjiga, <b>„Stvaraj“</b>, metod je po kome radimo ceo vikend, a primerak dobija svaki tim.</p>
+      <p class="podnaslov">Sa Markom Jevtićem napisao je <b>„Design Thinking“</b>, knjigu koja je izašla u deset izdanja. Njegova nova knjiga, <b>„Stvaraj“</b>, donosi 10 taktika za pronalaženje ideja i stvaranje proizvoda uz AI, sa 55 vežbi i preko 100 primera. Po njoj radimo ceo vikend, a primerak dobija svaki tim.</p>
       <div class="pred-blok">
         <p class="pred-kad">Subota, 09:45–10:45</p>
         <p><b>Uvodno predavanje:</b> kako se od ideje dođe do pravog problema, kako se proveravaju pretpostavke i kako se slaže pitch deck.</p>
@@ -941,7 +1008,7 @@ section.pravila-sek[id]{scroll-margin-top:96px}
   <div class="wrap">
     <div class="uvod2">
       <h2 id="za-koga-n"><span>Kod više nije usko grlo.</span> <span>Problem jeste.</span></h2>
-      <p class="uvod2-tekst">AI je ubrzao i pojeftinio pravljenje softvera, pa radna verzija danas nastaje za vikend. Najteže je ostalo isto: naći problem koji ljudi stvarno imaju, napraviti ono što im treba i doći do prvih kupaca.</p>
+      <p class="uvod2-tekst">AI je ubrzao i pojeftinio pravljenje softvera, pa radna verzija danas nastaje za vikend. Najteže je ostalo isto: naći pravi problem. Oko nas su milioni potencijalnih firmi, a tvoja najverovatnije počinje od problema koji ti je blizak, sa posla, fakulteta, iz porodičnog biznisa ili iz nečeg čime se baviš.</p>
     </div>
 
     <div class="kome">
@@ -1015,20 +1082,27 @@ section.pravila-sek[id]{scroll-margin-top:96px}
 <section class="sek svetlo-sek" id="ljudi" aria-labelledby="ljudi-n">
   <div class="wrap"><div class="prag">
     <h2 id="ljudi-n">Ljudi koji će vam reći šta ne valja.</h2>
-    <p class="podnaslov">Mentori su uz timove oba dana i ne ocenjuju one sa kojima su radili. Startap mentori pomažu oko problema, tržišta i prvih kupaca, a tehnički oko AI alata i MVP-ja.</p>
+    <p class="podnaslov">Mentori su uz timove oba dana i ne ocenjuju one sa kojima su radili. Pokrivaju tri oblasti: proizvod (problem i obim MVP-ja), tehniku (AI alati i razvoj) i biznis (prodaja i prvi kupci).</p>
 
     <h3 class="grupa-n">Mentori</h3>
-    <!-- Fotografije [TBD]: <img src="…" alt=""> ide unutar .oblik, inicijali se brišu. Oznaka startap / tehnički [TBD].
-         Fokus (interni plan): Ilić proizvod/MVP · Gajić proizvod, poslovni model · Popović tehnika/MVP · Lekić AI agenti, B2B prodaja · Grujović marketing · Pavlović preduzetništvo, agritech · Jovanović [TBD] · Verović proizvod/MVP -->
-    <ul class="mozaik-ljudi" aria-label="Mentori">
-      <li class="osoba"><div class="oblik o-pink" aria-hidden="true">AI</div><b>Aleksandar Ilić</b><span>Goodnotes</span></li>
-      <li class="osoba"><div class="oblik o-violet" aria-hidden="true">SG</div><b>Svetislav Gajić</b><span>Valyrion</span></li>
-      <li class="osoba"><div class="oblik o-crna" aria-hidden="true">BP</div><b>Balša Popović</b><span>Valyrion</span></li>
-      <li class="osoba"><div class="oblik o-siva" aria-hidden="true">LL</div><b>Lazar Lekić</b><span>Casper Agents</span></li>
-      <li class="osoba"><div class="oblik o-pink" aria-hidden="true">AG</div><b>Aleksa Grujović</b><span>Casper Agents</span></li>
-      <li class="osoba"><div class="oblik o-violet" aria-hidden="true">SP</div><b>Sava Pavlović</b><span>Farmit</span></li>
-      <li class="osoba"><div class="oblik o-crna" aria-hidden="true">LJ</div><b>Lazar Jovanović</b><span><span translate="no">Lovable</span></span></li>
+    <!-- 29. 10.: lista po internom planu (tab Mentori i žiri), poređano po oblastima: proizvod, tehnika, biznis i prodaja. Fotografije iz Vukovog Downloads foldera.
+         Bez fotografije: Vuk Verović, Sara Oluić, Lazar Jovanović [TBD]. Lazar Jovanović nije u tabeli mentora, ali je u tabeli partnera kao potvrđen mentor [proveriti].
+         Srđan Radosavljević (PMI) nije na listi dok ne potvrdi dolazak uživo. -->
+    <ul class="mozaik-ljudi mentori-lista" aria-label="Mentori">
+      <li class="osoba"><div class="oblik o-crna"><img src="ljudi-srdjan-colak.jpg" alt="" width="360" height="360" loading="lazy" decoding="async"></div><b>Srđan Čolak</b><span>Goodnotes</span></li>
+      <li class="osoba"><div class="oblik o-crna"><img src="ljudi-aleksandar-ilic.jpg" alt="" width="360" height="360" loading="lazy" decoding="async"></div><b>Aleksandar Ilić</b><span>Goodnotes</span></li>
+      <li class="osoba"><div class="oblik o-crna"><img src="ljudi-darko-pavlovic.jpg" alt="" width="360" height="360" loading="lazy" decoding="async"></div><b>Darko Pavlović</b><span>ex Nordeus</span></li>
+      <li class="osoba"><div class="oblik o-crna"><img src="ljudi-svetislav-gajic.jpg" alt="" width="360" height="360" loading="lazy" decoding="async"></div><b>Svetislav Gajić</b><span>Valyrion</span></li>
+      <li class="osoba"><div class="oblik o-crna"><img src="ljudi-balsa-popovic.jpg" alt="" width="360" height="360" loading="lazy" decoding="async"></div><b>Balša Popović</b><span>Valyrion</span></li>
+      <li class="osoba"><div class="oblik o-crna"><img src="ljudi-milos-milunovic.jpg" alt="" width="360" height="360" loading="lazy" decoding="async"></div><b>Miloš Milunović</b><span>Microsoft</span></li>
+      <li class="osoba"><div class="oblik o-crna"><img src="ljudi-danilo-vranes.jpg" alt="" width="360" height="360" loading="lazy" decoding="async"></div><b>Danilo Vraneš</b><span>AI startap</span></li>
+      <li class="osoba"><div class="oblik o-crna"><img src="ljudi-milan-pajovic.jpg" alt="" width="360" height="360" loading="lazy" decoding="async"></div><b>Milan Pajović</b><span>Bizzllet</span></li>
       <li class="osoba"><div class="oblik o-siva" aria-hidden="true">VV</div><b>Vuk Verović</b><span>Valyrion</span></li>
+      <li class="osoba"><div class="oblik o-crna"><img src="ljudi-aleksa-grujovic.jpg" alt="" width="360" height="360" loading="lazy" decoding="async"></div><b>Aleksa Grujović</b><span>Farseer</span></li>
+      <li class="osoba"><div class="oblik o-crna"><img src="ljudi-lazar-lekic.jpg" alt="" width="360" height="360" loading="lazy" decoding="async"></div><b>Lazar Lekić</b><span>Casper Agents</span></li>
+      <li class="osoba"><div class="oblik o-crna"><img src="ljudi-sava-pavlovic.jpg" alt="" width="360" height="360" loading="lazy" decoding="async"></div><b>Sava Pavlović</b><span>Farmit</span></li>
+      <li class="osoba"><div class="oblik o-pink" aria-hidden="true">SO</div><b>Sara Oluić</b><span>Fabrika inovacija</span></li>
+      <li class="osoba"><div class="oblik o-violet" aria-hidden="true">LJ</div><b>Lazar Jovanović</b><span><span translate="no">Lovable</span></span></li>
     </ul>
     <p class="napomena lista-napomena">Lista se dopunjuje.</p>
 
@@ -1038,10 +1112,11 @@ section.pravila-sek[id]{scroll-margin-top:96px}
         <p>Ocenjuje finalni pitch u nedelju.</p>
       </div>
       <ul class="mozaik-ljudi ziri-lista" aria-label="Žiri">
-        <li class="osoba"><div class="oblik o-crna" aria-hidden="true">ZB</div><b>Zorana Branković</b><span>Banca Intesa</span></li>
-        <li class="osoba"><div class="oblik o-crna" aria-hidden="true">NĐ</div><b>Nemanja Đorđević</b><span>Palata nauke</span></li>
-        <li class="osoba"><div class="oblik o-crna" aria-hidden="true">PN</div><b>Predrag Nikolić</b><span>CDT / PKS</span></li>
-        <li class="osoba"><div class="oblik o-crna" aria-hidden="true">MC</div><b>Marko Carević</b><span>Ananas</span></li>
+        <li class="osoba"><div class="oblik o-crna"><img src="ljudi-zorana-brankovic.jpg" alt="" width="360" height="360" loading="lazy" decoding="async"></div><b>Zorana Branković</b><span>Banca Intesa</span></li>
+        <li class="osoba"><div class="oblik o-crna"><img src="ljudi-nemanja-djordjevic.jpg" alt="" width="360" height="360" loading="lazy" decoding="async"></div><b>Nemanja Đorđević</b><span>Palata nauke</span></li>
+        <li class="osoba"><div class="oblik o-crna"><img src="ljudi-predrag-nikolic.jpg" alt="" width="360" height="360" loading="lazy" decoding="async"></div><b>Predrag Nikolić</b><span>CDT / PKS</span></li>
+        <li class="osoba"><div class="oblik o-crna"><img src="ljudi-igor-ilic.jpg" alt="" width="360" height="360" loading="lazy" decoding="async"></div><b>Igor Ilić</b><span>Microsoft</span></li>
+        <li class="osoba"><div class="oblik o-crna"><img src="ljudi-marko-carevic.jpg" alt="" width="360" height="360" loading="lazy" decoding="async"></div><b>Marko Carević</b><span>Ananas</span></li>
       </ul>
     </div>
   </div></div>
@@ -1096,13 +1171,14 @@ section.pravila-sek[id]{scroll-margin-top:96px}
     <div class="faq">
       <details><summary>Ne programiram. Ima li smisla da se prijavim?</summary><p>Ima. Žiri najviše boduje razumevanje problema, ne kod. Prvu verziju praviš uz AI alate kao što je <span translate="no">Lovable</span>, a mentori pomažu kad zapne.</p></details>
       <details><summary>Nemam tim. Mogu li da dođem sam?</summary><p>Možeš. Radiš sam ili u timu od dva do tri člana, a pojedinci se ocenjuju isto kao timovi i imaju isto pravo na pitch.</p></details>
+      <details><summary>Koja je tema?</summary><p>Nema zadate teme. Kreni od problema koji ti je blizak: sa posla, fakulteta, iz porodičnog biznisa ili iz okruženja. Žiri najviše gleda koliko je problem stvaran i da li si ga proverio sa ljudima koji ga imaju.</p></details>
       <details><summary>Nemam ideju. Šta onda?</summary><p>Ne treba ti ideja, treba ti problem. Kreni od nečega što znaš sa posla, fakulteta ili iz nečije firme. Ako ga nemaš, posle uvodnog predavanja Milovana Dekića znaćeš gde da ga tražiš.</p></details>
       <details><summary>Ko može da se prijavi?</summary><p>Svi do 30 godina iz cele Srbije: studenti, zaposleni, frilenseri i oni koji tek hoće svoj posao.</p></details>
       <details><summary>Koliko ima mesta?</summary><p>Do 45 učesnika, u najviše 15 timova. Prijave gledamo kako stižu, pa ne čekaj poslednji dan. Odgovor stiže najkasnije do 23.&nbsp;novembra.</p></details>
-      <details><summary>Moram li da budem tu ceo vikend? Radi li se preko noći?</summary><p>Oba dana, jer su pitch i proglašenje u nedelju. Subota traje od 09:00 do 23:00, nedelja od 09:00 do 19:30. Preko noći se ne radi.</p></details>
-      <details><summary>Da li je obezbeđen smeštaj?</summary><p>Nije. Ako dolaziš iz drugog grada, smeštaj za noć između subote i nedelje organizuješ sam.</p></details>
+      <details><summary>Moram li da budem tu oba dana?</summary><p>Da, jer su pitch i proglašenje u nedelju. Subota traje od 09:00 do 23:00, nedelja od 09:00 do 19:30.</p></details>
+      <details><summary>Ostaje li se preko noći? Ko obezbeđuje smeštaj?</summary><p>Na hakatonu se ne ostaje preko noći: u subotu se radi do 23:00, a nastavlja se u nedelju u 09:00. Smeštaj ne organizujemo, pa ako dolaziš iz drugog grada, za noć između subote i nedelje snalaziš se sam.</p></details>
       <details><summary>Mogu li da dođem sa projektom koji već radim?</summary><p>Problem i ideju slobodno ponesi. Postojeće biblioteke, AI alati i servisi su dozvoljeni, ali MVP koji se takmiči pravi se tokom vikenda.</p></details>
-      <details><summary>Šta ako ne pobedimo?</summary><p>Novac dobijaju tri tima, ali svaki tim odlazi sa prvom verzijom proizvoda, pitch deckom i knjigom „Stvaraj“. Pored toga, dva dana radiš sa mentorima koji su gradili proizvode i vode firme, i ti kontakti ostaju i posle vikenda.</p></details>
+      <details><summary>Šta ako ne pobedimo?</summary><p>Novac dobijaju prva dva tima, a prva tri nastavljaju uz SEE UP. Svaki tim odlazi sa prvom verzijom proizvoda, pitch deckom i knjigom „Stvaraj“. Pored toga, dva dana radiš sa mentorima koji su gradili proizvode i vode firme, i ti kontakti ostaju i posle vikenda.</p></details>
       <details><summary>Šta da ponesem?</summary><p>Laptop i punjač. Ako već znaš problem, ponesi i kontakte ljudi koji ga imaju.</p></details>
       <details><summary>Šta ako se prijavim, a ne mogu da dođem?</summary><p>Javi što pre na <a href="mailto:emilija@seeup.net">emilija@seeup.net</a>. Tvoje mesto ide sledećem sa liste čekanja.</p></details>
     </div>
@@ -1116,24 +1192,23 @@ section.pravila-sek[id]{scroll-margin-top:96px}
       <h2 id="prijava-n">Prijava je otvorena do 19.&nbsp;novembra.</h2>
       <!-- Posle roka JS menja h2 u „Prijave su zatvorene.“ i sklanja uvod, napomenu i odbrojavanje. -->
       <p class="uvod-p" id="prijava-uvod">Prijavljuješ se preko Google forme. Najviše vremena vredi potrošiti na opis problema koji poznaješ. Prijave gledamo kako stižu, a odgovor stiže najkasnije do 23.&nbsp;novembra.</p>
-      <div class="odbrojavanje" id="odbrojavanje">
-        <p class="natpis" id="odbroj-natpis">Do zatvaranja prijava</p>
-        <div class="odbroj" id="odbroj" role="timer" aria-label="Vreme do zatvaranja prijava" aria-live="off">
-          <div><b data-d>—</b><span data-dj>dana</span></div>
-          <div><b data-h>—</b><span data-hj>sati</span></div>
-          <div><b data-m>—</b><span data-mj>minuta</span></div>
-        </div>
-        <p class="sr">Prijave se zatvaraju u četvrtak, 19. novembra 2026, u 23:59.</p>
-        <p class="odbroj-ispod" aria-hidden="true">Četvrtak, 19.&nbsp;novembar 2026, u 23:59.</p>
-      </div>
     </div>
 
     <div>
       <!-- Prijava ide preko Google forme (odluka organizatora). Link se upisuje u PRIJAVA_URL u skripti na dnu. -->
       <div class="forma-list prijava-karta" id="prijava-karta">
-        <h3>Prijava je na Google formi.</h3>
-        <p>Otvara se u novom prozoru. Ako nešto ne radi, piši na <a href="mailto:emilija@seeup.net">emilija@seeup.net</a>.</p>
+        <div class="odbrojavanje" id="odbrojavanje">
+          <p class="natpis" id="odbroj-natpis">Do zatvaranja prijava</p>
+          <div class="odbroj" id="odbroj" role="timer" aria-label="Vreme do zatvaranja prijava" aria-live="off">
+            <div><b data-d>—</b><span data-dj>dana</span></div>
+            <div><b data-h>—</b><span data-hj>sati</span></div>
+            <div><b data-m>—</b><span data-mj>minuta</span></div>
+          </div>
+          <p class="sr">Prijave se zatvaraju u četvrtak, 19. novembra 2026, u 23:59.</p>
+          <p class="odbroj-ispod" aria-hidden="true">Četvrtak, 19.&nbsp;novembar 2026, u 23:59.</p>
+        </div>
         <a class="btn" href="#prijava" data-prijava data-umami-event="prijava-klik">Otvori prijavu</a>
+        <p class="karta-napomena">Prijava je na Google formi i otvara se u novom prozoru. Ako nešto ne radi, piši na <a href="mailto:emilija@seeup.net">emilija@seeup.net</a>.</p>
       </div>
       <div class="forma-list zatvoreno" id="zatvoreno" hidden>
         <h3 id="zatvoreno-n">Prijave su zatvorene.</h3>
