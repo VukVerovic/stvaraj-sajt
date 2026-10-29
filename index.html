@@ -887,6 +887,12 @@ section.pravila-sek[id]{scroll-margin-top:96px}
 /* 29. 10.: Finesa u partnerima */
 .partner-ime.partner-finesa img{height:64px;width:auto}
 @media (max-width:560px){.partner-ime.partner-finesa img{height:54px}}
+
+/* 29. 10.: logo SEE UP vodi na seeup.net, Project 011 na project011-bg.vercel.app */
+.lock-a{display:inline-flex;align-items:center;min-height:44px;color:inherit;text-decoration:none;border-radius:6px}
+.lock-a svg{display:block}
+@media (hover:hover){.lock-a:hover{opacity:.7}}
+@media (prefers-reduced-motion:no-preference){.lock-a{transition:opacity .15s}}
 </style>
 <script>document.documentElement.classList.add('js')</script>
 </head>
@@ -905,7 +911,7 @@ section.pravila-sek[id]{scroll-margin-top:96px}
 </svg>
 
 <nav class="nav" id="nav" aria-label="Glavna navigacija"><div class="wrap"><div class="nav-in">
-  <a class="lock" href="#vrh" aria-label="SEE UP × Project 011, na vrh strane"><svg viewBox="0 0 200 43" aria-hidden="true"><use href="#seeup"/></svg><span aria-hidden="true">×</span><svg class="p011" viewBox="0 0 149.47 43" aria-hidden="true"><use href="#p011-mali"/></svg></a>
+  <div class="lock"><a class="lock-a" href="https://seeup.net" target="_blank" rel="noopener" aria-label="SEE UP, seeup.net, otvara se u novom prozoru"><svg viewBox="0 0 200 43" aria-hidden="true"><use href="#seeup"/></svg></a><span aria-hidden="true">×</span><a class="lock-a" href="https://project011-bg.vercel.app" target="_blank" rel="noopener" aria-label="Project 011, otvara se u novom prozoru"><svg class="p011" viewBox="0 0 149.47 43" aria-hidden="true"><use href="#p011-mali"/></svg></a></div>
   <button class="meni-dugme" id="meni-dugme" type="button" aria-expanded="false" aria-controls="meni" aria-label="Otvori meni">Meni</button>
   <ul class="linkovi" id="meni">
     <li><a href="#za-koga">Za koga</a></li>
@@ -1177,13 +1183,13 @@ section.pravila-sek[id]{scroll-margin-top:96px}
     <div>
       <div class="org">
         <div class="org-kol">
-          <div class="org-znak"><svg viewBox="0 0 200 43" role="img" aria-label="SEE UP"><use href="#seeup"/></svg></div>
+          <div class="org-znak"><a class="lock-a" href="https://seeup.net" target="_blank" rel="noopener" aria-label="SEE UP, seeup.net, otvara se u novom prozoru"><svg viewBox="0 0 200 43" aria-hidden="true"><use href="#seeup"/></svg></a></div>
           <!-- Brojke (4 mil. € u 16 startapa, 80+ partnera) tek kad Dušan potvrdi [TBD] -->
           <p>Privatni akcelerator iz Beograda, fokusiran na prodaju. Startapima pomaže da od prve verzije proizvoda dođu do kupaca i rasta.</p>
           <a href="https://seeup.net" target="_blank" rel="noopener" aria-label="seeup.net, otvara se u novom prozoru">seeup.net</a>
         </div>
         <div class="org-kol">
-          <div class="org-znak"><svg viewBox="0 0 149.47 43" role="img" aria-label="Project 011"><use href="#p011"/></svg></div>
+          <div class="org-znak"><a class="lock-a" href="https://project011-bg.vercel.app" target="_blank" rel="noopener" aria-label="Project 011, otvara se u novom prozoru"><svg viewBox="0 0 149.47 43" aria-hidden="true"><use href="#p011"/></svg></a></div>
           <p>Ekipa koja svaki dan pravi softverske proizvode, a ovaj vikend pomaže drugima da naprave svoj. Ime je pozivni broj Beograda, a čita se i kao put od 0 do 1, od ideje do prve verzije.</p>
         </div>
       </div>
@@ -1255,7 +1261,7 @@ section.pravila-sek[id]{scroll-margin-top:96px}
   <div class="wrap">
     <div class="pod-red">
       <div class="lockup">
-        <div class="lock-red" role="img" aria-label="SEE UP × Project 011"><svg viewBox="0 0 200 43" aria-hidden="true"><use href="#seeup"/></svg><span aria-hidden="true">×</span><svg class="p011" viewBox="0 0 149.47 43" aria-hidden="true"><use href="#p011-mali"/></svg></div>
+        <div class="lock-red"><a class="lock-a" href="https://seeup.net" target="_blank" rel="noopener" aria-label="SEE UP, seeup.net, otvara se u novom prozoru"><svg viewBox="0 0 200 43" aria-hidden="true"><use href="#seeup"/></svg></a><span aria-hidden="true">×</span><a class="lock-a" href="https://project011-bg.vercel.app" target="_blank" rel="noopener" aria-label="Project 011, otvara se u novom prozoru"><svg class="p011" viewBox="0 0 149.47 43" aria-hidden="true"><use href="#p011-mali"/></svg></a></div>
         <p><b translate="no">SEE UP Build Session&nbsp;#01 · STVARAJ</b> · Prvo izdanje.</p>
       </div>
       <div><p class="naslov">Kada</p><p>Subota 28. i nedelja 29.&nbsp;novembar 2026.</p></div>
