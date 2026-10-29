@@ -869,6 +869,20 @@ section.pravila-sek[id]{scroll-margin-top:96px}
   .stub-plus{font-size:14px}
   .stub-podrska .iznos{font-size:26px}
 }
+
+/* 29. 10.: dva novčana mesta, pa šta dobijaju prva tri tima i svaki tim */
+@media (min-width:761px){.stubovi{grid-template-columns:1.25fr 1fr}}
+.nagrade-plus{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:32px 40px;margin-top:56px}
+.np-kartice{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 40px}
+.np-svi .np-kartice{grid-template-columns:1fr}
+.np-oznaka{display:flex;align-items:center;gap:10px;margin-bottom:16px;font:700 13px/1 var(--f-tekst);letter-spacing:.08em;text-transform:uppercase;color:#fff}
+.np-oznaka::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--pink);flex:none}
+.np-svi .np-oznaka::before{background:var(--violet)}
+.np-kartica{border-top:1px solid var(--linija);padding-top:20px}
+.np-kartica h3{font:700 20px/1.25 var(--f-naslov);font-stretch:100%}
+.np-kartica p{margin-top:8px;color:var(--tekst-2);font-size:16px;line-height:1.55}
+@media (max-width:900px){.nagrade-plus{grid-template-columns:1fr;gap:36px;margin-top:44px}}
+@media (max-width:640px){.np-kartice{grid-template-columns:1fr;gap:20px}}
 </style>
 <script>document.documentElement.classList.add('js')</script>
 </head>
@@ -944,14 +958,24 @@ section.pravila-sek[id]{scroll-margin-top:96px}
     <p class="podnaslov">Novac za prva dva mesta, a sva tri tima nastavljaju uz SEE&nbsp;UP.</p>
     <!-- 29. 10.: nagrade u dinarima (Vuk); 3. mesto bez novca, sa podrškom SEE UP-a. Interni plan i dalje kaže 1.000/400/200 €. -->
     <ol class="stubovi">
-      <li class="stub"><span class="mesto">1.&nbsp;mesto</span><span class="iznos">100.000<small>dinara</small></span><span class="stub-plus">+ podrška SEE UP-a i mogućnost Azure kredita</span></li>
-      <li class="stub"><span class="mesto">2.&nbsp;mesto</span><span class="iznos">40.000<small>dinara</small></span><span class="stub-plus">+ podrška SEE UP-a i mogućnost Azure kredita</span></li>
-      <li class="stub stub-podrska"><span class="mesto">3.&nbsp;mesto</span><span class="iznos">Podrška SEE&nbsp;UP-a</span><span class="stub-plus">mentorstvo, pomoć u osnivanju startapa i mogućnost Azure kredita</span></li>
+      <li class="stub"><span class="mesto">1.&nbsp;mesto</span><span class="iznos">100.000<small>dinara</small></span></li>
+      <li class="stub"><span class="mesto">2.&nbsp;mesto</span><span class="iznos">40.000<small>dinara</small></span></li>
     </ol>
-    <div class="dodatno">
-      <div><h3>Podrška SEE UP-a</h3><p>Prva tri tima nastavljaju uz SEE UP: mentorstvo, pomoć u osnivanju startapa, razvoju proizvoda i dolasku do prvih kupaca, uz veze sa osnivačima i partnerima. Otvara se i mogućnost ulaska u SEE UP kohortu. Posle 30&nbsp;dana proveravamo dokle ste stigli.</p></div>
-      <div><!-- Bez Microsoft/Azure logoa: traži licencu ili odobrenje Microsofta. --><h3><span translate="no">Microsoft Azure</span> krediti</h3><figure class="dod-vizual"><span class="dod-broj"><small>do</small> 150.000&nbsp;$</span></figure><p>Mogućnost za prva tri tima kroz <span translate="no">Microsoft Azure Sponsorship</span>. Krediti se koriste za cloud i AI servise na <span translate="no">Azure</span>-u, od servera i baza podataka do AI modela.</p></div>
-      <div><h3>Knjiga za svaki tim</h3><p>Svaki tim dobija primerak nove knjige „Stvaraj“ Milovana Dekića, bez obzira na plasman. Po njenom metodu radite ceo vikend, od problema i hipoteza do prvih kupaca, a knjiga ostaje kao vodič i kad se vikend završi.</p></div>
+    <!-- 29. 10.: 3. mesto nema novčanu nagradu; ono što dobijaju sva tri tima je ispod, u grupi „Prva tri tima“. -->
+    <div class="nagrade-plus">
+      <div class="np-grupa np-tri">
+        <p class="np-oznaka">Prva tri tima</p>
+        <div class="np-kartice">
+          <div class="np-kartica"><h3>Podrška SEE UP-a</h3><p>Mentorstvo, pomoć u osnivanju startapa, razvoju proizvoda i dolasku do prvih kupaca, uz veze sa osnivačima i partnerima. Otvara se i mogućnost ulaska u SEE UP kohortu. Posle 30&nbsp;dana proveravamo dokle ste stigli.</p></div>
+          <div class="np-kartica"><!-- Bez Microsoft/Azure logoa: traži licencu ili odobrenje Microsofta. --><h3><span translate="no">Microsoft Azure</span> krediti</h3><figure class="dod-vizual"><span class="dod-broj"><small>do</small> 150.000&nbsp;$</span></figure><p>Mogućnost kredita kroz <span translate="no">Microsoft Azure Sponsorship</span>, za cloud i AI servise na <span translate="no">Azure</span>-u, od servera i baza podataka do AI modela.</p></div>
+        </div>
+      </div>
+      <div class="np-grupa np-svi">
+        <p class="np-oznaka">Svaki tim</p>
+        <div class="np-kartice">
+          <div class="np-kartica"><h3>Knjiga „Stvaraj“</h3><p>Primerak nove knjige Milovana Dekića, bez obzira na plasman. Po njenom metodu radite ceo vikend, od problema i hipoteza do prvih kupaca, a knjiga ostaje kao vodič i kad se vikend završi.</p></div>
+        </div>
+      </div>
     </div>
 
     <!-- Partneri. Microsoft/Azure logo ne stavljati bez licence ili odobrenja Microsofta (microsoft.com/trademarks); Azure ostaje samo tekstom u nagradama. -->
