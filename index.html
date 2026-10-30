@@ -1244,7 +1244,7 @@ section.pravila-sek[id]{scroll-margin-top:96px}
           <p class="sr">Prijave se zatvaraju u četvrtak, 19. novembra 2026, u 23:59.</p>
           <p class="odbroj-ispod" aria-hidden="true">Četvrtak, 19.&nbsp;novembar 2026, u 23:59.</p>
         </div>
-        <a class="btn" href="#prijava" data-prijava data-umami-event="prijava-klik">Otvori prijavu</a>
+        <a class="btn" href="https://forms.gle/GULQf595u9wyZuhv6" target="_blank" rel="noopener" data-prijava data-umami-event="prijava-klik">Otvori prijavu</a>
         <p class="karta-napomena">Prijava je na Google formi i otvara se u novom prozoru. Ako nešto ne radi, piši na <a href="mailto:emilija@seeup.net">emilija@seeup.net</a>.</p>
       </div>
       <div class="forma-list zatvoreno" id="zatvoreno" hidden>
@@ -1412,8 +1412,8 @@ section.pravila-sek[id]{scroll-margin-top:96px}
   var IZVOR=izvor();
 
   /* ---------- link ka prijavi: Google forma ---------- */
-  // [TBD] upisati link Google forme. Dok je prazan, dugmad vode na sekciju #prijava.
-  var PRIJAVA_URL='';
+  // Google forma (Vuk, 30. 10.). Za polje „Izvor“ treba dug link docs.google.com/forms/d/e/…/viewform umesto forms.gle, jer kratki link ne nosi parametre.
+  var PRIJAVA_URL='https://forms.gle/GULQf595u9wyZuhv6';
   if(PRIJAVA_URL&&!zatvoreno()){
     var url=PRIJAVA_URL+(IZVOR_POLJE?(PRIJAVA_URL.indexOf('?')<0?'?':'&')+'usp=pp_url&'+IZVOR_POLJE+'='+encodeURIComponent(IZVOR):'');
     Array.prototype.forEach.call(document.querySelectorAll('a[data-prijava]'),function(a){a.href=url;a.target='_blank';a.rel='noopener'});
