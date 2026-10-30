@@ -1,0 +1,9 @@
+{
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/", "destination": "/stvaraj", "permanent": false }
+  ],
+  "rewrites": [
+    { "source": "/stvaraj", "destination": "/index.html" }
+  ]
+}
