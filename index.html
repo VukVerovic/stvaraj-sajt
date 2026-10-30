@@ -1411,7 +1411,7 @@ section.pravila-sek[id]{scroll-margin-top:96px}
 
   /* ---------- link ka prijavi: Google forma ---------- */
   // Google forma (Vuk, 30. 10.). Za polje „Izvor“ treba dug link docs.google.com/forms/d/e/…/viewform umesto forms.gle, jer kratki link ne nosi parametre.
-  var PRIJAVA_URL='https://forms.gle/GULQf595u9wyZuhv6';
+  var PRIJAVA_URL='https://docs.google.com/forms/d/e/1FAIpQLSeJHuK0W-dVXvdlJs41MTaJoDzutCkgzYhG4v6c6nOO2VT-OQ/viewform';
   if(PRIJAVA_URL&&!zatvoreno()){
     var url=PRIJAVA_URL+(IZVOR_POLJE?(PRIJAVA_URL.indexOf('?')<0?'?':'&')+'usp=pp_url&'+IZVOR_POLJE+'='+encodeURIComponent(IZVOR):'');
     Array.prototype.forEach.call(document.querySelectorAll('a[data-prijava]'),function(a){a.href=url;a.target='_blank';a.rel='noopener'});
