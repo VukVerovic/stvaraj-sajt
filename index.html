@@ -761,7 +761,7 @@ section.nastavak[id]{scroll-margin-top:calc(16px - var(--pad2))}
 .kriterijumi li::before{content:counter(kr);display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:#000;color:#fff;font:800 14px/1 var(--f-naslov);font-stretch:125%}
 .zp-traka{margin-top:16px;background:var(--pink);color:#000;border-radius:200px;padding:20px 30px;font:700 clamp(17px,1.6vw,22px)/1.3 var(--f-naslov);font-stretch:100%}
 @media (max-width:560px){.kriterijumi{gap:8px}.kriterijumi li{font-size:15px;padding:5px 14px 5px 5px;gap:8px}.kriterijumi li::before{width:24px;height:24px;font-size:12px}.zp-traka{border-radius:24px;padding:16px 20px;font-size:17px}}
-@media (max-width:560px){.mozaik-ljudi:not(.ziri-lista),.mozaik-ljudi.ziri-lista{grid-template-columns:repeat(4,minmax(0,1fr));gap:18px 8px}.ziri-lista .oblik{max-width:none}.mozaik-ljudi .oblik{font-size:20px}.osoba b{font-size:13px;line-height:1.2;margin-top:8px;overflow-wrap:anywhere}.osoba span{font-size:12px}}
+@media (max-width:560px){.mozaik-ljudi:not(.ziri-lista),.mozaik-ljudi.ziri-lista{grid-template-columns:repeat(4,minmax(0,1fr));gap:18px 8px}.ziri-lista .oblik{max-width:none}.mozaik-ljudi .oblik{font-size:20px}.osoba b{font-size:13px;line-height:1.2;margin-top:8px;overflow-wrap:anywhere}.osoba span{font-size:12px}.osoba .fokus{font-size:12px;margin-top:4px}}
 .partner{align-items:center}
 .partner-ime img{display:block;height:36px;width:auto}
 @media (max-width:560px){.partner-ime img{height:30px}}
@@ -1029,8 +1029,8 @@ section.pravila-sek[id]{scroll-margin-top:96px}
     <div class="pred-tekst">
       <p class="natpis">Gostujući predavač</p>
       <h2 id="predavac-n"><span>Milovan Dekić,</span> <span class="h2-pod">autor knjige „Stvaraj“</span></h2>
-      <p class="podnaslov">Milovan se bavi istraživanjem korisnika: kako ljudi stvarno koriste proizvode i zašto. Bio je User Research Lead u Nordeusu, gde je timovima koji prave igre pomagao da odluke o proizvodu donose na osnovu istraživanja. Pre toga je predavao sociologiju na Univerzitetu u Beogradu.</p>
-      <p class="podnaslov">Sa Markom Jevtićem napisao je <b>„Design Thinking“</b>, knjigu koja je izašla u deset izdanja. Njegova nova knjiga <b>„Stvaraj“</b>, u izdanju izdavačke kuće Finesa, donosi 10 taktika za pronalaženje ideja i stvaranje proizvoda uz AI, sa 55 vežbi i preko 100 primera. Po njoj radimo ceo vikend, a primerak dobija svaki tim.</p>
+      <p class="podnaslov">Milovan istražuje kako ljudi stvarno koriste proizvode i zašto. Kao User Research Lead u Nordeusu pomagao je timovima da odluke o igrama donose na osnovu istraživanja, a pre toga je predavao sociologiju na Univerzitetu u Beogradu.</p>
+      <p class="podnaslov">Koautor je knjige <b>„Design Thinking“</b> (sa Markom Jevtićem, deset izdanja). Nova knjiga <b>„Stvaraj“</b> (Finesa) donosi 10 taktika za pronalaženje ideja i pravljenje proizvoda uz AI, sa 55 vežbi i preko 100 primera. Po njoj radimo ceo vikend, a svaki tim dobija primerak.</p>
       <div class="pred-blok">
         <p class="pred-kad">Subota, 09:45–10:45</p>
         <p><b>Uvodno predavanje:</b> kako se od ideje dođe do pravog problema, kako se proveravaju pretpostavke i kako se slaže pitch deck.</p>
@@ -1119,26 +1119,29 @@ section.pravila-sek[id]{scroll-margin-top:96px}
 <section class="sek svetlo-sek" id="ljudi" aria-labelledby="ljudi-n">
   <div class="wrap"><div class="prag">
     <h2 id="ljudi-n">Ljudi koji će vam reći šta ne valja.</h2>
-    <p class="podnaslov">Mentori su uz timove oba dana i ne ocenjuju one sa kojima su radili. Pokrivaju tri oblasti: proizvod (problem i obim MVP-ja), tehniku (AI alati i razvoj) i biznis (prodaja i prvi kupci).</p>
+    <p class="podnaslov">Mentori su uz timove oba dana: za proizvod, tehniku i biznis. Ispod imena piše oko čega da ih pitaš. Ne ocenjuju timove sa kojima su radili.</p>
 
     <h3 class="grupa-n">Mentori</h3>
     <!-- 29. 10.: lista po internom planu (tab Mentori i žiri), 31. 10. (Vuk): redosled izmešan tako da ljudi iz iste firme i iste oblasti (proizvod, tehnika, biznis) ne stoje jedni pored drugih, ni u redu od 7 ni od 4. Fotografije iz Vukovog Downloads foldera.
          29. 10. (Vuk): na sajtu samo mentori koji su potvrdili dolazak i imaju fotografiju. Sara Oluić dodata 31. 10. (South Central Ventures, po Vukovoj poruci; interni plan kaže Fabrika inovacija). Lazar Jovanović se dodaje kad potvrdi.
-         Srđan Radosavljević (PMI) nije na listi dok ne potvrdi dolazak uživo. -->
+         31. 10.: Srđan Radosavljević potvrdio, dodat na kraj (14. mentor); titula i fotografija (140 px, jedina dostupna) sa F6S profila.
+         31. 10.: fokus ispod imena po kolonama Fokus / Ekspertiza iz taba Mentori i žiri. Marko Carević: fokus nije upisan u planu, stavljeno po ulozi (CEO Ananasa).
+         31. 10. (Svetislav): titule iz taba Mentori i žiri i javnih izvora (Banca Intesa, Leanpay, Delta Holding). Predrag Nikolić izašao iz žirija, Jovan Milićević (Leanpay) ušao; fotografija sa leanpay.com. -->
     <ul class="mozaik-ljudi mentori-lista" aria-label="Mentori">
-      <li class="osoba"><div class="oblik o-crna"><img src="ljudi-balsa-popovic.jpg" alt="" width="360" height="360" loading="lazy" decoding="async"></div><b>Balša Popović</b><span>Valyrion</span></li>
-      <li class="osoba"><div class="oblik o-crna"><img src="ljudi-sava-pavlovic.jpg" alt="" width="360" height="360" loading="lazy" decoding="async"></div><b>Sava Pavlović</b><span>Farmit</span></li>
-      <li class="osoba"><div class="oblik o-crna"><img src="ljudi-milos-milunovic.jpg" alt="" width="360" height="360" loading="lazy" decoding="async"></div><b>Miloš Milunović</b><span>Microsoft</span></li>
-      <li class="osoba"><div class="oblik o-pink"><img src="ljudi-sara-oluic.jpg" alt="" width="360" height="360" loading="lazy" decoding="async"></div><b>Sara Oluić</b><span>South Central Ventures</span></li>
-      <li class="osoba"><div class="oblik o-crna"><img src="ljudi-aleksandar-ilic.jpg" alt="" width="360" height="360" loading="lazy" decoding="async"></div><b>Aleksandar Ilić</b><span>Goodnotes</span></li>
-      <li class="osoba"><div class="oblik o-crna"><img src="ljudi-aleksa-grujovic.jpg" alt="" width="360" height="360" loading="lazy" decoding="async"></div><b>Aleksa Grujović</b><span>Farseer</span></li>
-      <li class="osoba"><div class="oblik o-siva"><img src="ljudi-vuk-verovic.jpg" alt="" width="360" height="360" loading="lazy" decoding="async"></div><b>Vuk Verović</b><span>Valyrion</span></li>
-      <li class="osoba"><div class="oblik o-crna"><img src="ljudi-darko-pavlovic.jpg" alt="" width="360" height="360" loading="lazy" decoding="async"></div><b>Darko Pavlović</b><span>ex Nordeus</span></li>
-      <li class="osoba"><div class="oblik o-crna"><img src="ljudi-milan-pajovic.jpg" alt="" width="360" height="360" loading="lazy" decoding="async"></div><b>Milan Pajović</b><span>Bizzllet</span></li>
-      <li class="osoba"><div class="oblik o-crna"><img src="ljudi-srdjan-colak.jpg" alt="" width="360" height="360" loading="lazy" decoding="async"></div><b>Srđan Čolak</b><span>Goodnotes</span></li>
-      <li class="osoba"><div class="oblik o-crna"><img src="ljudi-lazar-lekic.jpg" alt="" width="360" height="360" loading="lazy" decoding="async"></div><b>Lazar Lekić</b><span>Casper Agents</span></li>
-      <li class="osoba"><div class="oblik o-crna"><img src="ljudi-danilo-vranes.jpg" alt="" width="360" height="360" loading="lazy" decoding="async"></div><b>Danilo Vraneš</b><span>AI startap</span></li>
-      <li class="osoba"><div class="oblik o-crna"><img src="ljudi-svetislav-gajic.jpg" alt="" width="360" height="360" loading="lazy" decoding="async"></div><b>Svetislav Gajić</b><span>Valyrion</span></li>
+      <li class="osoba"><div class="oblik o-crna"><img src="ljudi-balsa-popovic.jpg" alt="" width="360" height="360" loading="lazy" decoding="async"></div><b>Balša Popović</b><span>Engineering Lead, Valyrion</span><span class="fokus">Razvoj MVP-ja</span></li>
+      <li class="osoba"><div class="oblik o-crna"><img src="ljudi-sava-pavlovic.jpg" alt="" width="360" height="360" loading="lazy" decoding="async"></div><b>Sava Pavlović</b><span>CEO, Farmit</span><span class="fokus">Osnivanje firme, monetizacija</span></li>
+      <li class="osoba"><div class="oblik o-crna"><img src="ljudi-milos-milunovic.jpg" alt="" width="360" height="360" loading="lazy" decoding="async"></div><b>Miloš Milunović</b><span>Senior Applied Scientist, Microsoft</span><span class="fokus">AI i NLP, AI alati</span></li>
+      <li class="osoba"><div class="oblik o-pink"><img src="ljudi-sara-oluic.jpg" alt="" width="360" height="360" loading="lazy" decoding="async"></div><b>Sara Oluić</b><span>South Central Ventures</span><span class="fokus">Pitch i prezentacija</span></li>
+      <li class="osoba"><div class="oblik o-crna"><img src="ljudi-aleksandar-ilic.jpg" alt="" width="360" height="360" loading="lazy" decoding="async"></div><b>Aleksandar Ilić</b><span>Product Lead, Goodnotes</span><span class="fokus">Problem i obim MVP-ja</span></li>
+      <li class="osoba"><div class="oblik o-crna"><img src="ljudi-aleksa-grujovic.jpg" alt="" width="360" height="360" loading="lazy" decoding="async"></div><b>Aleksa Grujović</b><span>Account Executive, Farseer</span><span class="fokus">B2B prodaja, prvi kupci</span></li>
+      <li class="osoba"><div class="oblik o-siva"><img src="ljudi-vuk-verovic.jpg" alt="" width="360" height="360" loading="lazy" decoding="async"></div><b>Vuk Verović</b><span>Software Engineer, Valyrion</span><span class="fokus">Razvoj i AI</span></li>
+      <li class="osoba"><div class="oblik o-crna"><img src="ljudi-darko-pavlovic.jpg" alt="" width="360" height="360" loading="lazy" decoding="async"></div><b>Darko Pavlović</b><span>Product Director, CrazyGames</span><span class="fokus">Proizvod i obim MVP-ja</span></li>
+      <li class="osoba"><div class="oblik o-crna"><img src="ljudi-milan-pajovic.jpg" alt="" width="360" height="360" loading="lazy" decoding="async"></div><b>Milan Pajović</b><span>CEO, Bizzllet</span><span class="fokus">Tehnika, iskustvo osnivača</span></li>
+      <li class="osoba"><div class="oblik o-crna"><img src="ljudi-srdjan-colak.jpg" alt="" width="360" height="360" loading="lazy" decoding="async"></div><b>Srđan Čolak</b><span>Director of Product, Goodnotes</span><span class="fokus">Problem i obim MVP-ja</span></li>
+      <li class="osoba"><div class="oblik o-crna"><img src="ljudi-lazar-lekic.jpg" alt="" width="360" height="360" loading="lazy" decoding="async"></div><b>Lazar Lekić</b><span>Founder, Casper Agents</span><span class="fokus">AI agenti, B2B prodaja</span></li>
+      <li class="osoba"><div class="oblik o-crna"><img src="ljudi-danilo-vranes.jpg" alt="" width="360" height="360" loading="lazy" decoding="async"></div><b>Danilo Vraneš</b><span>ML inženjer, AI startap</span><span class="fokus">Tehnika, hakatoni</span></li>
+      <li class="osoba"><div class="oblik o-crna"><img src="ljudi-svetislav-gajic.jpg" alt="" width="360" height="360" loading="lazy" decoding="async"></div><b>Svetislav Gajić</b><span>Head of Product, Valyrion</span><span class="fokus">Proizvod i obim MVP-ja</span></li>
+      <li class="osoba"><div class="oblik o-crna"><img src="ljudi-srdjan-radosavljevic.jpg" alt="" width="360" height="360" loading="lazy" decoding="async"></div><b>Srđan Radosavljević</b><span>COO/CFO, Smartsy</span><span class="fokus">Korporativna prodaja, kako firme kupuju</span></li>
     </ul>
     <p class="napomena lista-napomena">Lista se dopunjuje.</p>
 
@@ -1148,11 +1151,11 @@ section.pravila-sek[id]{scroll-margin-top:96px}
         <p>Ocenjuje finalni pitch u nedelju.</p>
       </div>
       <ul class="mozaik-ljudi ziri-lista" aria-label="Žiri">
-        <li class="osoba"><div class="oblik o-crna"><img src="ljudi-zorana-brankovic.jpg" alt="" width="360" height="360" loading="lazy" decoding="async"></div><b>Zorana Branković</b><span>Banca Intesa</span></li>
-        <li class="osoba"><div class="oblik o-crna"><img src="ljudi-nemanja-djordjevic.jpg" alt="" width="360" height="360" loading="lazy" decoding="async"></div><b>Nemanja Đorđević</b><span>Palata nauke</span></li>
-        <li class="osoba"><div class="oblik o-crna"><img src="ljudi-predrag-nikolic.jpg" alt="" width="360" height="360" loading="lazy" decoding="async"></div><b>Predrag Nikolić</b><span>CDT / PKS</span></li>
-        <li class="osoba"><div class="oblik o-crna"><img src="ljudi-igor-ilic.jpg" alt="" width="360" height="360" loading="lazy" decoding="async"></div><b>Igor Ilić</b><span>Microsoft</span></li>
-        <li class="osoba"><div class="oblik o-crna"><img src="ljudi-marko-carevic.jpg" alt="" width="360" height="360" loading="lazy" decoding="async"></div><b>Marko Carević</b><span>Ananas</span></li>
+        <li class="osoba"><div class="oblik o-crna"><img src="ljudi-zorana-brankovic.jpg" alt="" width="360" height="360" loading="lazy" decoding="async"></div><b>Zorana Branković</b><span>COO, Banca Intesa</span><span class="fokus">Biznis, digitalni proizvodi</span></li>
+        <li class="osoba"><div class="oblik o-crna"><img src="ljudi-nemanja-djordjevic.jpg" alt="" width="360" height="360" loading="lazy" decoding="async"></div><b>Nemanja Đorđević</b><span>CEO, Palata nauke</span><span class="fokus">Inovacije, obrazovanje</span></li>
+        <li class="osoba"><div class="oblik o-siva"><img src="ljudi-jovan-milicevic.png" alt="" width="360" height="360" loading="lazy" decoding="async"></div><b>Jovan Milićević</b><span>CPO, Leanpay</span><span class="fokus">Proizvod, startapi, fintech</span></li>
+        <li class="osoba"><div class="oblik o-crna"><img src="ljudi-igor-ilic.jpg" alt="" width="360" height="360" loading="lazy" decoding="async"></div><b>Igor Ilić</b><span>Founder, ex-Microsoft i Goodnotes</span><span class="fokus">Tehnologija, AI, proizvod</span></li>
+        <li class="osoba"><div class="oblik o-crna"><img src="ljudi-marko-carevic.jpg" alt="" width="360" height="360" loading="lazy" decoding="async"></div><b>Marko Carević</b><span>CEO, Ananas</span><span class="fokus">E-commerce, rast biznisa</span></li>
       </ul>
     </div>
   </div></div>
