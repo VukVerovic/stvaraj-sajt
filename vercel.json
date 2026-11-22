@@ -1,9 +1,24 @@
 {
   "trailingSlash": false,
   "redirects": [
-    { "source": "/", "destination": "/stvaraj", "permanent": false }
+    {
+      "source": "/",
+      "destination": "/stvaraj",
+      "permanent": false
+    }
   ],
   "rewrites": [
-    { "source": "/stvaraj", "destination": "/index.html" }
+    {
+      "source": "/stvaraj",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/stvaraj/mentori",
+      "destination": "/mentori.html"
+    },
+    {
+      "source": "/stvaraj/ziri",
+      "destination": "/ziri.html"
+    }
   ]
 }

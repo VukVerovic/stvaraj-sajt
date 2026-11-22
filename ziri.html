@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="sr-Latn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>STVARAJ · Za žiri</title>
+<meta name="description" content="STVARAJ, SEE UP Build Session #01: format finala, kriterijumi i lista za ocenjivanje.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#000000">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,700..800&family=Ubuntu:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="/stvaraj-interno.css">
+<style>
+.ime-izbor{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:18px}
+.ime-izbor label{color:var(--tekst-2)}
+select{font:500 16px/1 var(--f-tekst);color:#fff;background:var(--ploca);border:1.5px solid var(--linija);border-radius:30px;padding:12px 40px 12px 16px;min-height:46px;appearance:none;background-image:linear-gradient(45deg,transparent 50%,#fff 50%),linear-gradient(135deg,#fff 50%,transparent 50%);background-position:calc(100% - 20px) 50%,calc(100% - 14px) 50%;background-size:6px 6px;background-repeat:no-repeat}
+.oc-tim{background:var(--ploca);border:1px solid var(--ploca-ivica);border-radius:18px;margin-bottom:10px;overflow:hidden}
+.oc-tim summary{list-style:none;display:grid;grid-template-columns:1fr auto;gap:4px 14px;align-items:center;padding:16px 18px;cursor:pointer;min-height:64px}
+.oc-tim summary::-webkit-details-marker{display:none}
+.oc-tim summary h3{font-size:18px}
+.oc-tim summary p{grid-column:1;color:var(--tekst-3);font-size:14px;line-height:1.4}
+.zbir{grid-row:1/span 2;grid-column:2;text-align:right;font:800 26px/1 var(--f-naslov);font-stretch:125%;color:var(--tekst-3);font-variant-numeric:tabular-nums}
+.zbir small{display:block;font:500 11px/1.2 var(--f-tekst);letter-spacing:.04em;margin-top:4px}
+.zbir.gotovo{color:var(--pink)}
+.oc-tim[open] summary{border-bottom:1px solid var(--ploca-ivica)}
+.oc-telo{padding:6px 18px 18px}
+.oc-red{padding:12px 0;border-top:1px solid var(--ploca-ivica)}
+.oc-red:first-child{border-top:0}
+.oc-red .naz{display:flex;justify-content:space-between;gap:10px;font-weight:500}
+.oc-red .naz small{color:var(--tekst-3);font-weight:400}
+.oc-red .pit{color:var(--tekst-3);font-size:13.5px;margin:2px 0 10px;line-height:1.45}
+.ocene{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;max-width:360px}
+.ocene button{min-height:46px;border:0;border-radius:12px;background:#16161A;color:#fff;font:700 17px/1 var(--f-tekst);cursor:pointer}
+.ocene button:hover{background:#24242A}
+.ocene button[aria-pressed="true"]{background:var(--pink);color:#000}
+textarea{width:100%;min-height:76px;margin-top:6px;font:400 15px/1.5 var(--f-tekst);color:#fff;background:#000;border:1.5px solid var(--linija);border-radius:12px;padding:10px 12px;resize:vertical}
+.rang{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.rang th,.rang td{text-align:left;padding:10px 8px;border-top:1px solid var(--ploca-ivica)}
+.rang th{font:700 11.5px/1 var(--f-tekst);letter-spacing:.08em;text-transform:uppercase;color:var(--tekst-3);border-top:0}
+.rang td.br{font:800 18px/1 var(--f-naslov);font-stretch:125%;color:var(--pink);width:44px}
+.rang td.uk{font-weight:700;text-align:right}
+.rang th.uk{text-align:right}
+.akcije{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.prazno{color:var(--tekst-3)}
+.tost{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#fff;color:#000;font:500 15px/1.3 var(--f-tekst);padding:12px 18px;border-radius:30px;z-index:40}
+</style>
+</head>
+<body>
+<header class="traka">
+  <div class="wrap">
+    <a class="znak" href="#vrh">STVARAJ <span>za žiri</span></a>
+    <nav aria-label="Sekcije">
+      <a href="#format">Format</a>
+      <a href="#kriterijumi">Kriterijumi</a>
+      <a href="#ocenjivanje">Ocenjivanje</a>
+      <a href="#rang">Moja rang lista</a>
+    </nav>
+  </div>
+</header>
+
+<main id="vrh">
+  <div class="wrap hero">
+    <span class="oznaka">Samo za žiri</span>
+    <h1>Hvala što si u žiriju STVARAJ-a.</h1>
+    <p class="uvod">Za vikend je 16 timova i pojedinaca išlo od problema do MVP-ja. Najboljih 8 pitchuje pred vama u nedelju. Ovde su format, kriterijumi i lista za ocenjivanje koju možeš da koristiš na telefonu.</p>
+    <div class="cinjenice">
+      <span><b>Nedelja, 29. novembar</b></span>
+      <span><b>CDT Hub</b>, Kneza Miloša 12, 6. sprat</span>
+      <span>Pitch od <b>17h</b>, dodela oko <b>19h</b></span>
+    </div>
+  </div>
+
+  <section class="sek" id="format">
+    <div class="wrap">
+      <h2>Format finala</h2>
+      <p class="pod">Timovi predaju MVP i prezentaciju do 16h. Od svih predatih biramo 8 finalista koji izlaze pred žiri.</p>
+      <div class="mreza">
+        <div class="kartica">
+          <h3>Tok večeri</h3>
+          <ul class="lista">
+            <li><b>16:30</b> dolazak i kratak brifing</li>
+            <li><b>17:00</b> pitch 8 finalista</li>
+            <li><b>oko 18:15</b> veće žirija</li>
+            <li><b>oko 19:00</b> dodela nagrada</li>
+          </ul>
+        </div>
+        <div class="kartica">
+          <h3>Svaki finalista</h3>
+          <ul class="lista">
+            <li><b>3 min</b> prezentacija</li>
+            <li><b>2 min</b> demo uživo</li>
+            <li><b>2 min</b> pitanja žirija</li>
+            <li>Ocenjuj odmah posle pitanja, dok je sveže.</li>
+          </ul>
+        </div>
+        <div class="kartica">
+          <h3>Nagrade</h3>
+          <ul class="lista">
+            <li><b>1.000 EUR</b> prvo mesto, <b>400 EUR</b> drugo, <b>200 EUR</b> treće</li>
+            <li>SEE UP podrška za prva tri</li>
+            <li>Azure krediti do 150.000 USD</li>
+          </ul>
+        </div>
+      </div>
+      <p class="napomena" style="margin-top:14px">Kako odlučujemo: svako ocenjuje sam, po sedam kriterijuma ispod. Zbir ocena je polazna tačka za veće, a konačna odluka je zajednička. Kod jednakog zbira prednost ima viša ocena za MVP, pa za problem.</p>
+    </div>
+  </section>
+
+  <section class="sek" id="kriterijumi">
+    <div class="wrap">
+      <h2>Kriterijumi</h2>
+      <p class="pod">Ocena od 1 do 5 po kriterijumu. Težine se sabiraju do 100 poena: ocena 5 nosi pun broj poena, ocena 1 petinu. Ispod je šta znače 1, 3 i 5.</p>
+      <div class="krit" id="krit"></div>
+    </div>
+  </section>
+
+  <section class="sek" id="ocenjivanje">
+    <div class="wrap">
+      <h2>Ocenjivanje</h2>
+      <p class="pod">Ocene se čuvaju samo na ovom uređaju. Na kraju u „Mojoj rang listi" možeš da kopiraš svoje rezultate i pošalješ ih organizatoru.</p>
+      <div class="ime-izbor">
+        <label for="ime">Ocenjuje:</label>
+        <select id="ime"><option value="">Izaberi svoje ime</option></select>
+      </div>
+      <div class="cipovi" id="filter" role="group" aria-label="Prikaz">
+        <button class="cip" type="button" data-f="sve" aria-pressed="true">Svi timovi</button>
+        <button class="cip" type="button" data-f="ocenjeni" aria-pressed="false">Samo ocenjeni</button>
+        <button class="cip" type="button" data-f="neocenjeni" aria-pressed="false">Neocenjeni</button>
+      </div>
+      <div id="lista"></div>
+    </div>
+  </section>
+
+  <section class="sek" id="rang">
+    <div class="wrap">
+      <h2>Moja rang lista</h2>
+      <p class="pod">Samo tvoje ocene, sortirano po ukupnom zbiru.</p>
+      <div id="rang-tabela"></div>
+      <div class="akcije">
+        <button class="btn" type="button" id="kopiraj">Kopiraj rezultate</button>
+        <button class="btn sek-btn" type="button" id="obrisi">Obriši moje ocene</button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="podnozje">
+  <div class="wrap">
+    <p>Pitanja: Svetislav Gajić, <a href="mailto:sg@valyrion.com">sg@valyrion.com</a>.</p>
+    <p style="margin-top:8px">SEE UP i Project 011 · STVARAJ, Build Session #01</p>
+  </div>
+</footer>
+
+<script src="/stvaraj-podaci.js"></script>
+<script>
+(function(){
+  var S = window.STVARAJ, K = S.kriterijumi, KLJUC = "stvaraj-ziri-v1";
+  function el(tag, cls, html){ var e=document.createElement(tag); if(cls) e.className=cls; if(html!=null) e.innerHTML=html; return e; }
+  function esc(s){ return String(s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];}); }
+
+  var stanje = { ime:"", ocene:{} };
+  try{ var s = JSON.parse(localStorage.getItem(KLJUC)||"null"); if(s && s.ocene) stanje = s; }catch(e){}
+  function sacuvaj(){ try{ localStorage.setItem(KLJUC, JSON.stringify(stanje)); }catch(e){} }
+
+  function tost(t){ var x=el("div","tost",esc(t)); document.body.appendChild(x); setTimeout(function(){x.remove();},2200); }
+
+  // kriterijumi
+  var krit = document.getElementById("krit");
+  K.forEach(function(k){
+    krit.appendChild(el("div","krit-red",
+      '<div class="tezina">'+k.tezina+'<small>poena</small></div>'+
+      '<div><h3>'+esc(k.naziv)+'</h3><p>'+esc(k.pitanje)+'</p>'+
+      '<div class="skala"><span><b>1</b>'+esc(k.skala[0])+'</span><span><b>3</b>'+esc(k.skala[1])+'</span><span><b>5</b>'+esc(k.skala[2])+'</span></div></div>'));
+  });
+
+  // ime
+  var sel = document.getElementById("ime");
+  S.ziri.forEach(function(i){ var o=document.createElement("option"); o.value=i; o.textContent=i; sel.appendChild(o); });
+  sel.value = stanje.ime || "";
+  sel.addEventListener("change",function(){ stanje.ime = sel.value; sacuvaj(); });
+
+  function zbir(id){
+    var o = (stanje.ocene[id]||{}).s || {}, uk=0, n=0;
+    K.forEach(function(k){ if(o[k.id]){ uk += k.tezina*o[k.id]/5; n++; } });
+    return { uk: Math.round(uk*10)/10, n:n, pun: n===K.length };
+  }
+
+  // lista timova (abecedno)
+  var ids = Object.keys(S.timovi).sort(function(a,b){ return S.timovi[a].naziv.localeCompare(S.timovi[b].naziv,"sr"); });
+  var lista = document.getElementById("lista"), zbirEl = {}, kartice = {};
+
+  function osveziZbir(id){
+    var z = zbir(id), e = zbirEl[id];
+    e.className = "zbir"+(z.pun?" gotovo":"");
+    e.innerHTML = (z.n? z.uk : "&ndash;")+"<small>"+(z.pun?"od 100":(z.n? z.n+" od "+K.length+" ocena" : "nije ocenjen"))+"</small>";
+  }
+
+  ids.forEach(function(id){
+    var t = S.timovi[id];
+    var d = el("details","oc-tim"); d.dataset.id=id;
+    var sum = el("summary");
+    sum.innerHTML = '<h3>'+esc(t.naziv)+(t.solo?' <span class="bedz solo" style="vertical-align:3px">solo</span>':'')+'</h3><p>'+esc(t.kratko)+'</p>';
+    var z = el("div","zbir"); sum.appendChild(z); zbirEl[id]=z;
+    d.appendChild(sum);
+    var telo = el("div","oc-telo");
+    K.forEach(function(k){
+      var red = el("div","oc-red");
+      red.innerHTML = '<div class="naz"><span>'+esc(k.naziv)+'</span><small>'+k.tezina+' poena</small></div><p class="pit">'+esc(k.pitanje)+'</p>';
+      var oc = el("div","ocene"); oc.setAttribute("role","group"); oc.setAttribute("aria-label",k.naziv);
+      for(var v=1; v<=5; v++){
+        var b = el("button",null,String(v)); b.type="button"; b.dataset.k=k.id; b.dataset.v=v;
+        var tren = ((stanje.ocene[id]||{}).s||{})[k.id];
+        b.setAttribute("aria-pressed", String(tren===v));
+        oc.appendChild(b);
+      }
+      red.appendChild(oc); telo.appendChild(red);
+    });
+    var bl = el("div","oc-red");
+    bl.innerHTML = '<div class="naz"><span>Beleška</span><small>za veće</small></div>';
+    var ta = document.createElement("textarea"); ta.placeholder = "Šta te je ubedilo, šta nedostaje, pitanje za veće...";
+    ta.value = (stanje.ocene[id]||{}).b || "";
+    ta.addEventListener("input",function(){ (stanje.ocene[id] = stanje.ocene[id]||{s:{}}).b = ta.value; sacuvaj(); });
+    bl.appendChild(ta); telo.appendChild(bl);
+    d.appendChild(telo);
+
+    telo.addEventListener("click",function(e){
+      var b = e.target.closest(".ocene button"); if(!b) return;
+      var o = (stanje.ocene[id] = stanje.ocene[id]||{s:{}}); o.s = o.s||{};
+      var v = Number(b.dataset.v);
+      if(o.s[b.dataset.k]===v){ delete o.s[b.dataset.k]; } else { o.s[b.dataset.k]=v; }
+      Array.prototype.forEach.call(b.parentNode.children,function(x){ x.setAttribute("aria-pressed", String(o.s[b.dataset.k]===Number(x.dataset.v))); });
+      sacuvaj(); osveziZbir(id); crtajRang(); primeniFilter();
+    });
+
+    lista.appendChild(d); kartice[id]=d; osveziZbir(id);
+  });
+
+  // filter
+  var filter = "sve", fEl = document.getElementById("filter");
+  function primeniFilter(){
+    ids.forEach(function(id){ var n = zbir(id).n;
+      kartice[id].hidden = (filter==="ocenjeni" && !n) || (filter==="neocenjeni" && n && !kartice[id].open); });
+  }
+  fEl.addEventListener("click",function(e){ var b=e.target.closest(".cip"); if(!b) return; filter=b.dataset.f;
+    Array.prototype.forEach.call(fEl.children,function(c){ c.setAttribute("aria-pressed", String(c===b)); }); primeniFilter(); });
+
+  // rang
+  function rangovani(){
+    return ids.filter(function(id){ return zbir(id).n; })
+      .sort(function(a,b){ var za=zbir(a), zb=zbir(b);
+        if(zb.uk!==za.uk) return zb.uk-za.uk;
+        var sa=stanje.ocene[a].s, sb=stanje.ocene[b].s;
+        return ((sb.mvp||0)-(sa.mvp||0)) || ((sb.problem||0)-(sa.problem||0)); });
+  }
+  function crtajRang(){
+    var r = rangovani(), box = document.getElementById("rang-tabela");
+    if(!r.length){ box.innerHTML = '<p class="prazno">Još nema ocena.</p>'; return; }
+    var h = '<table class="rang"><thead><tr><th>#</th><th>Tim</th><th class="uk">Zbir</th></tr></thead><tbody>';
+    r.forEach(function(id,i){ var z=zbir(id);
+      h += '<tr><td class="br">'+(i+1)+'</td><td>'+esc(S.timovi[id].naziv)+(z.pun?'':' <span style="color:var(--tekst-3);font-size:13px">(nepotpuno)</span>')+'</td><td class="uk">'+z.uk+'</td></tr>'; });
+    box.innerHTML = h+'</tbody></table>';
+  }
+  crtajRang();
+
+  document.getElementById("kopiraj").addEventListener("click",function(){
+    var r = rangovani();
+    if(!r.length){ tost("Još nema ocena za kopiranje."); return; }
+    var linije = ["STVARAJ, ocene: "+(stanje.ime||"(ime nije izabrano)"), ""];
+    r.forEach(function(id,i){ var o=stanje.ocene[id], z=zbir(id);
+      linije.push((i+1)+". "+S.timovi[id].naziv+": "+z.uk+(z.pun?"":" (nepotpuno)"));
+      linije.push("   "+K.map(function(k){ return k.naziv+" "+(o.s[k.id]||"-"); }).join(", "));
+      if(o.b) linije.push("   Beleška: "+o.b.replace(/\s+/g," ").trim());
+    });
+    var tekst = linije.join("\n");
+    (navigator.clipboard ? navigator.clipboard.writeText(tekst) : Promise.reject())
+      .then(function(){ tost("Kopirano. Pošalji organizatoru."); })
+      .catch(function(){ window.prompt("Kopiraj tekst:", tekst); });
+  });
+
+  document.getElementById("obrisi").addEventListener("click",function(){
+    if(!confirm("Obrisati sve tvoje ocene i beleške na ovom uređaju?")) return;
+    stanje.ocene = {}; sacuvaj(); location.reload();
+  });
+})();
+</script>
+</body>
+</html>
