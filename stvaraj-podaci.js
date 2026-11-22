@@ -2,7 +2,7 @@
    Kontakti ucesnika (mejl, telefon) namerno NISU ovde: stranice su na javnom linku.
    status: "potvrdjeno" ili "ceka" (ceka potvrdu dolaska). */
 window.STVARAJ = {
-  azurirano: "22. novembar 2026.",
+  azurirano: "22. novembar 2026, 19h",
   dokument: "https://docs.google.com/document/d/1_i7nGyfqfZ10WY12mPibYMHXcUH_lQ86Mpka-HLcEWw",
 
   kriterijumi: [
@@ -97,7 +97,7 @@ window.STVARAJ = {
         ["Nikola Stojković", "FTN Čačak; porodična transportna firma sa nekoliko kamiona"]],
       problem: "Vlasnici prevozničkih firmi ne znaju koliko ih svaki kamion stvarno košta i kad mu je sledeći servis. Podaci su u Excelu, fakturama, papirima i porukama vozača i servisa, pa ih vlasnik spaja ručno, obično tek kad nešto pukne. Posledica: kvarovi, propušteni servisi, registracija i osiguranje, ture koje se pokažu kao neisplative tek naknadno.",
       pazite: ["Fleet management softver postoji. Ugao su male srpske flote (2 do 20 kamiona) koje neće enterprise alat.", "Nikolina porodična firma je prvi korisnik: neka je iskoriste za test već u subotu."] },
-    "bg-pacers": { naziv: "BG PACERS", grupa: 5, status: "ceka",
+    "bg-pacers": { naziv: "BG PACERS", grupa: 5, status: "potvrdjeno",
       kratko: "Priprema za prijemni ispit na fakultetu.",
       clanovi: [
         ["Filip Nikolić", "lider; Seeze AI"],
