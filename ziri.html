@@ -92,7 +92,7 @@ textarea{width:100%;min-height:76px;margin-top:6px;font:400 15px/1.5 var(--f-tek
             <li><b>2 min</b> demo uživo</li>
             <li><b>2 min</b> pitanja žirija</li>
             <li>Sve ide sa jednog računara na projektoru: prezentacija iz PDF-a ili browsera, demo uživo preko javnog linka.</li>
-            <li>Demo je bio uslov za finale, pa svaki finalista ima nešto što radi. Koliko je dobro, ocenjuje se kroz MVP.</li>
+            <li>Demo je bio uslov za finale, pa svaki finalista ima nešto što radi. Koliko je dobro, ocenjuje se kroz kriterijum Demo.</li>
             <li>Ocenjuj odmah posle pitanja, dok je sveže.</li>
           </ul>
         </div>
@@ -105,7 +105,7 @@ textarea{width:100%;min-height:76px;margin-top:6px;font:400 15px/1.5 var(--f-tek
           </ul>
         </div>
       </div>
-      <p class="napomena" style="margin-top:14px">Kako odlučujemo: svako ocenjuje sam, po sedam kriterijuma ispod. Zbir ocena je polazna tačka za veće, a konačna odluka je zajednička. Kod jednakog zbira prednost ima viša ocena za MVP, pa za problem.</p>
+      <p class="napomena" style="margin-top:14px">Kako odlučujemo: svako ocenjuje sam, po pet kriterijuma ispod. Zbir ocena je polazna tačka za veće, a konačna odluka je zajednička. Kod jednakog zbira prednost ima viša ocena za demo, pa za problem i dokaz.</p>
     </div>
   </section>
 
@@ -157,7 +157,7 @@ textarea{width:100%;min-height:76px;margin-top:6px;font:400 15px/1.5 var(--f-tek
 <script src="/stvaraj-podaci.js"></script>
 <script>
 (function(){
-  var S = window.STVARAJ, K = S.kriterijumi, KLJUC = "stvaraj-ziri-v1";
+  var S = window.STVARAJ, K = S.kriterijumi, KLJUC = "stvaraj-ziri-v2";
   function el(tag, cls, html){ var e=document.createElement(tag); if(cls) e.className=cls; if(html!=null) e.innerHTML=html; return e; }
   function esc(s){ return String(s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];}); }
 
@@ -253,7 +253,7 @@ textarea{width:100%;min-height:76px;margin-top:6px;font:400 15px/1.5 var(--f-tek
       .sort(function(a,b){ var za=zbir(a), zb=zbir(b);
         if(zb.uk!==za.uk) return zb.uk-za.uk;
         var sa=stanje.ocene[a].s, sb=stanje.ocene[b].s;
-        return ((sb.mvp||0)-(sa.mvp||0)) || ((sb.problem||0)-(sa.problem||0)); });
+        return ((sb.demo||0)-(sa.demo||0)) || ((sb.problem||0)-(sa.problem||0)); });
   }
   function crtajRang(){
     var r = rangovani(), box = document.getElementById("rang-tabela");
