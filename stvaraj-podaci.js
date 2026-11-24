@@ -46,8 +46,8 @@ window.STVARAJ = {
   grupe: [
     { br: 1, mentori: ["sava-pavlovic", "vuk-verovic"], timovi: ["disruptor", "sova"],
       napomena: "Oba tima su iz istog sveta: veleprodaja i distributeri. Disruptor nema programera i gradi u Lovable-u. Sovi treba distributer i njegovi podaci, a Disruptor ga ima u porodici (veleprodaja na Pantheon-u), pa ih upoznajte odmah." },
-    { br: 2, mentori: ["sara-oluic", "balsa-popovic"], timovi: ["databaes", "clyvio"],
-      napomena: "Databaes su jaki programeri sa hobi problemom, Clyvio vidi problem svake nedelje u svojoj agenciji. Kod oba je glavni posao isti: suziti ugao i odgovoriti ko plaća." },
+    { br: 2, mentori: ["sara-oluic", "balsa-popovic"], timovi: ["databaes", "clyvio", "edit"],
+      napomena: "Databaes su jaki programeri sa hobi problemom, Clyvio i EDIT dolaze iz sveta društvenih mreža i vide problem svake nedelje u svom poslu. Kod sva tri je glavni posao isti: suziti ugao i odgovoriti ko plaća." },
     { br: 3, mentori: ["srdjan-radosavljevic", "bogdan-bakarec", "svetislav-gajic"], timovi: ["c00kies", "devojke"],
       napomena: "Srđan stiže u subotu u 16h, pa Svetislav pokriva početak. Oba tima čine iskusni programeri koji mogu sami da grade." },
     { br: 4, mentori: ["srdjan-colak", "milan-pajovic"], timovi: ["shortlist", "trajkovic"],
@@ -90,6 +90,13 @@ window.STVARAJ = {
         ["Đorđe Marković", "PMF Kosovska Mitrovica; full-stack i AI inženjer, vodi studio GrowthQ Lab"]],
       problem: "Od AI-ja dobiju kod ili tekst koji izgleda tačno, a nemaju brz način da to provere. Ili proveravaju ručno i gube vreme koje je AI trebalo da uštedi, ili preskoče proveru pa kasnije debaguju. Pozivaju se na Stack Overflow anketu iz 2026: skoro polovina developera veruje AI-ju samo kad lako može da proveri izlaz.",
       pazite: ["Široko i prepuno (code review, evals). Treba jedan uzak korisnik i jedna provera koju alat radi najbolje.", "Nemaju svoj broj. Neka ga nađu tokom vikenda, kroz istraživanje i brainstorming sa vama."] },
+    "edit": { naziv: "EDIT", grupa: 2, status: "ceka",
+      kratko: "Praćenje paketa objava i naplate za frilensere i male agencije za društvene mreže.",
+      clanovi: [
+        ["Jovan Ilić", "lider; BAPUSS; vodi društvene mreže za klijente"],
+        ["Ognjen Stošić", "BAPUSS"]],
+      problem: "Jovan vodi društvene mreže za više klijenata sa mesečnim paketima objava. Za svakog mora da zna koliko je objava urađeno, koliko još duguje i da li je paket plaćen, a to je proveravao na tri mesta: dogovor u porukama, urađene objave u svojoj evidenciji, uplate na računu. Ako nešto promakne, radi za klijenta koji nije platio prethodni paket. Danas to vodi u svojoj tabeli.",
+      pazite: ["Njegov nedeljni problem sa jasnim gubitkom novca (rad bez naplate). Nemaju programera, grade sa AI alatima (Lovable).", "Postoje opšti alati (Notion, softver za agencije) i mali je iznos po korisniku: pitajte ko bi platio i koliko.", "Ušli su naknadno, umesto tima koji je odustao."] },
     "bg-pacers": { naziv: "BG PACERS", grupa: 5, status: "potvrdjeno",
       kratko: "Priprema za prijemni ispit na fakultetu.",
       clanovi: [
