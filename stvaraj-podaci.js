@@ -90,7 +90,7 @@ window.STVARAJ = {
         ["Đorđe Marković", "PMF Kosovska Mitrovica; full-stack i AI inženjer, vodi studio GrowthQ Lab"]],
       problem: "Od AI-ja dobiju kod ili tekst koji izgleda tačno, a nemaju brz način da to provere. Ili proveravaju ručno i gube vreme koje je AI trebalo da uštedi, ili preskoče proveru pa kasnije debaguju. Pozivaju se na Stack Overflow anketu iz 2026: skoro polovina developera veruje AI-ju samo kad lako može da proveri izlaz.",
       pazite: ["Široko i prepuno (code review, evals). Treba jedan uzak korisnik i jedna provera koju alat radi najbolje.", "Nemaju svoj broj. Neka ga nađu tokom vikenda, kroz istraživanje i brainstorming sa vama."] },
-    "edit": { naziv: "EDIT", grupa: 2, status: "ceka",
+    "edit": { naziv: "EDIT", grupa: 2, status: "potvrdjeno",
       kratko: "Praćenje paketa objava i naplate za frilensere i male agencije za društvene mreže.",
       clanovi: [
         ["Jovan Ilić", "lider; BAPUSS; vodi društvene mreže za klijente"],
