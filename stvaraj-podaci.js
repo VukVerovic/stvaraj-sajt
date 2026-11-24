@@ -2,7 +2,7 @@
    Kontakti ucesnika (mejl, telefon) namerno NISU ovde: stranice su na javnom linku.
    status: "potvrdjeno" ili "ceka" (ceka potvrdu dolaska). */
 window.STVARAJ = {
-  azurirano: "22. novembar 2026, 19h",
+  azurirano: "24. novembar 2026",
   dokument: "https://docs.google.com/document/d/1_i7nGyfqfZ10WY12mPibYMHXcUH_lQ86Mpka-HLcEWw",
 
   kriterijumi: [
@@ -44,18 +44,18 @@ window.STVARAJ = {
   },
 
   grupe: [
-    { br: 1, mentori: ["sava-pavlovic", "vuk-verovic"], timovi: ["disruptor", "trajkovic"],
-      napomena: "Ni Disruptor ni Dušan ne programiraju, a oboje dolaze iz prodaje i B2B sveta. Treba im praktična pomoć da stignu do dema na linku (Lovable je najsigurniji put)." },
-    { br: 2, mentori: ["sara-oluic", "balsa-popovic"], timovi: ["roadline", "databaes"],
-      napomena: "Roadline ima jak B2B problem iznutra i treba da suzi ugao u odnosu na postojeće alate. Databaes su jaki programeri sa hobi problemom: kod njih je glavno pitanje ko plaća." },
-    { br: 3, mentori: ["srdjan-radosavljevic", "bogdan-bakarec", "svetislav-gajic"], timovi: ["c00kies", "sova"],
-      napomena: "Srđan i Bogdan stižu kasnije u subotu, pa Svetislav pokriva početak." },
-    { br: 4, mentori: ["srdjan-colak", "milan-pajovic"], timovi: ["shortlist", "nucipal"],
-      napomena: "ShortList su srednjoškolci, Nucipal iskusni inženjeri sa jakim brojem iz prakse. Oba su u prepunom prostoru, pa je glavni posao sužavanje ugla." },
-    { br: 5, mentori: ["aleksandar-ilic", "milos-milunovic"], timovi: ["fonizz", "bg-pacers", "clyvio"],
-      napomena: "Jedina grupa sa tri tima. Sva tri imaju dobre graditelje i široke, prepune probleme, pa je glavni posao sužavanje." },
-    { br: 6, mentori: ["lazar-lekic", "danilo-vranes"], timovi: ["hallucination", "devojke"],
-      napomena: "Oba tima su iskusni programeri i mogu sami da grade. Najviše im treba pomoć oko problema i tržišta." },
+    { br: 1, mentori: ["sava-pavlovic", "vuk-verovic"], timovi: ["disruptor", "sova"],
+      napomena: "Oba tima su iz istog sveta: veleprodaja i distributeri. Disruptor nema programera i gradi u Lovable-u. Sovi treba distributer i njegovi podaci, a Disruptor ga ima u porodici (veleprodaja na Pantheon-u), pa ih upoznajte odmah." },
+    { br: 2, mentori: ["sara-oluic", "balsa-popovic"], timovi: ["roadline", "databaes", "clyvio"],
+      napomena: "Roadline ima jak B2B problem iznutra, Databaes su jaki programeri sa hobi problemom, Clyvio vidi problem svake nedelje u svojoj agenciji. Kod sva tri je glavni posao isti: suziti ugao i odgovoriti ko plaća." },
+    { br: 3, mentori: ["srdjan-radosavljevic", "bogdan-bakarec", "svetislav-gajic"], timovi: ["c00kies", "devojke"],
+      napomena: "Srđan stiže u subotu u 16h, pa Svetislav pokriva početak. Oba tima čine iskusni programeri koji mogu sami da grade." },
+    { br: 4, mentori: ["srdjan-colak", "milan-pajovic"], timovi: ["shortlist", "trajkovic"],
+      napomena: "Oboje prave alate za prodaju. ShortList su srednjoškolci, Dušan ne programira, pa mu treba praktična pomoć oko dema." },
+    { br: 5, mentori: ["aleksandar-ilic", "milos-milunovic"], timovi: ["fonizz", "bg-pacers"],
+      napomena: "AI verifikacija i edukacija. Oba tima imaju dobre graditelje i široke, prepune probleme, pa je glavni posao sužavanje." },
+    { br: 6, mentori: ["lazar-lekic", "danilo-vranes"], timovi: ["hallucination", "nucipal"],
+      napomena: "AI za firme koje nemaju svog stručnjaka (za procese i za bezbednost koda). Oba tima su iskusni programeri, najviše im treba pomoć oko problema i tržišta. Nucipal se preklapa sa fonizz-om iz grupe 5." },
     { br: 7, mentori: ["aleksa-grujovic", "darko-pavlovic"], timovi: ["bantulic", "pavlovic", "borojevic"],
       napomena: "Tri pojedinca koji sami programiraju. Treba im pomoć oko proizvoda i priče, a za tehniku su na poziv Balša, Milan i Bogdan." }
   ],
@@ -68,14 +68,14 @@ window.STVARAJ = {
         ["Vladimir Dabić", "softversko inženjerstvo, FIMEK; generative AI inženjer na istoj platformi, piše svoj kompajler"]],
       problem: "Mala firma koja hoće da uvede softver ili AI prvo mora da sazna kako se posao zaista radi, a to nigde nije zapisano. Nikola je kao konsultant za firmu sportske opreme nedeljama ručno mapirao procese: oko 20 faktura dnevno olovkom protiv dostavnice, cene računate ručno, opis proizvoda pisan posebno za svaki sajt. Danas firma ili plati konsultanta nedeljama ili to preskoči.",
       pazite: ["Lako sklizne u konsalting. MVP mora da bude alat (na primer AI intervjuer koji mapira procese firme), ne usluga.", "Neka ga testiraju sa firmom sportske opreme sa kojom su već radili."] },
-    "nucipal": { naziv: "Nucipal", grupa: 4, status: "potvrdjeno",
+    "nucipal": { naziv: "Nucipal", grupa: 6, status: "potvrdjeno",
       kratko: "AI pregled bezbednosti koda za timove koji nemaju security inženjera.",
       clanovi: [
         ["Igor Đurić", "lider; inženjer u Swiss Marketplace Group"],
         ["Milan Došlić", "softverski inženjer u Tenderly-ju"]],
       problem: "Firma nema security tim, pa bezbednost koda nose fullstack inženjeri bez obuke: troši se vreme za proizvod, a ranjivosti promaknu. Bug bounty hakeri nemaju pristup kodu. Igor je AI-jem prošao oko četvrtinu koda, našao nekoliko kritičnih bagova i procenjuje da je firmi uštedeo oko 10.000 EUR na bounty-jima.",
       pazite: ["Prepun prostor (Snyk, Semgrep, AI code review). Treba im oštar ugao i jasan prvi korisnik.", "Imaju pravi broj iz prakse, neka ga stave u centar priče."] },
-    "clyvio": { naziv: "Clyvio", grupa: 5, status: "ceka",
+    "clyvio": { naziv: "Clyvio", grupa: 2, status: "potvrdjeno",
       kratko: "Sadržaj za društvene mreže za male biznise koji ne mogu da plate agenciju.",
       clanovi: [
         ["Vukan Janković", "lider; RAF 4. godina, radi u agenciji"],
@@ -89,7 +89,7 @@ window.STVARAJ = {
         ["Miloš Marinković", "MATF; proizvod i razvoj"],
         ["Đorđe Marković", "PMF Kosovska Mitrovica; full-stack i AI inženjer, vodi studio GrowthQ Lab"]],
       problem: "Od AI-ja dobiju kod ili tekst koji izgleda tačno, a nemaju brz način da to provere. Ili proveravaju ručno i gube vreme koje je AI trebalo da uštedi, ili preskoče proveru pa kasnije debaguju. Pozivaju se na Stack Overflow anketu iz 2026: skoro polovina developera veruje AI-ju samo kad lako može da proveri izlaz.",
-      pazite: ["Široko i prepuno (code review, evals). Treba jedan uzak korisnik i jedna provera koju alat radi najbolje.", "Nemaju svoj broj. Neka ga nađu tokom vikenda, u razgovoru sa korisnicima."] },
+      pazite: ["Široko i prepuno (code review, evals). Treba jedan uzak korisnik i jedna provera koju alat radi najbolje.", "Nemaju svoj broj. Neka ga nađu tokom vikenda, kroz istraživanje i brainstorming sa vama."] },
     "roadline": { naziv: "Roadline services", grupa: 2, status: "ceka",
       kratko: "Koliko svaki kamion stvarno košta i kad mu je servis, za male prevoznike.",
       clanovi: [
@@ -104,7 +104,7 @@ window.STVARAJ = {
         ["Mihajlo Đurović", "ETF master; Seeze AI"],
         ["Lazar Đukić", "ETF master; Seeze AI"]],
       problem: "Premalo je zvaničnih materijala za pripremu prijemnog ispita, pa novac ide na privatne časove koji ne rešavaju problem.",
-      pazite: ["Problem je opisan u dve rečenice, B2C je i sezonski, a konkurencija su pripreme i tutori. Neka do podneva u subotu pričaju sa bar tri maturanta i roditelja i nađu ko plaća.", "Jak tehnički tim, MVP im neće biti problem."] },
+      pazite: ["Problem je opisan u dve rečenice, B2C je i sezonski, a konkurencija su pripreme i tutori. Neka do podneva istraže ko plaća (maturanti, roditelji, škole), a ako mogu, neka pozovu nekog ko se sprema za prijemni.", "Jak tehnički tim, MVP im neće biti problem."] },
     "c00kies": { naziv: "C00kies", grupa: 3, status: "potvrdjeno",
       kratko: "Brže zaustavljanje već poznatog štetnog sadržaja na malim platformama.",
       clanovi: [
@@ -113,13 +113,13 @@ window.STVARAJ = {
         ["Aleksei Akhundov", "Databricks Beograd; AI i ML"]],
       problem: "Štetan sadržaj, posebno onaj koji ugrožava decu, kopira se i ponovo postavlja po platformama. Moderacija se oslanja na prijave i ručni pregled, a reaguje tek kad je sadržaj već vani. Najteže je malim platformama bez resursa.",
       pazite: ["Osetljiva tema: nikako ne raditi sa pravim štetnim materijalom, samo sa bezbednim, sintetičkim primerima.", "Hash-matching alati već postoje. Pitajte šta je njihov ugao i ko je prvi korisnik (male platforme, forumi?)."] },
-    "sova": { naziv: "Sova", grupa: 3, status: "potvrdjeno",
+    "sova": { naziv: "Sova", grupa: 1, status: "potvrdjeno",
       kratko: "Distributeri daju veće popuste nego što moraju; analiza ERP podataka to pokazuje.",
       clanovi: [
         ["Sonja Simović", "liderka; MATF master, primenjena matematika; data analyst u revenue timu KupujemProdajem"],
         ["Slaven Milić", "MATF 4. godina, statistika i aktuarska matematika"]],
       problem: "Distributeri svaki dan daju popuste poslovnim kupcima po osećaju prodavca i ranijim dogovorima, bez uvida u stvarni efekat na profit. Neki kupci dobiju veći popust nego što treba da bi ostali, i firma gubi maržu. Ideja: iz postojećih ERP podataka označiti preterane popuste, uporediti slične kupce i proceniti koliko marže može da se vrati.",
-      pazite: ["Više je analitička ideja nego problem iz njihovog okruženja. Pitajte koji distributer im daje podatke za test tokom vikenda.", "Isti svet kao Disruptor (veleprodaja, Pantheon), mogu da razmene kontakte."] },
+      pazite: ["Više je analitička ideja nego problem iz njihovog okruženja. Pitajte koji distributer im daje podatke za test tokom vikenda.", "U istoj grupi je Disruptor, koji ima veleprodaju na Pantheon-u u porodici: to im je prvi izvor podataka."] },
     "shortlist": { naziv: "ShortList", grupa: 4, status: "potvrdjeno",
       kratko: "Pronalaženje pravih potencijalnih klijenata za B2B agencije i prodaju.",
       clanovi: [
@@ -135,7 +135,7 @@ window.STVARAJ = {
         ["Gordan Đorđević", "ETF; AI, računarska grafika, sajber bezbednost"]],
       problem: "Astronomi amateri i astrofotografi vode sesije po tabelama, beleškama i razbacanim folderima slika, pa ne vide lako šta su snimili, kojom opremom i u kojim uslovima. Ideja je iz njihovog posmatranja neba. Zajedno imaju iskustvo sa hakatona.",
       pazite: ["Mala hobi niša, a nije jasno ko plaća. Pitajte: klubovi, prodavci opreme, opservatorije?", "Sami su korisnici, pa im intervjui ne bi trebalo da budu problem."] },
-    "disruptor": { naziv: "Disruptor", grupa: 1, status: "ceka",
+    "disruptor": { naziv: "Disruptor", grupa: 1, status: "potvrdjeno",
       kratko: "Naručivanje za veleprodajne kupce nad Pantheon-om, bez telefona i ručnih ponuda.",
       clanovi: [
         ["Nikola Luković", "lider; FEFA, 1. godina"],
@@ -143,7 +143,7 @@ window.STVARAJ = {
         ["Andrej Đurić", "FEFA, 1. godina"]],
       problem: "U očevoj firmi veleprodajni kupci su morali da zovu za tačne cene i porudžbine. Svaki kupac ima svoje uslove, cene su u Pantheon-u, pa je neko ručno proveravao i slao ponude. Liste krojenja su se diktirale i ručno kucale. Firma sada ima B2B portal, ali su pozivi, čekanje i ručne ponude bili bol pre toga.",
       pazite: ["Nema programera u timu: grade u Lovable-u i treba im praktična pomoć.", "Očeva firma je problem već rešila, pa je to odličan intervju: koliko je portal koštao i šta još boli."] },
-    "devojke": { naziv: "DEVojke", grupa: 6, status: "potvrdjeno",
+    "devojke": { naziv: "DEVojke", grupa: 3, status: "potvrdjeno",
       kratko: "Elektronski zahtev za službeni put umesto papira.",
       clanovi: [
         ["Tamara Lukić", "liderka; AIK Banka"],
@@ -160,7 +160,7 @@ window.STVARAJ = {
       clanovi: [["Dušan Pavlović", "data science u Švajcarskoj, prelazi na AI master u Austriji; iz Kragujevca"]],
       problem: "Očeva firma za bušenje bunara pogađa dubinu vode po starim papirnim beleškama i rašljama. Promašaj košta oko 3.000 EUR po bunaru.",
       pazite: ["Dobar B2B problem iznutra, sa brojem. Pitajte koje podatke stvarno imaju (beleške, geološke karte) i šta MVP za vikend može da dokaže."] },
-    "trajkovic": { naziv: "Dušan Trajković", solo: true, grupa: 1, status: "potvrdjeno",
+    "trajkovic": { naziv: "Dušan Trajković", solo: true, grupa: 4, status: "potvrdjeno",
       kratko: "Prodajni razgovori sa svih kanala na jednom mestu, bez ručnog CRM-a.",
       clanovi: [["Dušan Trajković", "VIŠER; prodaja i proizvod; osnivač Telebux-a"]],
       problem: "Prodajni razgovori su razbacani po mejlu, LinkedIn-u i Telegramu, a ručno vođenje CRM-a pojede pola dana prodavca.",
