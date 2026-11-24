@@ -5,6 +5,11 @@
       "source": "/",
       "destination": "/stvaraj",
       "permanent": false
+    },
+    {
+      "source": "/ucesnici",
+      "destination": "/stvaraj/ucesnici",
+      "permanent": false
     }
   ],
   "rewrites": [
