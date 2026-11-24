@@ -56,8 +56,8 @@ window.STVARAJ = {
       napomena: "AI verifikacija i edukacija. Oba tima imaju dobre graditelje i široke, prepune probleme, pa je glavni posao sužavanje." },
     { br: 6, mentori: ["lazar-lekic", "danilo-vranes"], timovi: ["hallucination", "nucipal"],
       napomena: "AI za firme koje nemaju svog stručnjaka (za procese i za bezbednost koda). Oba tima su iskusni programeri, najviše im treba pomoć oko problema i tržišta. Nucipal se preklapa sa fonizz-om iz grupe 5." },
-    { br: 7, mentori: ["aleksa-grujovic", "darko-pavlovic"], timovi: ["bantulic", "pavlovic"],
-      napomena: "Dva pojedinca koji sami programiraju. Treba im pomoć oko proizvoda i priče, a za tehniku su na poziv Balša, Milan i Bogdan." }
+    { br: 7, mentori: ["aleksa-grujovic", "darko-pavlovic"], timovi: ["bantulic", "pavlovic", "borojevic"],
+      napomena: "Tri pojedinca koji sami programiraju. Treba im pomoć oko proizvoda i priče, a za tehniku su na poziv Balša, Milan i Bogdan." }
   ],
 
   timovi: {
@@ -164,6 +164,11 @@ window.STVARAJ = {
       kratko: "Prodajni razgovori sa svih kanala na jednom mestu, bez ručnog CRM-a.",
       clanovi: [["Dušan Trajković", "VIŠER; prodaja i proizvod; osnivač Telebux-a"]],
       problem: "Prodajni razgovori su razbacani po mejlu, LinkedIn-u i Telegramu, a ručno vođenje CRM-a pojede pola dana prodavca.",
-      pazite: ["Jedini solo koji ne programira, pa mu treba tehnička pomoć.", "Telebux već postoji: neka prijavi prethodni rad i pokaže šta je novo."] }
+      pazite: ["Jedini solo koji ne programira, pa mu treba tehnička pomoć.", "Telebux već postoji: neka prijavi prethodni rad i pokaže šta je novo."] },
+    "borojevic": { naziv: "Marko Borojević", solo: true, grupa: 7, status: "potvrdjeno",
+      kratko: "Objave za novinare po šablonu, bez deljenja lozinki naloga.",
+      clanovi: [["Marko Borojević", "RAF 1. godina, radi kao programer"]],
+      problem: "Napravio je aplikaciju koja popunjava šablone za objave i objavljuje ih za novinare, bez deljenja lozinki naloga. Koristi je 20 ljudi u jednoj medijskoj kući.",
+      pazite: ["Postojeći proizvod sa korisnicima: neka prijavi prethodni rad i jasno kaže šta gradi za vikend."] }
   }
 };
