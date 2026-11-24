@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="sr-Latn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>STVARAJ · Za učesnike</title>
+<meta name="description" content="STVARAJ, SEE UP Build Session #01: šta očekujemo od timova, satnica, predaja, kako se boduje i materijali.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#000000">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,700..800&family=Ubuntu:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="/stvaraj-interno.css">
+<style>
+.rokovi{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));margin-bottom:14px}
+.rok{background:var(--ploca);border:1px solid var(--ploca-ivica);border-radius:18px;padding:18px 20px}
+.rok.glavni{border-color:var(--pink)}
+.rok time{display:block;font:800 clamp(30px,4vw,40px)/1 var(--f-naslov);font-stretch:125%;color:var(--pink);font-variant-numeric:tabular-nums}
+.rok b{display:block;margin-top:10px;font-weight:700;font-size:17px}
+.rok p{color:var(--tekst-2);font-size:15px;margin-top:4px}
+.mejl{font-weight:700;color:#fff;background:#16161A;border-radius:10px;padding:2px 8px;white-space:nowrap}
+.satnica .moj{color:#fff}
+.satnica .moj::after{content:" \2022 rok";color:var(--pink);font-size:13px;font-weight:500}
+.deck li{counter-increment:d;display:grid;grid-template-columns:34px 1fr;gap:10px;padding:10px 0;border-top:1px solid var(--ploca-ivica);color:var(--tekst-2)}
+.deck li:first-child{border-top:0}
+.deck li::before{content:counter(d);font:800 18px/1.3 var(--f-naslov);font-stretch:125%;color:var(--pink)}
+.deck li b{color:#fff;font-weight:500}
+.deck{counter-reset:d}
+.grupe-u{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}
+.grupa-u{background:var(--ploca);border:1px solid var(--ploca-ivica);border-radius:18px;padding:18px}
+.grupa-u h3{font-size:17px;margin-bottom:8px}
+.grupa-u h3 span{color:var(--pink)}
+.grupa-u .tm{color:#fff;font-size:15px}
+.grupa-u .mn{color:var(--tekst-3);font-size:14px;margin-top:6px;line-height:1.5}
+.mat a{color:#fff;text-decoration-color:var(--pink);text-underline-offset:3px}
+</style>
+</head>
+<body>
+<header class="traka">
+  <div class="wrap">
+    <a class="znak" href="#vrh">STVARAJ <span>za učesnike</span></a>
+    <nav aria-label="Sekcije">
+      <a href="#ocekujemo">Šta očekujemo</a>
+      <a href="#predaja">Predaja</a>
+      <a href="#satnica">Satnica</a>
+      <a href="#bodovanje">Bodovanje</a>
+      <a href="#mentori">Mentori</a>
+      <a href="#materijali">Materijali</a>
+    </nav>
+  </div>
+</header>
+
+<main id="vrh">
+  <div class="wrap hero">
+    <span class="oznaka">Za timove i pojedince</span>
+    <h1>Dobrodošli na STVARAJ.</h1>
+    <p class="uvod">Za dva dana idete od problema do proizvoda koji radi na linku i do prvih kupaca. Ovde je sve na jednom mestu: šta očekujemo od vas, šta i do kada predajete, kako žiri boduje i materijali za rad.</p>
+    <div class="cinjenice">
+      <span><b>28. i 29. novembar</b></span>
+      <span><b>CDT Hub</b>, Kneza Miloša 12, 6. sprat</span>
+      <span>Predaja u nedelju do <b>16h</b>, pitch od <b>17h</b></span>
+    </div>
+  </div>
+
+  <section class="sek" id="ocekujemo">
+    <div class="wrap">
+      <h2>Šta očekujemo od vas</h2>
+      <p class="pod">Ukratko: stvaran problem, demo koji radi na javnom linku i jasna priča ko plaća. Kod nije usko grlo, problem jeste.</p>
+
+      <div class="kartica" style="margin-bottom:14px;border-color:var(--pink)">
+        <h3>Sve kreće od dva pitanja</h3>
+        <ul class="lista">
+          <li><b>Koji problem rešavate?</b> Čiji je i koliko ga danas košta, u vremenu ili novcu.</li>
+          <li><b>Kako znate da je stvaran?</b> Razgovori, brojevi, istraživanje. To nosi najviše poena.</li>
+        </ul>
+        <p style="margin-top:10px"><b>Ideja nije zaključana.</b> Možete da menjate pristup i rešenje, ali ostajete u svojoj temi. Ako posle razgovora sa mentorima i korisnicima vidite da je problem drugačiji nego što ste mislili, to je dobar znak i žiri to nagrađuje.</p>
+      </div>
+
+      <div class="mreza">
+        <div class="kartica">
+          <h3>Na kraju vikenda imate</h3>
+          <ul class="lista">
+            <li><b>Problem</b> sa brojem: koliko košta onoga ko ga ima.</li>
+            <li><b>MVP</b> na javnom linku: jedan korisnik, jedan problem, jedan tok koji radi.</li>
+            <li><b>Plan za prve kupce</b>: ko plaća, koliko i kako dolazite do prvih 10 za 30 dana.</li>
+            <li><b>Prezentaciju</b> od 3 minuta.</li>
+          </ul>
+        </div>
+        <div class="kartica">
+          <h3>Pravila</h3>
+          <ul class="lista">
+            <li>MVP koji se takmiči pravi se tokom vikenda. Biblioteke, AI alati i servisi su dozvoljeni.</li>
+            <li>Ako ste nešto napravili pre vikenda, prijavite to i pokažite šta je novo.</li>
+            <li><b>Demo je obavezan.</b> Bez linka koji radi nema finala.</li>
+            <li>Alat je slobodan: Lovable, Claude, Cursor, svoj kod. Bitan je samo link.</li>
+          </ul>
+        </div>
+        <div class="kartica">
+          <h3>Ponesite</h3>
+          <ul class="lista">
+            <li>Laptop i punjač.</li>
+            <li>Napravljen <a href="https://lovable.dev">Lovable</a> nalog, makar i besplatan.</li>
+            <li>Kontakte ljudi koji imaju vaš problem. Jedan poziv vredi više od deset pretpostavki.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sek" id="predaja">
+    <div class="wrap">
+      <h2>Šta i do kada predajete</h2>
+      <p class="pod">Sve šaljete na <span class="mejl" data-mejl>MEJL ZA PREDAJU</span>, u naslovu napišite ime tima. Rokovi su u nedelju, 29. novembra, i ne pomeraju se.</p>
+      <div class="rokovi">
+        <div class="rok">
+          <time>15:30</time>
+          <b>Link za demo</b>
+          <p>Javni link koji radi sa bilo kog računara. Pošaljite ga čim je spreman, ne čekajte poslednji minut.</p>
+        </div>
+        <div class="rok glavni">
+          <time>16:00</time>
+          <b>Prezentacija</b>
+          <p>PDF ili HTML, nešto što se otvara u browseru. Posle 16h ne primamo izmene.</p>
+        </div>
+        <div class="rok">
+          <time>16:30</time>
+          <b>Biramo 8 do 10 finalista</b>
+          <p>Sa mentorima biramo ko izlazi na pitch i odmah javljamo svim timovima.</p>
+        </div>
+      </div>
+      <div class="mreza">
+        <div class="kartica">
+          <h3>Demo</h3>
+          <ul class="lista">
+            <li>Ne mora da bude ceo proizvod: dovoljno je da se otvori linkom i da glavni tok može da se klikne.</li>
+            <li><b>Localhost ne radi.</b> Demo mora da bude na javnom linku: objavljen Lovable projekat, Claude artifact, Vercel ili nešto slično.</li>
+            <li>Gradite svoj kod? Postavite bilo šta na javni link (Vercel ili slično) još u subotu, ne u nedelju u 15:20.</li>
+          </ul>
+        </div>
+        <div class="kartica">
+          <h3>Pitch, od 17h</h3>
+          <ul class="lista">
+            <li><b>3 min</b> prezentacija, <b>2 min</b> demo uživo, <b>2 min</b> pitanja žirija.</li>
+            <li>Sve ide sa našeg računara: prezentacije skidamo pre 17h i proveravamo linkove.</li>
+            <li>Vreme se meri. Kad istekne, prelazimo na sledeći tim.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sek" id="satnica">
+    <div class="wrap">
+      <h2>Satnica</h2>
+      <p class="pod">Subota traje do 23h, ne ostaje se preko noći. U nedelju nastavljamo u 9h.</p>
+      <div class="satnica">
+        <div class="kartica">
+          <h3>Subota, 28. novembar</h3>
+          <ol>
+            <li><time>09:00</time><span>Registracija, kafa</span></li>
+            <li><time>09:30</time><span>Otvaranje</span></li>
+            <li><time>09:45</time><span>Milovan Dekić, uvodno predavanje</span></li>
+            <li><time>10:45</time><span>Kako ide vikend, šta očekujemo</span></li>
+            <li><time>11:00</time><span>Problem i tržište, rad sa mentorima</span></li>
+            <li><time>13:00</time><span>Ručak</span></li>
+            <li><time>13:45</time><span>Lovable radionica, Lazar Jovanović (online)</span></li>
+            <li><time>14:45</time><span>Rešenje i razvoj MVP-ja</span></li>
+            <li><time>do 23h</time><span>Rad na projektima</span></li>
+          </ol>
+        </div>
+        <div class="kartica">
+          <h3>Nedelja, 29. novembar</h3>
+          <ol>
+            <li><time>09:00</time><span>Završavanje MVP-ja</span></li>
+            <li><time>13:15</time><span>Ručak</span></li>
+            <li><time>15:30</time><span class="moj">Link za demo</span></li>
+            <li><time>16:00</time><span class="moj">Prezentacija</span></li>
+            <li><time>16:30</time><span>Izbor 8 do 10 finalista</span></li>
+            <li><time>17:00</time><span>Pitch pred žirijem</span></li>
+            <li><time>oko 19h</time><span>Proglašenje pobednika</span></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sek" id="bodovanje">
+    <div class="wrap">
+      <h2>Kako se boduje</h2>
+      <p class="pod">Žiri daje ocenu od 1 do 5 po kriterijumu, a težine se sabiraju do 100 poena. Ispod je šta znače 1, 3 i 5. Kod jednakog zbira prednost ima viša ocena za demo, pa za problem i dokaz.</p>
+      <div class="krit" id="krit"></div>
+      <div class="kartica" style="margin-top:14px">
+        <h3>Nagrade</h3>
+        <ul class="lista">
+          <li><b>100.000 dinara</b> za prvo i <b>40.000 dinara</b> za drugo mesto.</li>
+          <li>Set knjiga za prva tri tima i mogućnost nastavka sa SEE UP-om: podrška, ulazak u kohortu, cloud krediti.</li>
+          <li>Infobip Startup Tribe: krediti od 5k, 7k i 10k za timove kojima Infobip servisi stvarno trebaju.</li>
+          <li>Bez obzira na plasman, dobijate knjigu „Stvaraj“ Milovana Dekića.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="sek" id="mentori">
+    <div class="wrap">
+      <h2>Tvoja grupa i mentori</h2>
+      <p class="pod">Svaka grupa ima dva ili tri mentora, uživo u subotu od 11h do ručka, posle toga u chatu. Pitajte ih sve, ali gradite vi.</p>
+      <div class="grupe-u" id="grupe"></div>
+    </div>
+  </section>
+
+  <section class="sek" id="materijali">
+    <div class="wrap">
+      <h2>Materijali</h2>
+      <p class="pod">Šta vam treba za vikend, redom kojim će vam trebati.</p>
+      <div class="mreza mat">
+        <div class="kartica">
+          <h3>Metod: pet koraka</h3>
+          <ul class="lista">
+            <li><b>Pronađi problem:</b> ko ga ima, koliko je važan, kako se danas rešava.</li>
+            <li><b>Istraži tržište:</b> ko već rešava isti problem i po čemu ste drugačiji.</li>
+            <li><b>Napravi MVP:</b> najmanja verzija koja radi i koju žiri može sam da proba.</li>
+            <li><b>Pronađi prve kupce:</b> kako do prvih deset za 30 dana.</li>
+            <li><b>Pitch:</b> tri minuta, sa demom.</li>
+          </ul>
+          <p style="margin-top:10px">Ceo metod je u knjizi „Stvaraj“ Milovana Dekića.</p>
+        </div>
+        <div class="kartica">
+          <h3>Lovable</h3>
+          <ul class="lista">
+            <li>Svaki tim dobija <b>100 Lovable kredita</b>. Kako ih aktivirate, javljamo na licu mesta.</li>
+            <li><a href="https://docs.lovable.dev">Lovable dokumentacija</a>, počnite od uvoda i kredita.</li>
+            <li>Planirajte u <b>Plan modu</b> (razgovor bez menjanja koda), pa gradite.</li>
+            <li>Idite malim koracima. Kad nešto pukne, vratite prethodnu verziju umesto da trošite kredite na popravke.</li>
+            <li>Istraživanje i prezentaciju radite u besplatnom AI chatu, da krediti ostanu za gradnju.</li>
+          </ul>
+        </div>
+        <div class="kartica">
+          <h3>Kostur prezentacije (3 min)</h3>
+          <ol class="deck">
+            <li><span><b>Problem</b>: ko ga ima i koliko košta, sa brojem.</span></li>
+            <li><span><b>Dokaz</b>: kako znate da je stvaran.</span></li>
+            <li><span><b>Rešenje</b>: jedna rečenica, pa demo.</span></li>
+            <li><span><b>Konkurencija</b>: šta ljudi koriste danas i zašto ste bolji.</span></li>
+            <li><span><b>Ko plaća</b>: cena i prvih 10 kupaca za 30 dana.</span></li>
+            <li><span><b>Tim</b>: zašto baš vi.</span></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="podnozje">
+  <div class="wrap">
+    <p>Pitanja tokom vikenda: pitajte bilo koga iz organizacije na licu mesta. Pre vikenda: <a href="mailto:emilija@seeup.net">emilija@seeup.net</a>.</p>
+    <p style="margin-top:8px">SEE UP i Project 011 · STVARAJ, Build Session #01 · <a href="/stvaraj">buildsessions.seeup.net/stvaraj</a></p>
+  </div>
+</footer>
+
+<script src="/stvaraj-podaci.js"></script>
+<script>
+(function(){
+  var S = window.STVARAJ;
+  function esc(s){ return String(s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];}); }
+
+  var krit = document.getElementById("krit");
+  S.kriterijumi.forEach(function(k){
+    var d = document.createElement("div"); d.className = "krit-red";
+    d.innerHTML = '<div class="tezina">'+k.tezina+'<small>poena</small></div>'+
+      '<div><h3>'+esc(k.naziv)+'</h3><p>'+esc(k.pitanje)+'</p>'+
+      '<div class="skala"><span><b>1</b>'+esc(k.skala[0])+'</span><span><b>3</b>'+esc(k.skala[1])+'</span><span><b>5</b>'+esc(k.skala[2])+'</span></div></div>';
+    krit.appendChild(d);
+  });
+
+  var box = document.getElementById("grupe");
+  S.grupe.forEach(function(g){
+    var timovi = g.timovi.map(function(id){ return S.timovi[id] && S.timovi[id].naziv; }).filter(Boolean);
+    var mentori = g.mentori.map(function(id){ var m = S.mentori[id]; return m ? esc(m.ime)+' ('+esc(m.oblast.toLowerCase())+')' : ""; }).filter(Boolean);
+    var d = document.createElement("div"); d.className = "grupa-u";
+    d.innerHTML = '<h3><span>Grupa '+g.br+'</span></h3><p class="tm">'+timovi.map(esc).join(", ")+'</p><p class="mn">Mentori: '+mentori.join(", ")+'</p>';
+    box.appendChild(d);
+  });
+})();
+</script>
+</body>
+</html>
