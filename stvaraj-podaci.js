@@ -57,7 +57,7 @@ window.STVARAJ = {
     { br: 6, mentori: ["lazar-lekic", "danilo-vranes"], timovi: ["hallucination", "nucipal"],
       napomena: "AI za firme koje nemaju svog stručnjaka (za procese i za bezbednost koda). Oba tima su iskusni programeri, najviše im treba pomoć oko problema i tržišta. Nucipal se preklapa sa fonizz-om iz grupe 5." },
     { br: 7, mentori: ["aleksa-grujovic", "darko-pavlovic"], timovi: ["bantulic", "pavlovic", "borojevic"],
-      napomena: "Tri pojedinca koji sami programiraju. Treba im pomoć oko proizvoda i priče, a za tehniku su na poziv Balša, Milan i Bogdan." }
+      napomena: "Dva pojedinca i Dušan Pavlović, koji je od 26. nov tim od troje. Svi programiraju. Treba im pomoć oko proizvoda i priče, a za tehniku su na poziv Balša, Milan i Bogdan." }
   ],
 
   timovi: {
@@ -65,7 +65,7 @@ window.STVARAJ = {
       kratko: "Alat koji mapira kako mala firma stvarno radi i pokazuje šta vredi automatizovati.",
       clanovi: [
         ["Nikola Vuksanović", "lider; full-stack product inženjer, frilenser, poslednje na AI video platformi"],
-        ["Vladimir Dabić", "softversko inženjerstvo, FIMEK; generative AI inženjer na istoj platformi, piše svoj kompajler"]],
+        ["Ivana Bandu", "ušla umesto Vladimira Dabića (26. nov)"]],
       problem: "Mala firma koja hoće da uvede softver ili AI prvo mora da sazna kako se posao zaista radi, a to nigde nije zapisano. Nikola je kao konsultant za firmu sportske opreme nedeljama ručno mapirao procese: oko 20 faktura dnevno olovkom protiv dostavnice, cene računate ručno, opis proizvoda pisan posebno za svaki sajt. Danas firma ili plati konsultanta nedeljama ili to preskoči.",
       pazite: ["Lako sklizne u konsalting. MVP mora da bude alat (na primer AI intervjuer koji mapira procese firme), ne usluga.", "Neka ga testiraju sa firmom sportske opreme sa kojom su već radili."] },
     "nucipal": { naziv: "Nucipal", grupa: 6, status: "potvrdjeno",
@@ -112,7 +112,7 @@ window.STVARAJ = {
         ["Nemanja Vlatković", "ETF; aeronautika i simulacioni softver"],
         ["Aleksei Akhundov", "Databricks Beograd; AI i ML"]],
       problem: "Štetan sadržaj, posebno onaj koji ugrožava decu, kopira se i ponovo postavlja po platformama. Moderacija se oslanja na prijave i ručni pregled, a reaguje tek kad je sadržaj već vani. Najteže je malim platformama bez resursa.",
-      pazite: ["Osetljiva tema: nikako ne raditi sa pravim štetnim materijalom, samo sa bezbednim, sintetičkim primerima.", "Hash-matching alati već postoje. Pitajte šta je njihov ugao i ko je prvi korisnik (male platforme, forumi?)."] },
+      pazite: ["Osetljiva tema: nikako ne raditi sa pravim štetnim materijalom, samo sa bezbednim, sintetičkim primerima.", "Hash-matching alati već postoje. Pitajte šta je njihov ugao i ko je prvi korisnik (male platforme, forumi?).", "Dogovoreno prisustvo: u subotu su tu prvi deo dana, u nedelju od 15h. Najvažnije sa njima uradite u subotu pre podne."] },
     "sova": { naziv: "Sova", grupa: 1, status: "potvrdjeno",
       kratko: "Distributeri daju veće popuste nego što moraju; analiza ERP podataka to pokazuje.",
       clanovi: [
@@ -155,11 +155,14 @@ window.STVARAJ = {
       clanovi: [["Andrej Bantulić", "ETF master, frilenser, programer"]],
       problem: "Simultani prevod za događaje košta do 2.000 EUR po jeziku. Andrej je razgovarao sa 30+ organizatora dok pravi proizvod za prevod u realnom vremenu (Vavilon).",
       pazite: ["Proizvod već postoji: neka prijavi šta je bilo pre vikenda i pokaže šta je novo.", "Najjači solo po uvidu u tržište."] },
-    "pavlovic": { naziv: "Dušan Pavlović", solo: true, grupa: 7, status: "potvrdjeno",
+    "pavlovic": { naziv: "Dušan Pavlović", grupa: 7, status: "potvrdjeno",
       kratko: "Procena dubine vode za bušenje bunara iz podataka umesto napamet.",
-      clanovi: [["Dušan Pavlović", "data science u Švajcarskoj, prelazi na AI master u Austriji; iz Kragujevca"]],
+      clanovi: [
+        ["Dušan Pavlović", "lider; data science u Švajcarskoj, prelazi na AI master u Austriji; iz Kragujevca"],
+        ["Vukoje Živković", "PMF Kragujevac, softversko inženjerstvo, 3. godina; aplikacije, sajtovi, prototipovi i dizajn"],
+        ["Uroš Marković", "PMF Kragujevac, softversko inženjerstvo; full-stack (C#/.NET, Angular, React), praksa u Inovatec-u, AI i LLM API-ji"]],
       problem: "Očeva firma za bušenje bunara pogađa dubinu vode po starim papirnim beleškama i rašljama. Promašaj košta oko 3.000 EUR po bunaru.",
-      pazite: ["Dobar B2B problem iznutra, sa brojem. Pitajte koje podatke stvarno imaju (beleške, geološke karte) i šta MVP za vikend može da dokaže."] },
+      pazite: ["Dobar B2B problem iznutra, sa brojem. Pitajte koje podatke stvarno imaju (beleške, geološke karte) i šta MVP za vikend može da dokaže.", "Prijavio se sam, pa doveo dvojicu programera sa PMF-a Kragujevac. Ideja je njegova: neka on vodi problem, a oni grade."] },
     "trajkovic": { naziv: "Dušan Trajković", solo: true, grupa: 4, status: "potvrdjeno",
       kratko: "Prodajni razgovori sa svih kanala na jednom mestu, bez ručnog CRM-a.",
       clanovi: [["Dušan Trajković", "VIŠER; prodaja i proizvod; osnivač Telebux-a"]],
